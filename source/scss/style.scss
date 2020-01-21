@@ -1,1 +1,23 @@
 @import "normalize";
+@import "general/variables";
+@import "general/fonts";
+@import "general/mixins";
+@import "general/functions";
+@import "general/global";
+@import "general/custom-reset";
+@import "general/visually-hidden";
+
+// region libs
+// @import "libs/choices/choices";
+// @import "libs/swiper/swiper";
+// @import "libs/range-slider/range-slider";
+// @import "libs/simplebar/simplebar";
+//endregion
+
+// region Blocks
+@import "../blocks/page-footer/page-footer";
+@import "../blocks/overlay/overlay";
+
+
+//endregion
+

@@ -1,0 +1,47 @@
+@mixin opensans($size, $height, $weight) {
+  font-family: $opensans;
+  font-size: $size + px;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin montserrat($size, $height, $weight) {
+  font-family: $montserrat;
+  font-size: $size + px;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+@mixin no-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin desktopmid-max {
+  @media (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin desktopxl-max {
+  @media (max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin tablet-max {
+  @media (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media (max-width: $screen-md) {
+    @content;
+  }
+}

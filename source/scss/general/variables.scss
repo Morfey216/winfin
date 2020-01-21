@@ -1,0 +1,38 @@
+// region screen sizes
+$screen-sm: 320px;
+$screen-md: 767px;
+$screen-l: 1198px; //todo ??
+$screen-lg: 1199px;
+// $screen-xl: 1399px;
+$screen-xl: 1440px;
+
+$screen-xxl: 1799px;
+// endregion
+
+// region colors
+$dark-gray: #181715; // Основной цвет текста / заголовков.
+$gray: #373737; // Цвет фона некоторых блоков / топ-футера.
+$light-gray: #4c4c4c; // Цвет фона некоторых блоков / низ футера.
+$very-light-gray: #8f8f8f; // Цвет светлого текста
+$icon-gray: #c2c2c2; // Цвет фона иконок
+$icon-bg-gray: #b9b9b9; // Цвет фона иконок в футере
+$gray-disabled: #c5c5c5;
+
+$orange: #f19700; // Цвет кнопок и некоторого текста.
+
+$green: #64892e; // Цвет кнопок и некоторых ссылок.
+$white: #ffffff; // Цвет текста на цветном фоне.
+$black: #000000;
+
+// $bg-gradient-gray: linear-gradient(0deg, rgba(216, 216, 216, 0.2) -5.21%, rgba(216, 216, 216, 0) 88.31%);
+// endregion
+
+// region fonts
+$opensans: "OpenSans", "Arial", sans-serif;
+$montserrat: "Montserrat", "Arial", sans-serif;
+// endregion
+
+// region retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+// endregion

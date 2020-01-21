@@ -1,0 +1,109 @@
+-
+  const windowCategories = [
+    'Дерево-алюминиевые окна',
+    'Финские окна Скандинавские окна',
+    'Деревянные панорамные окна',
+    'Дерево-алюминиевые панорамные окна',
+    'Аксессуары для окон',
+    'Окна в Подмосковье'
+  ]
+-
+  const services = [
+    'Остекление балконов',
+    'Остекление коттеджей',
+    'Монтаж деревянных окон',
+    'Гарантийное обслуживание',
+    'Ремонт окон из дерева',
+    'Замер и консультация'
+  ]
+-
+  const aboutPoints = [
+    'Остекление балконов',
+    'Остекление коттеджей',
+    'Монтаж деревянных окон',
+    'Гарантийное обслуживание',
+    'Ремонт окон из дерева',
+    'Замер и консультация'
+  ]
+
+mixin page-footer
+  footer.page-footer
+    div.page-footer__top
+      div.page-footer__company
+        div.page-footer__logo
+          a.page-footer__logo-link
+            img(data-src="img/logos/logo-footer.png" width="163" height="44" alt="Логотип  WINFIN").page-footer__logo-img.lz-img
+        p.page-footer__logo-description Деревянные окна "под ключ" производство, поставка и установка по России
+        div.page-footer__technology
+          img(data-src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии").page-footer__technology-img.lz-img
+          p.page-footer__technology-description Finland Technology
+
+      nav(aria-label="Дополнительное меню").page-footer__nav
+        div.page-footer__nav-block
+          h2.page-footer__nav-header ДЕРЕВЯННЫЕ ОКНА
+          ul.page-footer__nav-list.page-footer__nav-list--categories
+            each win in windowCategories
+              li.page-footer__item
+                a(href="#").page-footer__link #{win}
+
+        div.page-footer__nav-block
+          h2.page-footer__nav-header УСЛУГИ
+          ul.page-footer__nav-list.page-footer__nav-list--services
+            each service in services
+              li.page-footer__item
+                a(href="#").page-footer__link #{service}
+
+        div.page-footer__nav-block
+          h2.page-footer__nav-header О НАС
+          ul.page-footer__nav-list.page-footer__nav-list--about
+            each about in aboutPoints
+              li.page-footer__item
+                a(href="#").page-footer__link #{about}
+
+    div.page-footer__bottom
+      div.page-footer__wrapper
+        div.page-footer__social
+          h2.visually-hidden Мы в соцсетях
+          ul.page-footer__social-list
+            li.page-footer__social-item
+              a(href="#").page-footer__social-link
+                img(data-src="img/icons/vk.png" width="26" height="16" alt="Логотип Вконтакте").page-footer__icon
+                span.visually-hidden Следите за новостями во Вконтакте
+            li.page-footer__social-item
+              a(href="#").page-footer__social-link
+                img(data-src="img/icons/youtube.png" width="26" height="18" alt="Логотип YouTube").page-footer__icon
+                span.visually-hidden Подписывайтесь на наш YouTube-канал
+            li.page-footer__social-item
+              a(href="#").page-footer__social-link
+                img(data-src="img/icons/facebook.png" width="19" height="19" alt="Логотип Вконтакте").page-footer__icon
+                span.visually-hidden Следите за новостями в Facebook
+            li.page-footer__social-item
+              a(href="#").page-footer__social-link
+                img(data-src="img/icons/odnoklassniki.png" width="12" height="18" alt="Логотип Одноклассники").page-footer__icon
+                span.visually-hidden Следите за новостями в Одноклассниках
+
+        div.page-footer__info
+          p.page-footer__info-item
+              img(data-src="img/logos/appointment.png" width="28" height="28" alt="Расписание").page-footer__img.page-footer__img--mastercard.lz-img
+              span.page-footer__info-description Ежеднедневно:
+              span.page-footer__info-text с 10:00 - 20:00
+          p.page-footer__info-item
+              img(data-src="img/logos/mail.png" width="28" height="28" alt="Расписание").page-footer__img.page-footer__img--mastercard.lz-img
+              span.page-footer__info-description Написать:
+              a(href="mailto:winfin@winfin.ru").page-footer__info-text winfin@winfin.ru
+
+        div.page-footer__messenger
+          h2.visually-hidden Мы в мессенджерах
+          ul.page-footer__messenger-list
+            li.page-footer__messenger-item
+              a(href="#").page-footer__messenger-link
+                img(data-src="img/icons/telegram.png" width="31" height="27" alt="Логотип Telegram").page-footer__icon
+                span.visually-hidden Наш Telegram
+            li.page-footer__messenger-item
+              a(href="#").page-footer__messenger-link
+                img(data-src="img/icons/whatsapp.png" width="30" height="30" alt="Логотип WhatsApp").page-footer__icon
+                span.visually-hidden Наш WhatsApp
+            li.page-footer__messenger-item
+              a(href="#").page-footer__messenger-link
+                img(data-src="img/icons/viber.png" width="29" height="32" alt="Логотип Viber").page-footer__icon
+                span.visually-hidden Наш Viber
