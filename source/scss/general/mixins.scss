@@ -5,8 +5,8 @@
   font-weight: $weight;
 }
 
-@mixin montserrat($size, $height, $weight) {
-  font-family: $montserrat;
+@mixin ubuntu($size, $height, $weight) {
+  font-family: $ubuntu;
   font-size: $size + px;
   line-height: $height;
   font-weight: $weight;

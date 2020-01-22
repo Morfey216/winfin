@@ -12,7 +12,8 @@ $screen-xxl: 1799px;
 // region colors
 $dark-gray: #181715; // Основной цвет текста / заголовков.
 $gray: #373737; // Цвет фона некоторых блоков / топ-футера.
-$light-gray: #4c4c4c; // Цвет фона некоторых блоков / низ футера.
+$medium-gray: #4c4c4c; // Цвет фона некоторых блоков / низ футера.
+$light-gray: #787878; // Цвет фона некоторых блоков / низ футера.
 $very-light-gray: #8f8f8f; // Цвет светлого текста
 $icon-gray: #c2c2c2; // Цвет фона иконок
 $icon-bg-gray: #b9b9b9; // Цвет фона иконок в футере
@@ -29,7 +30,7 @@ $black: #000000;
 
 // region fonts
 $opensans: "OpenSans", "Arial", sans-serif;
-$montserrat: "Montserrat", "Arial", sans-serif;
+$ubuntu: "Ubuntu", "Arial", sans-serif;
 // endregion
 
 // region retina
