@@ -1,0 +1,11 @@
+include ../contacts-phone/contacts-phone
+include ../address/address
+
+mixin feedback-contacts
+  section.feedback-contacts
+    div.feedback-contacts__call
+      a(href="#").button.button--green.feedback-contacts__gager Заявка на замер
+      a(href="#").button.button--orange.feedback-contacts__callback ОБРАТНЫЙ ЗВОНОК
+    div.feedback-contacts__contacts
+      +contacts-phone('phone.png', 31, 31).feedback-contacts__phone
+      +address('point.png', 31, 31).feedback-contacts__address

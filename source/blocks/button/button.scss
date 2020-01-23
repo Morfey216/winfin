@@ -7,9 +7,9 @@
   text-transform: uppercase;
   border: none;
   outline: none;
-  border-radius: 50px;
+  border-radius: 10px;
 
-  @include ubuntu(11, 20px, 700);
+  @include ubuntu(16, 18, 700);
   padding: 9px 5px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -18,29 +18,15 @@
     padding: 10px 5px;
   }
 
-  &--primary {
-    color: $white;
-    background-color: $orange;
-    border: none;
-
-    &:hover {
-      background-color: $orange-hover;
-    }
-
-    &:active {
-      background-color: $orange-active;
-    }
-  }
-
   &--transparent {
-    color: $brown;
+    color: $orange;
     background-color: transparent;
-    border: 1px solid $light-brown;
+    border: 1px solid $light-gray;
     transition: border-color 0.3s;
 
     &:hover,
     &:focus {
-      border-color: $brown;
+      border-color: $gray;
     }
 
     &:active {
@@ -54,9 +40,9 @@
   }
 
   &--orange {
-    @include ubuntu(12, 1.3, 700);
+    @include ubuntu(16, 18, 700);
     margin-bottom: 10px;
-    padding: 12px 14px;
+    padding: 18px 14px;
     color: $white;
     text-decoration: none;
     text-align: center;
@@ -65,10 +51,12 @@
 
     &:hover,
     &:focus {
+      color: $white;
       background-color: $orange-hover;
     }
 
     &:active {
+      color: $white;
       background-color: $orange-active;
     }
 
@@ -77,20 +65,29 @@
     }
   }
 
-  &--beige {
-    @include ubuntu(12, 1.3, 700);
-    padding: 10px 10px;
-    color: $brown;
-    background-color: transparent;
-    border: 1px solid $beige;
+  &--green {
+    @include ubuntu(16, 18, 700);
+    margin-bottom: 10px;
+    padding: 18px 14px;
+    color: $white;
     text-decoration: none;
     text-align: center;
+    background-color: $green;
+    transition: background-color 0.3s;
 
     &:hover,
     &:focus {
-      transition: border 0.3s;
-      border: 1px solid $orange;
-      opacity: 1;
+      color: $white;
+      background-color: $green-hover;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $green-active;
+    }
+
+    &:disabled {
+      background-color: $gray-disabled;
     }
   }
 }

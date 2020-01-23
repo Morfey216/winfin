@@ -8,7 +8,7 @@
 @mixin ubuntu($size, $height, $weight) {
   font-family: $ubuntu;
   font-size: $size + px;
-  line-height: $height;
+  line-height: $height + px;
   font-weight: $weight;
 }
 

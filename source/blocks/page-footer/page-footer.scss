@@ -7,7 +7,6 @@
   @include tablet-max {
     justify-content: flex-start;
     padding: 33px 36px 8px;
-    //max-width: 768px;
   }
 
   @include mobile-max {
@@ -54,7 +53,7 @@
 }
 
 .page-footer__logo-description {
-  @include ubuntu(13, 1.5, 500);
+  @include ubuntu(13, 18, 500);
   margin-top: 25px;
   margin-bottom: 70px;
   color: $white;
@@ -62,7 +61,7 @@
 }
 
 .page-footer__technology-description {
-  @include ubuntu(14, 1.5, 500);
+  @include ubuntu(14, 18, 500);
   margin-top: 10px;
   color: $white;
 }
@@ -86,7 +85,7 @@
   position: relative;
   padding-bottom: 16px;
 
-  @include ubuntu(14, 1.5, 700);
+  @include ubuntu(18, 18, 700);
   color: $white;
 
   &::after {
@@ -184,30 +183,21 @@
 
 .page-footer__link {
   @include tablet-max {
-    @include ubuntu(12, 1.7, 500);
+    @include ubuntu(12, 18, 500);
   }
 
   @include mobile-max {
-    @include ubuntu(11, 1.8, 500);
+    @include ubuntu(11, 18, 500);
     display: inline;
     vertical-align: text-top;
   }
 
   @include no-indent;
-  @include ubuntu(13, 1.5, 500);
+  @include ubuntu(13, 18, 500);
   display: block;
   color: $white;
   text-decoration: none;
   transition: opacity 0.3s;
-
-  &--bold {
-    @include mobile-max {
-      @include ubuntu(9, 2.2, 700);
-    }
-
-    @include ubuntu(11, 1.8, 700);
-    text-transform: uppercase;
-  }
 
   &:hover,
   &:focus {
@@ -319,7 +309,7 @@
     width: 100%;
   }
 
-  @include ubuntu(14, 1.4, 500);
+  @include ubuntu(14, 18, 500);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -368,7 +358,7 @@
 }
 
 .page-footer__info-text {
-  @include ubuntu(16, 1.4, 700);
+  @include ubuntu(16, 18, 700);
 }
 
 .page-footer__messenger {
@@ -377,7 +367,7 @@
 }
 
 .page-footer_messenger-name {
-  @include ubuntu(14, 1.4, 500);
+  @include ubuntu(14, 18, 500);
   color: $icon-bg-gray;
   margin-top: 25px;
   margin-right: 32px;

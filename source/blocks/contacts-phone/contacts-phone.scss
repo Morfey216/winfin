@@ -1,0 +1,16 @@
+.contacts-phone {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+}
+
+.contacts-phone__icon {
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.contacts-phone__phone {
+  @include ubuntu(18, 24, 700);
+  display: block;
+}

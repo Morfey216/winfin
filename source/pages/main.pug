@@ -1,5 +1,6 @@
 include ../blocks/head/head
 //- include ../blocks/header/header
+include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/page-footer/page-footer
 include ../blocks/overlay/overlay
 
@@ -12,7 +13,8 @@ html(lang='ru')
     main
       h1.visually-hidden Сайт компании "WINFIN"
 
-    +overlay.js-modal-overlay
+    +feedback-contacts
     +page-footer
+    +overlay.js-modal-overlay
 
     //- include ../blocks/_scripts-block/_scripts-block

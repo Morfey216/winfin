@@ -1,0 +1,32 @@
+.address {
+  display: block;
+  position: relative;
+  margin-left: 48px;
+  padding-left: 50px;
+  padding-top: 6px;
+}
+
+.address__icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.address__office {
+  @include ubuntu(18, 20, 700);
+  display: block;
+}
+
+.address__affiliates {
+  @include ubuntu(16, 20, 700);
+  display: block;
+  color: $green;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+
+  &:hover,
+  :focus {
+    text-decoration: none;
+    opacity: 0.7;
+  }
+}

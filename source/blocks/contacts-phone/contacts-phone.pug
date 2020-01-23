@@ -1,0 +1,5 @@
+mixin contacts-phone(icon, w, h)
+  div(class='contacts-phone')&attributes(attributes)
+    img(src = 'img/icons/' + icon, width = w, height = h, alt='').contacts-phone__icon
+    a(href="tel:+74999041488").contacts-phone__phone.contacts-phone__phone--first +7 (499) 904 14 88
+    a(href="tel:+74999040171").contacts-phone__phone.contacts-phone__phone--second +7 (499) 904 01 71

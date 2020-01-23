@@ -1,0 +1,5 @@
+mixin address(icon, w, h)
+  div(class='address')&attributes(attributes)
+    img(src = 'img/icons/' + icon, width = w, height = h, alt='').address__icon
+    p.address__office Офис: Москва, Отрадная, 2
+    a(href="#").address__affiliates филиалы в РФ

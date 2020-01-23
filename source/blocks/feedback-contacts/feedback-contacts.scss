@@ -1,0 +1,27 @@
+.feedback-contacts {
+  display: flex;
+  width: 1140px;
+  margin: 26px auto;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.feedback-contacts__call,
+.feedback-contacts__contacts {
+  display: flex;
+}
+
+.feedback-contacts__gager,
+.feedback-contacts__callback {
+  width: 225px;
+  margin-right: 37px;
+}
+
+.feedback-contacts__gager {
+  color: $green-btn;
+}
+
+.feedback-contacts__callback {
+  color: $orange-btn;
+}
