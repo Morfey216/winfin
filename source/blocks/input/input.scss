@@ -1,0 +1,90 @@
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: $ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(103, 76, 51, 0.4);
+  border: 1px solid rgba(103, 76, 51, 0.1);
+  outline: none;
+
+  &:hover {
+    color: rgba(103, 76, 51, 0.6);
+    border: 1px solid rgba(103, 76, 51, 0.4);
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(103, 76, 51, 1);
+    border-color: $gray;
+
+    &::placeholder {
+      color: rgba(103, 76, 51, 1);
+    }
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.input:not([type="checkbox"]):not([type="radio"]) {
+  border-radius: 10px;
+}
+
+.input--transparent {
+  color: $white;
+  border: 1px solid $white;
+  background-color: transparent;
+
+  &:hover {
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $border-gray;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $white;
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $icon-gray;
+    }
+  }
+}
+
+.input--without-border {
+  color: $gray;
+  border: 1px solid $white;
+
+  &::placeholder {
+    color: $gray;
+  }
+
+  &:hover {
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $gray;
+    border: 1px solid $white;
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+}

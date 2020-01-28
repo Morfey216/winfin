@@ -1,0 +1,10 @@
+include ../linck/linck
+
+mixin news-promo(data)
+  div.news-promo&attributes(attributes)
+    img(src='img/news/' + data.image width="278" height="262" alt= data.alt).news-promo__img
+    div.news-promo__news-wrapper
+      p.news-promo__date #{data.date}
+      h3.news-promo__title #{data.title}
+      p.news-promo__text #{data.text}
+      +linck('Читать далее', '#', 'arrow').news-promo__linck

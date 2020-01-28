@@ -15,9 +15,17 @@
 //endregion
 
 // region Blocks
+@import "../blocks/breadcrumbs/breadcrumbs";
+@import "../blocks/title/title";
+@import "../blocks/linck/linck";
 @import "../blocks/button/button";
+@import "../blocks/input/input";
 @import "../blocks/contacts-phone/contacts-phone";
 @import "../blocks/address/address";
+@import "../blocks/news-heading/news-heading";
+@import "../blocks/news-promo/news-promo";
+@import "../blocks/news-preview/news-preview";
+@import "../blocks/news-subscription/news-subscription";
 @import "../blocks/feedback-contacts/feedback-contacts";
 @import "../blocks/page-footer/page-footer";
 @import "../blocks/overlay/overlay";

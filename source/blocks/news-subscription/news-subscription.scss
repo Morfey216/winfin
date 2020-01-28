@@ -1,0 +1,48 @@
+.news-subscription {
+  max-width: 1170px;
+  width: 100%;
+  min-height: 140px;
+  margin: 70px auto;
+  margin-bottom: 105px;
+  padding: 40px 30px;
+  background: $green url("/img/icons/bg-email.png") no-repeat -30px center;
+}
+
+.news-subscription__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.news-subscription__title {
+  width: 415px;
+
+  @include ubuntu(24, 36, 400);
+  color: $white;
+  text-transform: uppercase;
+}
+
+.news-subscription__client-email-description {
+  position: absolute;
+  top: 18px;
+  left: 450px;
+
+  @include ubuntu(18, 40, 400);
+  color: $white;
+}
+
+.news-subscription__client-email-value {
+  @include ubuntu(18, 36, 400);
+  width: 415px;
+  padding: 6px 20px;
+  padding-left: 65px;
+}
+
+.news-subscription__button {
+  @include ubuntu(18, 40, 700);
+  width: 175px;
+  text-transform: capitalize;
+}

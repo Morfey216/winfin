@@ -1,0 +1,121 @@
+.form-input {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #ffffff;
+  border-radius: 4px;
+
+  @media (max-width: $screen-lg) {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    padding-left: 14px;
+    padding-right: 24px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-left: 20px;
+  }
+}
+
+.form-input input {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1;
+  border: none;
+  padding: 0;
+  outline: none;
+  color: rgba(103, 76, 51, 0.4);
+
+  &:hover {
+    color: rgba(103, 76, 51, 0.6);
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(103, 76, 51, 1);
+
+    &::placeholder {
+      color: rgba(103, 76, 51, 1);
+    }
+  }
+}
+
+.form-input__label {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  width: calc(100% - 48px);
+  transform: translateY(-50%);
+  font-size: 14px;
+  line-height: 1;
+  color: rgba(103, 76, 51, 0.4);
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    left: 20px;
+    width: calc(100% - 44px);
+  }
+}
+
+.form-input:hover .form-input__label {
+  color: rgba(103, 76, 51, 0.6);
+}
+
+.form-input__error {
+  position: absolute;
+  bottom: -18px;
+  left: 24px;
+  width: calc(100% - 48px);
+  transition: opacity 0.3s;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0;
+  color: #ff470d;
+
+  @media (max-width: $screen-lg) {
+    left: 14px;
+    width: calc(100% - 38px);
+  }
+
+  @media (max-width: $screen-md) {
+    left: 20px;
+    width: calc(100% - 44px);
+  }
+}
+
+.form-input svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  fill: #ff470d;
+}
+
+.form-input input:focus + .form-input__label,
+.form-input input:not(:placeholder-shown) + .form-input__label,
+.form-input.error .form-input__label {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.form-input.error .form-input__error,
+.form-input.error svg {
+  opacity: 1;
+}
+
+.form-input.error input:focus ~ .form-input__error,
+.form-input.error input:focus ~ svg {
+  opacity: 0;
+}

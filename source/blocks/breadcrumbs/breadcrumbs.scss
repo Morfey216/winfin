@@ -1,0 +1,45 @@
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include list-reset;
+}
+
+.breadcrumbs__item {
+  &:not(:first-child)::before {
+    content: "|";
+    color: $breadcrumbs-gray;
+  }
+
+  &:first-child .breadcrumbs__link {
+    padding-left: 15px;
+  }
+
+  &:last-child .breadcrumbs__link {
+    color: $green;
+    text-decoration: none;
+  }
+}
+
+.breadcrumbs__link {
+  @include ubuntu(14, 48, 400);
+  color: $breadcrumbs-gray;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding-right: 9px;
+  padding-left: 9px;
+
+  @include tablet-max {
+    @include ubuntu(12, 36, 400);
+  }
+
+  &:hover,
+  &:focus {
+    color: $green;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $green;
+  }
+}

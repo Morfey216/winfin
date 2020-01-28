@@ -1,0 +1,4 @@
+mixin linck(text, href, mod)
+  a(class='linck' + (mod ? ' linck--' + mod : '') href= href)&attributes(attributes) #{text}
+    if (mod === 'arrow')
+      img(src='img/icons/arrow-long.png' width="51" height="15" alt="").linck__arrow

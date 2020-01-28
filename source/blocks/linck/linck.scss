@@ -1,0 +1,19 @@
+.linck {
+  @include ubuntu(16, 20, 700);
+  position: relative;
+  display: block;
+  color: $green;
+  text-decoration: underline;
+  transition: opacity 0.3s;
+
+  &--arrow {
+    display: inline-block;
+    padding-right: 63px;
+  }
+}
+
+.linck__arrow {
+  position: absolute;
+  right: 0;
+  top: 8px;
+}

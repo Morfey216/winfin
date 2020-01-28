@@ -1,0 +1,47 @@
+.title {
+  position: relative;
+
+  @include ubuntu(36, 40, 500);
+  color: $black-title;
+  text-transform: uppercase;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -19px;
+  //   left: 0;
+
+  //   width: 48px;
+  //   height: 4px;
+
+  //   background-color: $black-title;
+  // }
+
+  @include tablet-max {
+    @include ubuntu(24, 36, 500);
+
+    // &::before {
+    //   top: -21px;
+    // }
+  }
+
+  @include mobile-max {
+    @include ubuntu(18, 25, 500);
+
+    // &::before {
+    //   top: -19px;
+    // }
+  }
+}
+
+.title--bold {
+  @include ubuntu(36, 40, 700);
+
+  @include tablet-max {
+    @include ubuntu(24, 36, 700);
+  }
+
+  @include mobile-max {
+    @include ubuntu(18, 25, 700);
+  }
+}

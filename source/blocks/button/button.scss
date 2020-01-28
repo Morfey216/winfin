@@ -10,7 +10,7 @@
   border-radius: 10px;
 
   @include ubuntu(16, 18, 700);
-  padding: 9px 5px;
+  padding: 6px 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 
@@ -41,8 +41,7 @@
 
   &--orange {
     @include ubuntu(16, 18, 700);
-    margin-bottom: 10px;
-    padding: 18px 14px;
+    // padding: 18px 14px;
     color: $white;
     text-decoration: none;
     text-align: center;
@@ -67,7 +66,6 @@
 
   &--green {
     @include ubuntu(16, 18, 700);
-    margin-bottom: 10px;
     padding: 18px 14px;
     color: $white;
     text-decoration: none;

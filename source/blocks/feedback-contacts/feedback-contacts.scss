@@ -1,10 +1,11 @@
 .feedback-contacts {
   display: flex;
-  width: 1140px;
-  margin: 26px auto;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 26px 30px;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
+  border-top: 1px solid $border-gray;
 }
 
 .feedback-contacts__call,
@@ -16,6 +17,7 @@
 .feedback-contacts__callback {
   width: 225px;
   margin-right: 37px;
+  margin-bottom: 10px;
 }
 
 .feedback-contacts__gager {

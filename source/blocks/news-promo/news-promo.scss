@@ -1,0 +1,40 @@
+.news-promo {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 35px 30px;
+  border: 1px solid $border-gray;
+}
+
+.news-promo__img {
+  margin-right: 75px;
+}
+
+.news-promo__date {
+  @include ubuntu(14, 7, 700);
+  margin-bottom: 15px;
+  color: $orange-date;
+}
+
+.news-promo__title {
+  @include ubuntu(18, 18, 500);
+  margin-bottom: 30px;
+  color: $black-title;
+  text-transform: uppercase;
+}
+
+.news-promo__text {
+  @include ubuntu(16, 24, 400);
+  margin-bottom: 25px;
+  color: $dark-gray;
+}
+
+.news-promo__linck {
+  @include ubuntu(15, 30, 300);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

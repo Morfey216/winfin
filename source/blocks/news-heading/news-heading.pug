@@ -1,0 +1,19 @@
+include ../breadcrumbs/breadcrumbs
+include ../title/title
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Новости',
+      link: '#',
+    }
+  ]
+
+mixin news-heading
+  div.news-heading
+    +breadcrumbs(breadcrumbs).news-heading__breadcrumbs
+    +title('Новости', 'bold').news-heading__title
