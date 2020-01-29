@@ -10,6 +10,18 @@
     display: inline-block;
     padding-right: 63px;
   }
+
+  &--gray {
+    @include ubuntu(15, 18, 700);
+    display: inline-block;
+    color: $gray;
+    text-decoration-color: $header-gray;
+
+    &:hover,
+    :focus {
+      text-decoration: none;
+    }
+  }
 }
 
 .linck__arrow {

@@ -1,0 +1,193 @@
+.header {
+  border-bottom: 1px solid $border-gray;
+}
+
+.header__secondary,
+.header__primary {
+  display: flex;
+
+  @include tablet-max {
+    align-items: flex-start;
+  }
+}
+
+.header__towns-container,
+.header__towns-wrap,
+.header__schedule-wrap,
+.header__orders-wrap,
+.header__social-wrap {
+  display: flex;
+}
+
+.header__towns-container {
+  margin-right: 20px;
+}
+
+.header__towns-pin {
+  width: 15px;
+  height: 18px;
+}
+
+.header__towns-wrap span {
+  padding-left: 10px;
+  padding-right: 2px;
+}
+
+.header__towns-wrap,
+.header__schedule-wrap {
+  @include ubuntu(15, 18, 400);
+  color: $header-gray;
+  align-items: center;
+}
+
+.header__schedule,
+.header__email {
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  border-left: 1px solid $border-gray;
+}
+
+.header__email {
+  &:hover,
+  :focus {
+    color: $medium-gray;
+  }
+}
+
+.header__calculation,
+.header__gager {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-left: 1px solid $border-gray;
+
+  @include ubuntu(16, 16, 500);
+  color: $header-gray;
+
+  &:hover,
+  :focus {
+    color: $medium-gray;
+  }
+}
+
+.header__calculation {
+  width: 212px;
+}
+
+.header__gager {
+  width: 242px;
+}
+
+.header__calculation-img {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+
+.header__gager-img {
+  width: 33px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.header__social-list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  border-left: 1px solid $border-gray;
+}
+
+.header__social-item {
+  display: flex;
+  width: 37px;
+  height: 37px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: $icon-gray;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $header-gray;
+  }
+}
+
+.header__icon {
+  display: block;
+  align-content: flex-start;
+}
+
+// Второй уровень шапки
+
+.header__primary-container {
+  border-top: 1px solid $border-gray;
+  border-bottom: 1px solid $border-gray;
+}
+
+.header__primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 33px;
+  padding-bottom: 32px;
+}
+
+.header__logo {
+  display: flex;
+  width: 585px;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  margin-top: -13px;
+}
+
+.header__logo-description {
+  width: 260px;
+}
+
+.header__logo-description-text {
+  @include ubuntu(15, 18, 500);
+  margin-bottom: 10px;
+  color: $dark-gray;
+  text-transform: uppercase;
+}
+
+.header__technology {
+  display: flex;
+}
+
+.header__technology-description {
+  @include ubuntu(14, 18, 500);
+  color: $medium-gray;
+}
+
+.header__contacts {
+  display: flex;
+  width: 487px;
+  justify-content: space-between;
+  margin-top: -29px;
+}
+
+.header__contacts-phone .contacts-phone__phone {
+  @include ubuntu(23, 30, 700);
+}
+
+.header__call-request {
+  width: 206px;
+  height: 43px;
+  padding: 11px;
+}
+
+.header__overlay {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: -1;
+}
