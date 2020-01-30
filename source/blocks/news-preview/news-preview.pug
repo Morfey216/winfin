@@ -1,5 +1,5 @@
 include ../news-promo/news-promo
-//- include ../page-pagination/page-pagination
+include ../page-pagination/page-pagination
 
 -
   const newsList = [
@@ -42,4 +42,4 @@ mixin news-preview
     each item in newsList
       div.news-preview__item
         +news-promo(item).news-preview__card
-    //- +page-pagination
+    +page-pagination

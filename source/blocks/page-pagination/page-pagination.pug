@@ -1,0 +1,38 @@
+-
+  const pagination = [
+    {
+      numb: '1',
+    },
+    {
+      numb: '2',
+    },
+    {
+      numb: '3',
+    },
+    {
+      numb: '4',
+    },
+    {
+      numb: '5',
+      class: 'page-pagination__elem--active',
+    },
+    {
+      numb: '6',
+    },
+    {
+      numb: 'Далее',
+      class: 'page-pagination__elem--more',
+    },
+  ]
+
+mixin page-pagination
+  div.page-pagination
+    div.page-pagination__position
+      span.page-pagination__current-number 5
+      span из
+      span.page-pagination__all-numbers 30
+      span новостей
+    ul.page-pagination__list
+      each item in pagination
+        li.page-pagination__item
+          a(class= item.class href="#").page-pagination__elem #{item.numb}
