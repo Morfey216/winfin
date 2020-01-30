@@ -160,6 +160,7 @@
 
 .header__technology-description {
   @include ubuntu(14, 18, 500);
+  margin-left: 10px;
   color: $medium-gray;
 }
 
@@ -178,6 +179,19 @@
   width: 206px;
   height: 43px;
   padding: 11px;
+}
+
+// Главное меню
+
+.header__main-nav-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__calculator {
+  width: 202px;
+  height: 60px;
+  border-radius: 0;
 }
 
 .header__overlay {

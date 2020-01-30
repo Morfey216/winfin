@@ -1,0 +1,22 @@
+include ../nav-window/nav-window
+
+mixin main-nav
+  nav.main-nav&attributes(attributes)(aria-label="Главное меню")
+    ul.main-nav__list
+      li.main-nav__item.main-nav__item--sub.main-nav__item--window
+        a.main-nav__link(href="#") Деревянные окна
+        +nav-window.main-nav__window.main-nav__sub
+      li.main-nav__item
+        a.main-nav__link(href="#") Двери
+      li.main-nav__item.main-nav__item--sub.main-nav__item--accessories
+        a.main-nav__link(href="#") Аксессуары
+      li.main-nav__item.main-nav__item--sub.main-nav__item--services
+        a.main-nav__link(href="#") Услуги
+      li.main-nav__item
+        a.main-nav__link(href="#") Галерея
+      li.main-nav__item
+        a.main-nav__link(href="#") О нас
+      li.main-nav__item
+        a.main-nav__link(href="#") Цены
+      li.main-nav__item
+        a.main-nav__link(href="contacts.html") Контакты

@@ -1,0 +1,98 @@
+.main-nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+
+  // @include tablet-max {
+  //   flex-direction: column;
+  //   width: 100%;
+  // }
+}
+
+.main-nav__link {
+  @include ubuntu(18, 25, 700);
+  display: block;
+  padding: 17px 6px 18px;
+  color: #302f2f;
+
+  &:hover,
+  :focus,
+  :active {
+    color: $green;
+  }
+  // color: $gray;
+
+  // @include tablet-max {
+  //   padding: 14px 0;
+  // }
+
+  // @include mobile-max {
+  //   padding: 8px 0;
+  // }
+}
+
+
+.main-nav__item {
+  position: relative;
+  margin-right: 27px;
+
+  &--active,
+  &:hover {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      z-index: 2;
+      left: 6px;
+      right: 6px;
+
+      display: block;
+      height: 1px;
+
+      background-color: $gray;
+
+      @include tablet-max {
+        display: none;
+      }
+    }
+
+    .main-nav__link {
+      color: $green;
+    }
+
+    .main-nav__sub {
+      display: block;
+      padding-top: 23px;
+      padding-bottom: 60px;
+    }
+  }
+
+  // @include tablet-max {
+  //   border-top: 1px solid #E0E0E0;
+
+  //   &:hover .main-nav__window {
+  //     display: none;
+  //   }
+  // }
+
+  // @include mobile-max {
+  //   border-top: none;
+  // }
+}
+
+.main-nav__item--sub {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: -10px;
+    z-index: 2;
+
+    display: block;
+    width: 11px;
+    height: 6px;
+    background-image: url("/img/icons/arrow-marker.png");
+  }
+}

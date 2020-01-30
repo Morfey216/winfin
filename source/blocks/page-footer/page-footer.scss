@@ -5,8 +5,8 @@
 
 .page-footer__top {
   @include tablet-max {
-    justify-content: flex-start;
-    padding: 33px 36px 8px;
+    // justify-content: flex-start;
+    // padding: 33px 36px 8px;
   }
 
   @include mobile-max {
@@ -21,7 +21,7 @@
   margin: 0 auto;
   padding: 83px 15px 15px 15px;
   max-width: 1170px;
-  width: 100%;
+  // width: 100%;
 }
 
 .page-footer__company {
@@ -68,7 +68,7 @@
 
 .page-footer__nav {
   @include tablet-max {
-    width: 100%;
+    // width: 100%;
   }
 
   @include mobile-max {
@@ -78,7 +78,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  width: 865px;
+  max-width: 865px;
+  // width: 865px;
 }
 
 .page-footer__nav-header {
@@ -110,7 +111,7 @@
     }
 
     @include tablet-max {
-      margin-right: 135px;
+      // margin-right: 135px;
     }
 
     @include mobile-max {

@@ -2,8 +2,7 @@ include ../svg/svg
 include ../linck/linck
 include ../button/button
 include ../contacts-phone/contacts-phone
-//- include ../main-nav/main-nav
-//- include ../header-contacts/header-contacts
+include ../main-nav/main-nav
 
 mixin header
   header.header
@@ -52,19 +51,11 @@ mixin header
         div.header__contacts
           +contacts-phone('smartphone.png', 18, 32).header__contacts-phone
           +button("Заказать звонок", "orange")(aria-label='Заказать звонок' type="button").header__call-request
-    //-       img.header__bage-img(src="img/logos/7years.svg" width="119" height="40" alt="7 лет гарантии")
-    //-     div.header__main-nav-wrap
-    //-       +main-nav.header__main-nav
-    //-     a.header__favorites(href="#")
-    //-       span.header__favorites-circle
-    //-         span.header__favorites-count 3
-    //-       +svg("heart").header__favorites-svg(width="20" height="18")
-    //-     div.header__call-gager
-    //-       +button("Вызвать замерщика", "transparent", { name: "tape", width: 21, height: 16 } )(type="button").header__call-gager-button
+    div.header__main-nav-container.container
+        div.header__main-nav-wrap
+          +main-nav.header__main-nav
+          +button("Калькулятор", "green")(aria-label='Калькулятор' type="button").header__calculator
 
-    //-     div.header__contacts-wrap
-    //-       +header-contacts.header__contacts
-    //-     +button("Заказать звонок", "primary", { name: "phone", width: 16, height: 16 })(aria-label='Заказать звонок' type="button").header__call-request
 
     //- button.header__toggle(type="button")
     //-   span.visually-hidden Открыть/закрыть
