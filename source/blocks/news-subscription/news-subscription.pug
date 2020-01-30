@@ -2,8 +2,8 @@ include ../input/input
 include ../button/button
 
 mixin news-subscription
-  section.news-subscription
-    form(method="post" action="" id="news-subscription").news-subscription__form
+  div.news-subscription
+    form(method="post" action="#" id="news-subscription").news-subscription__form
       p.news-subscription__title Будьте в курсе последних новостей от нашей компании
       label.news-subscription__client-email-description(for="client-email") Email
       +input('transparent').news-subscription__client-email-value(
