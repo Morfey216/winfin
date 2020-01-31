@@ -1,18 +1,24 @@
 include ../blocks/head/head
 include ../blocks/header/header
+include ../blocks/promotions-heading/promotions-heading
+include ../blocks/promotions-preview/promotions-preview
+include ../blocks/news-subscription/news-subscription
 include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/page-footer/page-footer
 include ../blocks/overlay/overlay
 
 doctype html
 html(lang='ru')
-  +head('Главная')
+  +head('Акции')
   body
     +header
 
     main
       h1.visually-hidden Сайт компании "WINFIN"
 
+      +promotions-heading
+      +promotions-preview
+      +news-subscription
       +feedback-contacts
     +page-footer
     +overlay.js-modal-overlay

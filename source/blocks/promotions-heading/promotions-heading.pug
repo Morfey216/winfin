@@ -1,0 +1,19 @@
+include ../breadcrumbs/breadcrumbs
+include ../title/title
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Акции',
+      link: '#',
+    }
+  ]
+
+mixin promotions-heading
+  div.promotions-heading
+    +breadcrumbs(breadcrumbs).promotions-heading__breadcrumbs
+    +title('Акции', 'bold').promotions-heading__title

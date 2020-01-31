@@ -16,18 +16,108 @@
 </head>
 
 <body>
-  <main>
-    <h1 class="visually-hidden">Сайт компании "WINFIN"</h1>
-  </main>
-  <div class="feedback-contacts">
-    <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
-    <div class="feedback-contacts__contacts">
-      <div class="contacts-phone feedback-contacts__phone"><img class="contacts-phone__icon" src="img/icons/phone.png" width="31" height="31" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div>
-      <div class="address feedback-contacts__address"><img class="address__icon" src="img/icons/point.png" width="31" height="31" alt="" />
-        <p class="address__office">Офис: Москва, Отрадная, 2</p><a class="address__affiliates" href="#">филиалы в РФ</a>
+  <header class="header">
+    <div class="header__secondary container">
+      <div class="header__towns-container">
+        <div class="header__towns-wrap"><img class="header__towns-pin" src="img/icons/marker.svg" width="12" height="18" alt="" /><span>Ваш город</span><a class="linck linck--gray header__towns-linck" href="#">Москва?</a></div>
+      </div>
+      <div class="header__schedule-wrap">
+        <p class="header__schedule">Пн. – Пт.: с 10:00 до 19:00</p><a class="header__email" href="mailto:window@winfin.ru">window@winfin.ru</a>
+      </div>
+      <div class="header__orders-wrap"><a class="header__calculation" href="#"><img class="header__calculation-img" src="img/icons/resize.png" width="34" height="34" alt="#" /><span class="header__calculation-desc">Выслать размеры на рассчет</span></a><a class="header__gager" href="#"><img class="header__gager-img" src="img/icons/measuring-tape.png" width="33" height="25" alt="#" /><span class="header__gager-desc">Вызвать замерщика бесплатно</span></a></div>
+      <div class="header__social-wrap">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="header__social-list">
+          <li class="header__social-item"><a class="header__social-link" href="#"><img class="header__icon" src="img/icons/facebook-white.png" width="8" height="14" alt="Логотип Facebook" /><span class="visually-hidden">Подписывайтесь к нам на Facebook</span></a></li>
+          <li class="header__social-item"><a class="header__social-link" href="#"><img class="header__icon" src="img/icons/odnoklassniki-white.png" width="11" height="17" alt="Логотип Одноклассники" /><span class="visually-hidden">Подписывайтесь к нам на Одноклассниках</span></a></li>
+          <li class="header__social-item"><a class="header__social-link" href="#"><img class="header__icon" src="img/icons/instagram-white.png" width="19" height="19" alt="Логотип Instagram" /><span class="visually-hidden">Подписывайтесь к нам на Instagram</span></a></li>
+        </ul>
       </div>
     </div>
-  </div>
+    <div class="header__primary-container">
+      <div class="header__primary container">
+        <div class="header__logo"><a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logos/logo-header.png" width="262" height="79" alt="Логотип компании WINFIN" /></a>
+          <div class="header__logo-description">
+            <p class="header__logo-description-text">Деревянные окна "под ключ" производство, поставка и установка по России</p>
+            <div class="header__technology"><img class="header__technology-img" src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии" />
+              <p class="header__technology-description">Finland Technology</p>
+            </div>
+          </div>
+        </div>
+        <div class="header__contacts">
+          <div class="contacts-phone header__contacts-phone"><img class="contacts-phone__icon" src="img/icons/smartphone.png" width="18" height="32" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div><button class="button button--orange header__call-request" aria-label="Заказать звонок" type="button"><span>Заказать звонок</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="header__main-nav-container container">
+      <div class="header__main-nav-wrap">
+        <nav class="main-nav header__main-nav" aria-label="Главное меню">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--sub main-nav__item--window"><a class="main-nav__link" href="#">Деревянные окна</a>
+              <ul class="nav-window main-nav__window main-nav__sub">
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Дерево-алюминиевые</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из дуба</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из сосны</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из лиственницы<img class="nav-window__sub-icon" src="img/icons/arrow-marker-r.png" width="6" height="11" alt="" /></a>
+                  <div class="nav-window__sub">
+                    <ul class="nav-window__sub-list">
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Дерево-алюминиевые</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Дерево-алюминиевые</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из дуба</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из сосны</a></li>
+                      <li class="nav-window__sub-item"><a class="nav-window__sub-link" href="#">Из лиственницы</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из дуба</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из сосны</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из лиственницы</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из дуба</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из сосны</a></li>
+                <li class="nav-window__item"><a class="nav-window__link" href="#">Из лиственницы</a></li>
+              </ul>
+            </li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Двери</a></li>
+            <li class="main-nav__item main-nav__item--sub main-nav__item--accessories"><a class="main-nav__link" href="#">Аксессуары</a></li>
+            <li class="main-nav__item main-nav__item--sub main-nav__item--services"><a class="main-nav__link" href="#">Услуги</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Галерея</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Цены</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav><button class="button button--green header__calculator" aria-label="Калькулятор" type="button"><span>Калькулятор</span></button>
+      </div>
+    </div>
+    <div class="header__dropdown"></div>
+    <div class="header__overlay"></div>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Сайт компании "WINFIN"</h1>
+    <div class="feedback-contacts">
+      <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
+      <div class="feedback-contacts__contacts">
+        <div class="contacts-phone feedback-contacts__phone"><img class="contacts-phone__icon" src="img/icons/phone.png" width="31" height="31" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div>
+        <div class="address feedback-contacts__address"><img class="address__icon" src="img/icons/point.png" width="31" height="31" alt="" />
+          <p class="address__office">Офис: Москва, Отрадная, 2</p><a class="address__affiliates" href="#">филиалы в РФ</a>
+        </div>
+      </div>
+    </div>
+  </main>
   <footer class="page-footer">
     <div class="page-footer__top">
       <div class="page-footer__company">

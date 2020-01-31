@@ -1,0 +1,80 @@
+.promotions-promo {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  margin-bottom: 22px;
+  padding: 35px 30px;
+  border: 1px solid $border-gray;
+}
+
+.promotions-promo__img-wrapper {
+  position: relative;
+  width: 490px;
+  margin-right: 28px;
+}
+
+.promotions-promo__img-wrapper--mark {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-right: 47px solid transparent;
+    border-bottom: 42px solid transparent;
+    border-left: 47px solid $orange;
+    border-top: 42px solid $orange;
+  }
+}
+
+.promotions-promo__promotions-wrapper {
+  max-width: 590px;
+}
+
+.promotions-promo__img {
+  width: 490px;
+  height: 269px;
+}
+
+.promotions-promo__img-mark {
+  @include ubuntu(15, 30, 400);
+  position: absolute;
+  top: 17px;
+  left: 3px;
+  display: inline-block;
+  min-width: 65px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  transform: rotate(-40deg);
+  z-index: 2;
+}
+
+.promotions-promo__date {
+  @include ubuntu(15, 24, 500);
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  color: $white;
+  background-color: $red;
+}
+
+.promotions-promo__title {
+  @include ubuntu(22, 24, 700);
+  margin-bottom: 20px;
+  color: $red;
+  text-transform: uppercase;
+}
+
+.promotions-promo__text {
+  @include ubuntu(17, 24, 400);
+  margin-bottom: 25px;
+  color: $dark-gray;
+}
+
+.promotions-promo__linck {
+  @include ubuntu(15, 30, 300);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

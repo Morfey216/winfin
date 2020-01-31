@@ -1,0 +1,13 @@
+include ../linck/linck
+
+mixin promotions-promo(data)
+  div.promotions-promo&attributes(attributes)
+    div(class= data.label ? 'promotions-promo__img-wrapper--mark' : '').promotions-promo__img-wrapper
+      if (data.label)
+        span.promotions-promo__img-mark #{data.label}
+      img(src='img/promotions/' + data.image width="490" height="269" alt= data.alt).promotions-promo__img
+    div.promotions-promo__promotions-wrapper
+      p.promotions-promo__date #{data.date}
+      h3.promotions-promo__title #{data.title}
+      p.promotions-promo__text #{data.text}
+      +linck('Читать далее', '#', 'arrow').promotions-promo__linck

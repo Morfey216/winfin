@@ -6,4 +6,8 @@ import lazyload from './general/lazyload';
 /* eslint-enable */
 // region Blocks
 
+import pagination from '../blocks/page-pagination/page-pagination';
+
 // endregion
+
+pagination();
