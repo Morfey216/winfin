@@ -5,10 +5,10 @@
   padding-right: 15px;
   margin: 0 auto;
 
-  @include tablet-max {
-    padding-left: 34px;
-    padding-right: 34px;
-  }
+  // @include tablet-max {
+  //   padding-left: 34px;
+  //   padding-right: 34px;
+  // }
 
   @include mobile-max {
     padding-left: 18px;

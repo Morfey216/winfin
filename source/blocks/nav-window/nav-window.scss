@@ -9,22 +9,28 @@
 
   background-color: $white;
   border-top: 1px solid $gray;
-  // border-bottom-left-radius: 8px;
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
 
   z-index: 5;
+
+  @include tablet-medium-max {
+    min-width: auto;
+  }
 }
 
 .nav-window__link {
-  // display: block;
   display: flex;
   margin: 0 32px;
   padding-top: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid $border-gray;
 
-  @include ubuntu(16, 24px, 400);
+  @include ubuntu(16, 24, 400);
   color: $gray;
+
+  @include tablet-medium-max {
+    border-bottom: none;
+  }
 }
 
 .nav-window__item {
@@ -32,7 +38,7 @@
 
   &:hover {
     .nav-window__link {
-      @include ubuntu(16, 24px, 700);
+      @include ubuntu(16, 24, 700);
       color: $gray;
     }
 
@@ -59,11 +65,7 @@
   top: 0;
   bottom: 0;
   min-width: 447px;
-  // width: 100%;
   background-color: $white;
-  // background-color: $green;
-  // box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
-  // box-shadow: inset 25px 0 25px -5px rgba(0, 0, 0, 0.6);
 
   z-index: 5;
 }
@@ -85,6 +87,11 @@
 
   @include list-reset;
   background-color: #fcfbfb;
+
+  @include tablet-medium-max {
+    position: static;
+    min-width: auto;
+  }
 }
 
 .nav-window__sub-link {
@@ -93,7 +100,7 @@
   padding-bottom: 9px;
   padding-left: 33px;
 
-  @include ubuntu(16, 26px, 500);
+  @include ubuntu(16, 26, 500);
   color: $gray;
 }
 
@@ -102,7 +109,7 @@
 
   &:hover {
     .nav-window__sub-link {
-      @include ubuntu(16, 26px, 700);
+      @include ubuntu(16, 26, 700);
       color: $green;
     }
 

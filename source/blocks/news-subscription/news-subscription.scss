@@ -1,4 +1,4 @@
-.news-subscription {
+.news-subscription__form-wrapper {
   max-width: 1170px;
   width: 100%;
   min-height: 140px;
@@ -6,6 +6,19 @@
   margin-bottom: 105px;
   padding: 40px 30px;
   background: $green url("/img/icons/bg-email.png") no-repeat -30px center;
+
+  @include tablet-medium-max {
+    margin-bottom: 70px;
+  }
+
+  @include mobile-max {
+    margin-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  @include mobile-medium-max {
+    margin-bottom: 50px;
+  }
 }
 
 .news-subscription__form {
@@ -13,8 +26,18 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  width: 1050px;
+  max-width: 1050px;
   margin: 0 auto;
+
+  @include tablet-max {
+    justify-content: space-between;
+  }
+
+  @include tablet-medium-max {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
 }
 
 .news-subscription__title {
@@ -23,26 +46,78 @@
   @include ubuntu(24, 36, 400);
   color: $white;
   text-transform: uppercase;
+
+  @include tablet-max {
+    @include ubuntu(22, 34, 400);
+    width: 380px;
+  }
+
+  @include tablet-medium-max {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}
+
+.news-subscription__client-email-label {
+  position: relative;
+  font-size: 0;
 }
 
 .news-subscription__client-email-description {
   position: absolute;
-  top: 18px;
-  left: 450px;
+  top: 5px;
+  left: 15px;
 
   @include ubuntu(18, 40, 400);
   color: $white;
+
+  @include tablet-max {
+    font-size: 16px;
+  }
+
+  @include mobile-max {
+    left: 25px;
+  }
 }
 
 .news-subscription__client-email-value {
   @include ubuntu(18, 36, 400);
   width: 415px;
   padding: 6px 20px;
-  padding-left: 65px;
+  padding-left: 70px;
+
+  &::placeholder {
+    opacity: 0.6;
+  }
+
+  @include tablet-max {
+    width: 262px;
+    font-size: 16px;
+    padding-left: 65px;
+  }
+
+  @include mobile-max {
+    margin: 15px;
+    margin-top: 0;
+  }
+
+  @include mobile-medium-max {
+    width: 290px;
+  }
 }
 
 .news-subscription__button {
   @include ubuntu(18, 40, 700);
   width: 175px;
   text-transform: capitalize;
+
+  @include mobile-max {
+    margin-bottom: 15px;
+  }
+
+  @include mobile-medium-max {
+    width: 290px;
+  }
 }

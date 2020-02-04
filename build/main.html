@@ -9,10 +9,10 @@
   <link rel="preload" href="css/style.css" as="style" />
   <link rel="stylesheet" href="css/style.css" media="screen" />
   <link rel="preload" href="js/main.js" as="script" />
-  <link rel="preload" href="fonts/Ubuntu-Light.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Regular.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Medium.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-300-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-400-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-500-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-700-normal.woff2" as="font" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -38,7 +38,7 @@
       <div class="header__primary container">
         <div class="header__logo"><a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logos/logo-header.png" width="262" height="79" alt="Логотип компании WINFIN" /></a>
           <div class="header__logo-description">
-            <p class="header__logo-description-text">Деревянные окна "под ключ" производство, поставка и установка по России</p>
+            <p class="header__logo-description-text">Деревянные окна "под ключ"<span>производство, поставка и установка по России</span></p>
             <div class="header__technology"><img class="header__technology-img" src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии" />
               <p class="header__technology-description">Finland Technology</p>
             </div>
@@ -102,13 +102,17 @@
           </ul>
         </nav><button class="button button--green header__calculator" aria-label="Калькулятор" type="button"><span>Калькулятор</span></button>
       </div>
-    </div>
+    </div><button class="header__toggle" type="button"><span class="visually-hidden">Открыть/закрыть</span><svg class="header__toggle-svg-open" width="32" height="23">
+        <use xlink:href="img/sprite.svg#burger"></use>
+      </svg><svg class="header__toggle-svg-close" width="23" height="23">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg></button>
     <div class="header__dropdown"></div>
     <div class="header__overlay"></div>
   </header>
   <main>
     <h1 class="visually-hidden">Сайт компании "WINFIN"</h1>
-    <div class="feedback-contacts">
+    <div class="feedback-contacts container">
       <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
       <div class="feedback-contacts__contacts">
         <div class="contacts-phone feedback-contacts__phone"><img class="contacts-phone__icon" src="img/icons/phone.png" width="31" height="31" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div>

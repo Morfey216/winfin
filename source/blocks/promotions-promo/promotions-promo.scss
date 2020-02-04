@@ -5,12 +5,21 @@
   margin-bottom: 22px;
   padding: 35px 30px;
   border: 1px solid $border-gray;
+
+  @include mobile-max {
+    flex-direction: column;
+  }
 }
 
 .promotions-promo__img-wrapper {
   position: relative;
   width: 490px;
   margin-right: 28px;
+
+  @include mobile-max {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .promotions-promo__img-wrapper--mark {
@@ -27,24 +36,32 @@
 
 .promotions-promo__promotions-wrapper {
   max-width: 590px;
+
+  @include mobile-max {
+    max-width: 658px;
+    width: auto;
+  }
 }
 
 .promotions-promo__img {
   width: 490px;
-  height: 269px;
+
+  @include mobile-max {
+    width: 100%;
+  }
 }
 
 .promotions-promo__img-mark {
   @include ubuntu(15, 30, 400);
   position: absolute;
   top: 17px;
-  left: 3px;
+  left: 2px;
   display: inline-block;
   min-width: 65px;
   text-align: center;
   color: $white;
   text-transform: uppercase;
-  transform: rotate(-40deg);
+  transform: rotate(-42deg);
   z-index: 2;
 }
 
@@ -62,12 +79,30 @@
   margin-bottom: 20px;
   color: $red;
   text-transform: uppercase;
+
+  @include mobile-max {
+    @include ubuntu(18, 20, 700);
+    margin-bottom: 14px;
+  }
 }
 
 .promotions-promo__text {
   @include ubuntu(17, 24, 400);
   margin-bottom: 25px;
   color: $dark-gray;
+
+  @include tablet-medium-max {
+    font-size: 16px;
+  }
+
+  @include mobile-max {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 14px;
+  }
 }
 
 .promotions-promo__linck {

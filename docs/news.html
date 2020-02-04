@@ -9,10 +9,10 @@
   <link rel="preload" href="css/style.css" as="style" />
   <link rel="stylesheet" href="css/style.css" media="screen" />
   <link rel="preload" href="js/main.js" as="script" />
-  <link rel="preload" href="fonts/Ubuntu-Light.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Regular.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Medium.woff2" as="font" crossorigin="anonymous" />
-  <link rel="preload" href="fonts/Ubuntu-Bold.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-300-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-400-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-500-normal.woff2" as="font" crossorigin="anonymous" />
+  <link rel="preload" href="fonts/ubuntu-700-normal.woff2" as="font" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -38,7 +38,7 @@
       <div class="header__primary container">
         <div class="header__logo"><a class="header__logo-link" href="#"><img class="header__logo-img" src="img/logos/logo-header.png" width="262" height="79" alt="Логотип компании WINFIN" /></a>
           <div class="header__logo-description">
-            <p class="header__logo-description-text">Деревянные окна "под ключ" производство, поставка и установка по России</p>
+            <p class="header__logo-description-text">Деревянные окна "под ключ"<span>производство, поставка и установка по России</span></p>
             <div class="header__technology"><img class="header__technology-img" src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии" />
               <p class="header__technology-description">Finland Technology</p>
             </div>
@@ -102,13 +102,17 @@
           </ul>
         </nav><button class="button button--green header__calculator" aria-label="Калькулятор" type="button"><span>Калькулятор</span></button>
       </div>
-    </div>
+    </div><button class="header__toggle" type="button"><span class="visually-hidden">Открыть/закрыть</span><svg class="header__toggle-svg-open" width="32" height="23">
+        <use xlink:href="img/sprite.svg#burger"></use>
+      </svg><svg class="header__toggle-svg-close" width="23" height="23">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg></button>
     <div class="header__dropdown"></div>
     <div class="header__overlay"></div>
   </header>
   <main>
     <h1 class="visually-hidden">Сайт компании "WINFIN"</h1>
-    <div class="news-heading">
+    <div class="news-heading container">
       <div class="breadcrumbs news-heading__breadcrumbs">
         <ul class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
@@ -167,12 +171,14 @@
         </ul>
       </div>
     </div>
-    <div class="news-subscription">
-      <form class="news-subscription__form" method="post" action="#" id="news-subscription">
-        <p class="news-subscription__title">Будьте в курсе последних новостей от нашей компании</p><label class="news-subscription__client-email-description" for="client-email">Email</label><input class="input input--transparent news-subscription__client-email-value" name="client-email" type="email" id="client-email" placeholder="|" required="required" /><button class="button button--orange news-subscription__button js-nsf-submit" type="submit"><span>Отправить</span></button>
-      </form>
+    <div class="news-subscription container">
+      <div class="news-subscription__form-wrapper">
+        <form class="news-subscription__form" method="post" action="#" id="news-subscription">
+          <p class="news-subscription__title">Будьте в курсе последних новостей от нашей компании</p><label class="news-subscription__client-email-label" for="client-email">Email<input class="input input--transparent news-subscription__client-email-value" name="client-email" type="email" id="client-email" placeholder="Введите Email" required="required" /><span class="news-subscription__client-email-description">Email:</span></label><button class="button button--orange news-subscription__button js-nsf-submit" type="submit"><span>Отправить</span></button>
+        </form>
+      </div>
     </div>
-    <div class="feedback-contacts">
+    <div class="feedback-contacts container">
       <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
       <div class="feedback-contacts__contacts">
         <div class="contacts-phone feedback-contacts__phone"><img class="contacts-phone__icon" src="img/icons/phone.png" width="31" height="31" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div>
@@ -255,6 +261,14 @@
     </div>
   </footer>
   <div class="overlay js-modal-overlay"></div>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/4.1.0/simplebar.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.5.3/cleave.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>

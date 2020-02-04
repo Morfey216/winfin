@@ -14,8 +14,12 @@
   cursor: pointer;
   transition: background-color 0.3s;
 
-  @include tablet-max {
-    padding: 10px 5px;
+  // @include tablet-max {
+  //   padding: 10px 5px;
+  // }
+
+  @include mobile-max {
+    font-size: 12px;
   }
 
   &--transparent {
@@ -40,7 +44,7 @@
   }
 
   &--orange {
-    @include ubuntu(16, 18, 700);
+    // @include ubuntu(16, 18, 700);
     // padding: 18px 14px;
     color: $white;
     text-decoration: none;
@@ -65,7 +69,7 @@
   }
 
   &--green {
-    @include ubuntu(16, 18, 700);
+    // @include ubuntu(16, 18, 700);
     padding: 18px 14px;
     color: $white;
     text-decoration: none;

@@ -5,10 +5,24 @@
   margin-bottom: 12px;
   padding: 35px 30px;
   border: 1px solid $border-gray;
+
+  @include mobile-max {
+    flex-direction: column;
+  }
 }
 
 .news-promo__img {
+  width: 278px;
   margin-right: 75px;
+
+  @include tablet-medium-max {
+    margin-right: 35px;
+  }
+
+  @include mobile-max {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .news-promo__date {
@@ -28,6 +42,15 @@
   @include ubuntu(16, 24, 400);
   margin-bottom: 25px;
   color: $dark-gray;
+
+  @include mobile-max {
+    font-size: 17px;
+    margin-bottom: 15px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 14px;
+  }
 }
 
 .news-promo__linck {

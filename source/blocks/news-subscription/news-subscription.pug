@@ -2,14 +2,16 @@ include ../input/input
 include ../button/button
 
 mixin news-subscription
-  div.news-subscription
-    form(method="post" action="#" id="news-subscription").news-subscription__form
-      p.news-subscription__title Будьте в курсе последних новостей от нашей компании
-      label.news-subscription__client-email-description(for="client-email") Email
-      +input('transparent').news-subscription__client-email-value(
-        name="client-email"
-        type="email"
-        id="client-email"
-        placeholder="|"
-        required)
-      +button('Отправить', 'orange')(type="submit").news-subscription__button.js-nsf-submit
+  div.news-subscription.container
+    div.news-subscription__form-wrapper
+      form(method="post" action="#" id="news-subscription").news-subscription__form
+        p.news-subscription__title Будьте в курсе последних новостей от нашей компании
+        label.news-subscription__client-email-label(for="client-email") Email
+          +input('transparent').news-subscription__client-email-value(
+            name="client-email"
+            type="email"
+            id="client-email"
+            placeholder="Введите Email"
+            required)
+          span.news-subscription__client-email-description Email:
+        +button('Отправить', 'orange')(type="submit").news-subscription__button.js-nsf-submit

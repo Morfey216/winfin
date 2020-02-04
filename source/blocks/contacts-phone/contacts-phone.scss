@@ -8,6 +8,10 @@
   position: absolute;
   top: 6px;
   left: 0;
+
+  @include mobile-max {
+    top: 3px;
+  }
 }
 
 .contacts-phone__phone {

@@ -38,10 +38,10 @@
   @include ubuntu(36, 40, 700);
 
   @include tablet-max {
-    @include ubuntu(24, 36, 700);
+    @include ubuntu(28, 36, 700);
   }
 
   @include mobile-max {
-    @include ubuntu(18, 25, 700);
+    @include ubuntu(24, 25, 700);
   }
 }

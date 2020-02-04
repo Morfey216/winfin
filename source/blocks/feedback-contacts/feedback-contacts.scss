@@ -6,17 +6,60 @@
   padding: 26px 30px;
   justify-content: space-between;
   border-top: 1px solid $border-gray;
+
+  @include tablet-medium-max {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @include mobile-medium-max {
+    flex-direction: column-reverse;
+    width: 360px;
+  }
 }
 
 .feedback-contacts__call,
 .feedback-contacts__contacts {
   display: flex;
+
+  @include tablet-medium-max {
+    flex-direction: column;
+  }
+}
+
+.feedback-contacts__contacts {
+  @include tablet-medium-max {
+    flex-direction: column-reverse;
+  }
 }
 
 .feedback-contacts__gager,
 .feedback-contacts__callback {
   width: 225px;
+  height: 54px;
   margin-right: 37px;
+
+  @include tablet-max {
+    width: 210px;
+    margin-right: 20px;
+  }
+
+  @include tablet-medium-max {
+    width: 270px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+
+  @include mobile-max {
+    width: 175px;
+    height: 40px;
+    margin-right: 25px;
+  }
+
+  @include mobile-medium-max {
+    width: 300px;
+    margin-right: 0;
+  }
 }
 
 .feedback-contacts__gager {
@@ -25,4 +68,49 @@
 
 .feedback-contacts__callback {
   color: $orange-btn;
+}
+
+.feedback-contacts__phone {
+  margin-right: 58px;
+
+  @include tablet-max {
+    margin-right: 15px;
+
+    & .contacts-phone__phone {
+      font-size: 16px;
+    }
+  }
+
+  @include tablet-medium-max {
+    margin-bottom: 20px;
+  }
+
+  @include mobile-max {
+    margin-right: 0;
+
+    & .contacts-phone__phone {
+      @include ubuntu(14, 20, 500);
+    }
+  }
+}
+
+.feedback-contacts__address {
+  @include tablet-max {
+    & .address__office {
+      font-size: 16px;
+    }
+  }
+
+  @include tablet-medium-max {
+    margin-bottom: 20px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 15px;
+
+    & .address__office,
+    .address__affiliates {
+      @include ubuntu(14, 20, 500);
+    }
+  }
 }

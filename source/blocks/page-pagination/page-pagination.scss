@@ -20,6 +20,10 @@
 .page-pagination__position {
   @include ubuntu(17, 24, 400);
   color: $very-light-gray;
+
+  @include mobile-medium-max {
+    font-size: 14px;
+  }
 }
 
 .page-pagination__position span {
@@ -39,6 +43,11 @@
   display: flex;
   color: $dark-gray;
 
+  &:hover {
+    color: $green;
+    border-color: $green;
+  }
+
   &--more {
     @include ubuntu(17, 24, 400);
     @include no-indent;
@@ -48,20 +57,23 @@
     border-bottom: 1px solid $very-light-gray;
   }
 
-  &:hover {
+  &--active {
     color: $green;
     border-color: $green;
   }
 
-  &--active {
-    color: $green;
-    border-color: $green;
+  @include mobile-medium-max {
+    font-size: 14px;
   }
 }
 
 .page-pagination__item {
   @include mobile-max {
     margin-right: 15px;
+  }
+
+  @include mobile-medium-max {
+    margin-right: 10px;
   }
   margin-right: 16px;
 }
