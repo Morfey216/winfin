@@ -1,0 +1,79 @@
+.company-promo {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 72px 15px 41px;
+
+  @include mobile-max {
+    padding: 38px 15px 15px;
+  }
+}
+
+.company-promo p {
+  @include ubuntu(17, 24, 700);
+  margin: 32px auto;
+  text-align: center;
+
+  @include mobile-max {
+    @include ubuntu(14, 20, 500);
+  }
+
+  @include mobile-medium-max {
+    margin: 18px auto;
+    font-size: 12px;
+  }
+}
+
+.company-promo__qualities {
+  display: flex;
+
+  @include mobile-max {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.company-promo__quality {
+  width: 285px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile-max {
+    width: 260px;
+    margin-bottom: 32px;
+  }
+
+  @include mobile-medium-max {
+    width: 160px;
+  }
+}
+
+.company-promo__quality p {
+  @include ubuntu(18, 24, 500);
+  margin: 0;
+
+  @include mobile-max {
+    @include ubuntu(14, 20, 400);
+  }
+}
+
+.company-promo__quality-img {
+  width: 95px;
+  height: 95px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+
+  background-image: radial-gradient(rgba(100, 137, 46, 1) 0, rgba(100, 137, 46, 1) 55%, rgba(255, 255, 255, 0) 57%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid $border-gray;
+  border-radius: 50%;
+
+  @include mobile-medium-max {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.company-promo__quality-img img {
+  margin: auto;
+}

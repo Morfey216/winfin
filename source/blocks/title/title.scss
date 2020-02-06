@@ -1,21 +1,7 @@
 .title {
-  // position: relative;
-
   @include ubuntu(36, 40, 500);
   color: $black-title;
   text-transform: uppercase;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: -19px;
-  //   left: 0;
-
-  //   width: 48px;
-  //   height: 4px;
-
-  //   background-color: $black-title;
-  // }
 
   @include tablet-max {
     @include ubuntu(24, 36, 500);
@@ -43,5 +29,24 @@
 
   @include mobile-max {
     @include ubuntu(24, 25, 700);
+  }
+}
+
+.title--section {
+  position: relative;
+  text-align: center;
+  padding-top: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 80px;
+    height: 2px;
+
+    background-color: $border-gray;
   }
 }
