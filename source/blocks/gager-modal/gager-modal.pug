@@ -1,0 +1,16 @@
+include ../modal/modal
+include ../link/link
+include ../button/button
+include ../form-input/form-input
+
+mixin gager-modal
+  +modal('gager-modal').gager-modal
+    h2 Вызвать на замер
+    form.gager-modal__form.js-gmf(action="#" method="post")
+      +form-input({label: 'Ваше имя', error: 'Введите имя',})(type="text").gager-modal__input.js-gmf-name#gmf-name
+      +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',})(type="tel").gager-modal__input.js-gmf-phone#gmf-phone
+      +button('Отправить', 'orange')(type="submit").gager-modal__submit-button.js-gmf-submit
+      p.gager-modal__privacy
+        | Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+        |
+        +link('персональных данных', '#', 'under-solid').gager-modal__privacy-link

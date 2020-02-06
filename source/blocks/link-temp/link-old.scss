@@ -1,0 +1,121 @@
+.link {
+  color: $brown;
+  transition: color 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $black;
+  }
+
+  &--dotted {
+    border-bottom: 1px dashed $brown;
+    transition: border-bottom 0.3s;
+
+    &:hover {
+      border-bottom-color: $white;
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $black;
+    }
+  }
+
+  &--underline {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:active {
+      color: $black;
+    }
+  }
+}
+
+.link--as-btn {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+
+  @include montserrat(11, 20px, 700);
+  padding: 10px 5px;
+  color: $white;
+  text-align: center;
+  background-color: $orange;
+  transition: background-color 0.3s;
+  border: none;
+
+  cursor: pointer;
+
+  span {
+    margin-right: 5px;
+  }
+
+  svg {
+    color: $white;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $orange-hover;
+  }
+
+  &:active {
+    color: $white;
+    background-color: $orange-active;
+  }
+
+  @include tablet-max {
+    padding: 10px 5px;
+  }
+}
+
+.link--transparent {
+  color: $brown;
+  background-color: transparent;
+  border: 1px solid $light-brown;
+
+  transition: border-color 0.3s;
+
+  svg {
+    color: $brown;
+  }
+
+  &:hover {
+    border-color: $brown;
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $brown;
+    background-color: transparent;
+  }
+}
+
+.link--under-solid {
+  font-family: $montserrat;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.33;
+  color: $light-brown;
+  border-bottom: 1px solid $light-brown;
+
+  &:hover,
+  &:focus {
+    color: $brown;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  &:active {
+    color: black;
+  }
+}

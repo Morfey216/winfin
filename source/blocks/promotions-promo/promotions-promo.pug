@@ -1,4 +1,4 @@
-include ../linck/linck
+include ../link/link
 
 mixin promotions-promo(data)
   div.promotions-promo&attributes(attributes)
@@ -10,4 +10,4 @@ mixin promotions-promo(data)
       p.promotions-promo__date #{data.date}
       h3.promotions-promo__title #{data.title}
       p.promotions-promo__text #{data.text}
-      +linck('Читать далее', '#', 'arrow').promotions-promo__linck
+      +link('Читать далее', '#', 'arrow').promotions-promo__link

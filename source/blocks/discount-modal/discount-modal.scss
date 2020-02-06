@@ -1,0 +1,205 @@
+.discount-modal {
+  width: 1052px;
+  background-color: $white;
+}
+
+.discount-modal__wrapper {
+  // width: 960px;
+  width: auto;
+  margin: 100px 46px 36px;
+  padding: 40px 40px 35px;
+  background: $white url("../img/modal/modal-bg.jpg") no-repeat right top;
+  background-size: cover;
+  border: 1px solid $border-gray;
+}
+
+.discount-modal__title {
+  @include ubuntu(37, 36, 700);
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $black-title;
+}
+
+.discount-modal__label {
+  @include ubuntu(30, 36, 500);
+  margin-bottom: 3px;
+  text-align: center;
+  color: $green;
+}
+
+.discount-modal__description {
+  @include ubuntu(19, 19, 500);
+  margin-bottom: 70px;
+  text-align: center;
+  color: $light-gray;
+}
+
+.discount-modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 680px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.discount-modal__input {
+  width: 329px;
+  margin-bottom: 12px;
+  padding: 15px 23px 15px 19px;
+  border: 1px solid $border-gray;
+  border-radius: 0;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus-within {
+    border-color: $green;
+    outline: none;
+  }
+}
+
+.discount-modal__input input:active,
+.discount-modal__input input:focus {
+  border-color: $green;
+}
+
+.discount-modal__privacy {
+  @include ubuntu(12, 18, 400);
+  width: 329px;
+  color: $light-gray;
+  text-align: left;
+}
+
+.discount-modal__privacy-link {
+  @include ubuntu(12, 18, 400);
+  display: inline-block;
+}
+
+.discount-modal__submit-button {
+  margin-bottom: 15px;
+  width: 329px;
+  padding: 7px 25px 7px;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: capitalize;
+  border-radius: 0;
+  order: 1;
+}
+
+.discount-modal__close-label {
+  @include ubuntu(14, 14, 400);
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: $medium-gray;
+}
+
+.discount-modal__logo-img {
+  width: 196px;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: $screen-lg) {
+  .discount-modal {
+    width: 700px;
+    padding: 30px 40px 0;
+  }
+
+  .discount-modal__wrapper {
+    margin: 60px 0 36px;
+    padding: 40px 25px 35px;
+  }
+
+  .discount-modal__description {
+    margin-bottom: 45px;
+  }
+
+  .discount-modal__form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .discount-modal__input {
+    width: 275px;
+    margin-top: 5px;
+  }
+
+  .discount-modal__privacy {
+    margin-top: 13px;
+    width: 275px;
+  }
+
+  .discount-modal__submit-button {
+    order: 1;
+    width: 275px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .discount-modal {
+    padding: 10px;
+    width: 314px;
+  }
+
+  .discount-modal__wrapper {
+    margin: 50px 0 15px;
+    padding: 25px 25px 20px;
+    background-position-x: center;
+  }
+
+  .discount-modal__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .discount-modal__description {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .discount-modal__form {
+    width: 244px;
+    margin-bottom: 32px;
+  }
+
+  .discount-modal__label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .discount-modal__input {
+    padding: 10px 19px;
+  }
+
+  .discount-modal__privacy {
+    display: block;
+    width: 240px;
+    margin: 0;
+    font-size: 10px;
+    line-height: 15px;
+    order: 1;
+  }
+
+  .discount-modal__privacy-link {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .discount-modal__submit-button {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 34px;
+  }
+
+  .discount-modal__close-label {
+    font-size: 12px;
+  }
+}

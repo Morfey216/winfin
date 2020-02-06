@@ -4,8 +4,8 @@ include ../address/address
 mixin feedback-contacts
   div.feedback-contacts.container
     div.feedback-contacts__call
-      a(href="#").button.button--green.feedback-contacts__gager Заявка на замер
-      a(href="#").button.button--orange.feedback-contacts__callback ОБРАТНЫЙ ЗВОНОК
+      a(href="#").button.button--green.feedback-contacts__gager.js-gager-open Заявка на замер
+      a(href="#").button.button--orange.feedback-contacts__callback.js-call-request-open ОБРАТНЫЙ ЗВОНОК
     div.feedback-contacts__contacts
       +contacts-phone('phone.png', 31, 31).feedback-contacts__phone
       +address('point.png', 31, 31).feedback-contacts__address

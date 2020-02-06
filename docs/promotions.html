@@ -19,12 +19,12 @@
   <header class="header">
     <div class="header__secondary container">
       <div class="header__towns-container">
-        <div class="header__towns-wrap"><img class="header__towns-pin" src="img/icons/marker.svg" width="12" height="18" alt="" /><span>Ваш город</span><a class="linck linck--gray header__towns-linck" href="#">Москва?</a></div>
+        <div class="header__towns-wrap"><img class="header__towns-pin" src="img/icons/marker.svg" width="12" height="18" alt="" /><span>Ваш город</span><a class="link link--gray header__towns-link" href="#">Москва?</a></div>
       </div>
       <div class="header__schedule-wrap">
         <p class="header__schedule">Пн. – Пт.: с 10:00 до 19:00</p><a class="header__email" href="mailto:window@winfin.ru">window@winfin.ru</a>
       </div>
-      <div class="header__orders-wrap"><a class="header__calculation" href="#"><img class="header__calculation-img" src="img/icons/resize.png" width="34" height="34" alt="#" /><span class="header__calculation-desc">Выслать размеры на рассчет</span></a><a class="header__gager" href="#"><img class="header__gager-img" src="img/icons/measuring-tape.png" width="33" height="25" alt="#" /><span class="header__gager-desc">Вызвать замерщика бесплатно</span></a></div>
+      <div class="header__orders-wrap"><a class="header__calculation" href="#"><img class="header__calculation-img" src="img/icons/resize.png" width="34" height="34" alt="#" /><span class="header__calculation-desc">Выслать размеры на рассчет</span></a><a class="header__gager js-gager-open" href="#"><img class="header__gager-img" src="img/icons/measuring-tape.png" width="33" height="25" alt="#" /><span class="header__gager-desc">Вызвать замерщика бесплатно</span></a></div>
       <div class="header__social-wrap">
         <h2 class="visually-hidden">Мы в соцсетях</h2>
         <ul class="header__social-list">
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="header__contacts">
-          <div class="contacts-phone header__contacts-phone"><img class="contacts-phone__icon" src="img/icons/smartphone.png" width="18" height="32" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div><button class="button button--orange header__call-request" aria-label="Заказать звонок" type="button"><span>Заказать звонок</span></button>
+          <div class="contacts-phone header__contacts-phone"><img class="contacts-phone__icon" src="img/icons/smartphone.png" width="18" height="32" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div><button class="button button--orange header__call-request js-call-request-open" aria-label="Заказать звонок" type="button"><span>Заказать звонок</span></button>
         </div>
       </div>
     </div>
@@ -103,9 +103,9 @@
         </nav><button class="button button--green header__calculator" aria-label="Калькулятор" type="button"><span>Калькулятор</span></button>
       </div>
     </div><button class="header__toggle" type="button"><span class="visually-hidden">Открыть/закрыть</span><svg class="header__toggle-svg-open" width="32" height="23">
-        <use xlink:href="img/sprite.svg#burger"></use>
+        <use xlink:href="../img/sprite.svg#burger"></use>
       </svg><svg class="header__toggle-svg-close" width="23" height="23">
-        <use xlink:href="img/sprite.svg#cross"></use>
+        <use xlink:href="../img/sprite.svg#cross"></use>
       </svg></button>
     <div class="header__dropdown"></div>
     <div class="header__overlay"></div>
@@ -128,7 +128,7 @@
           <div class="promotions-promo__promotions-wrapper">
             <p class="promotions-promo__date">Акция действительна до 12.02.22</p>
             <h3 class="promotions-promo__title">Скидка на установку</h3>
-            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="linck linck--arrow promotions-promo__linck" href="#">Читать далее<img class="linck__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
+            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="link link--arrow promotions-promo__link" href="#">Читать далее<img class="link__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@
           <div class="promotions-promo__promotions-wrapper">
             <p class="promotions-promo__date">Акция действительна до 12.02.22</p>
             <h3 class="promotions-promo__title">Скидка на установку</h3>
-            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="linck linck--arrow promotions-promo__linck" href="#">Читать далее<img class="linck__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
+            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="link link--arrow promotions-promo__link" href="#">Читать далее<img class="link__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@
           <div class="promotions-promo__promotions-wrapper">
             <p class="promotions-promo__date">Акция действительна до 12.02.22</p>
             <h3 class="promotions-promo__title">Скидка на установку</h3>
-            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="linck linck--arrow promotions-promo__linck" href="#">Читать далее<img class="linck__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
+            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="link link--arrow promotions-promo__link" href="#">Читать далее<img class="link__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
           </div>
         </div>
       </div>
@@ -158,7 +158,7 @@
           <div class="promotions-promo__promotions-wrapper">
             <p class="promotions-promo__date">Акция действительна до 12.02.22</p>
             <h3 class="promotions-promo__title">Скидка на установку</h3>
-            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="linck linck--arrow promotions-promo__linck" href="#">Читать далее<img class="linck__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
+            <p class="promotions-promo__text">Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий. Панорамное остекление, представляющее собой конструкцию,</p><a class="link link--arrow promotions-promo__link" href="#">Читать далее<img class="link__arrow" src="img/icons/arrow-long.png" width="51" height="15" alt="" /></a>
           </div>
         </div>
       </div>
@@ -183,7 +183,7 @@
       </div>
     </div>
     <div class="feedback-contacts container">
-      <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
+      <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager js-gager-open" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback js-call-request-open" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
       <div class="feedback-contacts__contacts">
         <div class="contacts-phone feedback-contacts__phone"><img class="contacts-phone__icon" src="img/icons/phone.png" width="31" height="31" alt="" /><a class="contacts-phone__phone contacts-phone__phone--first" href="tel:+74999041488">+7 (499) 904 14 88</a><a class="contacts-phone__phone contacts-phone__phone--second" href="tel:+74999040171">+7 (499) 904 01 71</a></div>
         <div class="address feedback-contacts__address"><img class="address__icon" src="img/icons/point.png" width="31" height="31" alt="" />
@@ -192,6 +192,31 @@
       </div>
     </div>
   </main>
+  <div class="overlay js-modal-overlay"></div>
+  <section class="modal js-modal gager-modal" id="gager-modal"><button class="modal__close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span><svg class="modal__close-svg" width="16" height="16">
+        <use xlink:href="../img/sprite.svg#cross"></use>
+      </svg></button>
+    <h2>Вызвать на замер</h2>
+    <form class="gager-modal__form js-gmf" action="#" method="post"><label class="form-input gager-modal__input js-gmf-name"><input class="js-form-input" placeholder=" " id="gmf-name" type="text" required="required" /><span class="form-input__label">Ваше имя</span><span class="form-input__error">Введите имя</span><svg width="15" height="15">
+          <use xlink:href="../img/sprite.svg#warning"></use>
+        </svg></label><label class="form-input gager-modal__input js-gmf-phone"><input class="js-form-input" placeholder=" " id="gmf-phone" type="tel" required="required" /><span class="form-input__label">+7 ( _ _ _ ) _ _ _ – _ _ – _ _</span><span class="form-input__error">Неверный номер</span><svg width="15" height="15">
+          <use xlink:href="../img/sprite.svg#warning"></use>
+        </svg></label><button class="button button--orange gager-modal__submit-button js-gmf-submit" type="submit"><span>Отправить</span></button>
+      <p class="gager-modal__privacy">Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+        <a class="link link--under-solid gager-modal__privacy-link" href="#">персональных данных</a></p>
+    </form>
+  </section>
+  <section class="modal js-modal call-request-modal" id="call-request-modal"><button class="modal__close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span><svg class="modal__close-svg" width="16" height="16">
+        <use xlink:href="../img/sprite.svg#cross"></use>
+      </svg></button>
+    <h2>Заказать звонок</h2>
+    <form class="call-request-modal__form js-crmf" action="#" method="post"><label class="form-input call-request-modal__input js-crmf-phone"><input class="js-form-input" placeholder=" " id="crmf-phone" type="tel" required="required" /><span class="form-input__label">+7 ( _ _ _ ) _ _ _ – _ _ – _ _</span><span class="form-input__error">Неверный номер</span><svg width="15" height="15">
+          <use xlink:href="../img/sprite.svg#warning"></use>
+        </svg></label><button class="button button--orange call-request-modal__submit-button js-crmf-submit" type="submit"><span>Отправить</span></button>
+      <p class="call-request-modal__privacy">Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+        <a class="link link--under-solid call-request-modal__privacy-link" href="#">персональных данных</a></p>
+    </form>
+  </section>
   <footer class="page-footer">
     <div class="page-footer__top">
       <div class="page-footer__company">
@@ -264,7 +289,6 @@
       </div>
     </div>
   </footer>
-  <div class="overlay js-modal-overlay"></div>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/4.1.0/simplebar.min.js"></script>

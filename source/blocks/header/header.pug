@@ -1,5 +1,5 @@
 include ../svg/svg
-include ../linck/linck
+include ../link/link
 include ../button/button
 include ../contacts-phone/contacts-phone
 include ../main-nav/main-nav
@@ -11,7 +11,7 @@ mixin header
         div.header__towns-wrap
           img.header__towns-pin(src="img/icons/marker.svg" width="12" height="18" alt="")
           span Ваш город
-          +linck('Москва?', '#', 'gray').header__towns-linck
+          +link('Москва?', '#', 'gray').header__towns-link
           //- select.header__stores
       div.header__schedule-wrap
         p.header__schedule Пн. – Пт.: с 10:00 до 19:00
@@ -20,7 +20,7 @@ mixin header
         a.header__calculation(href="#")
           img(src="img/icons/resize.png" width="34" height="34" alt="#").header__calculation-img
           span.header__calculation-desc Выслать размеры на рассчет
-        a.header__gager(href="#")
+        a.header__gager(href="#").js-gager-open
           img(src="img/icons/measuring-tape.png" width="33" height="25" alt="#").header__gager-img
           span.header__gager-desc Вызвать замерщика бесплатно
       div.header__social-wrap
@@ -51,16 +51,16 @@ mixin header
               p.header__technology-description Finland Technology
         div.header__contacts
           +contacts-phone('smartphone.png', 18, 32).header__contacts-phone
-          +button("Заказать звонок", "orange")(aria-label='Заказать звонок' type="button").header__call-request
+          +button("Заказать звонок", "orange")(aria-label='Заказать звонок' type="button").header__call-request.js-call-request-open
     div.header__main-nav-container.container
         div.header__main-nav-wrap
           +main-nav.header__main-nav
           +button("Калькулятор", "green")(aria-label='Калькулятор' type="button").header__calculator
 
 
-    button.header__toggle(type="button")
+    button(type="button").header__toggle
       span.visually-hidden Открыть/закрыть
-      +svg("burger").header__toggle-svg-open(width="32" height="23")
-      +svg("cross").header__toggle-svg-close(width="23" height="23")
+      +svg('burger')(width="32" height="23").header__toggle-svg-open
+      +svg('cross')(width="23" height="23").header__toggle-svg-close
     div.header__dropdown
     div.header__overlay

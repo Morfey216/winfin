@@ -20,19 +20,10 @@ export default () => {
   const mainNav = header.querySelector('.header__main-nav');
 
   const calculatorButton = header.querySelector('.header__calculator');
-  const callRequestButton = header.querySelector('.header__call-request');
-
-  const calculationLink = header.querySelector('.header__calculation');
-  const gagerLink = header.querySelector('.header__gager');
 
   const scheduleWrap = header.querySelector('.header__schedule-wrap');
 
   calculatorButton.addEventListener('click', () => { console.log('Открыть калькулятор'); });
-  callRequestButton.addEventListener('click', () => { console.log('Заказать звонок'); });
-
-  calculationLink.addEventListener('click', () => { console.log('Выслать размеры на рассчет'); });
-  gagerLink.addEventListener('click', () => { console.log('Вызвать замерщика бесплатно'); });
-
 
   const adjustDesktop = () => {
     clearAllBodyScrollLocks(dropdown);

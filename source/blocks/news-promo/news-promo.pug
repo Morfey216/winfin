@@ -1,4 +1,4 @@
-include ../linck/linck
+include ../link/link
 
 mixin news-promo(data)
   div.news-promo&attributes(attributes)
@@ -7,4 +7,4 @@ mixin news-promo(data)
       p.news-promo__date #{data.date}
       h3.news-promo__title #{data.title}
       p.news-promo__text #{data.text}
-      +linck('Читать далее', '#', 'arrow').news-promo__linck
+      +link('Читать далее', '#', 'arrow').news-promo__link

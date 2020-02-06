@@ -1,0 +1,15 @@
+include ../modal/modal
+include ../link/link
+include ../button/button
+include ../form-input/form-input
+
+mixin call-request-modal
+  +modal('call-request-modal').call-request-modal
+    h2 Заказать звонок
+    form.call-request-modal__form.js-crmf(action="#" method="post")
+      +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',})(type="tel").call-request-modal__input.js-crmf-phone#crmf-phone
+      +button('Отправить', 'orange')(type="submit").call-request-modal__submit-button.js-crmf-submit
+      p.call-request-modal__privacy
+        | Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+        |
+        +link('персональных данных', '#', 'under-solid').call-request-modal__privacy-link

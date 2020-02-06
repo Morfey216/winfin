@@ -1,0 +1,97 @@
+.call-request-modal {
+  width: 640px;
+  padding: 55px 40px 3px;
+  background: $white url("../img/modal/decoration.png") no-repeat right center;
+}
+
+.call-request-modal h2 {
+  @include ubuntu(40, 60, 700);
+  margin-bottom: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $gray;
+}
+
+.call-request-modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 416px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.call-request-modal__input {
+  margin-bottom: 22px;
+  padding: 15px 23px 15px 19px;
+  border: 1px solid $border-gray;
+}
+
+.call-request-modal__privacy {
+  @include ubuntu(12, 18, 400);
+  color: $light-gray;
+  margin-top: 13px;
+  margin-right: auto;
+  width: 232px;
+}
+
+.call-request-modal__privacy-link {
+  @include ubuntu(12, 18, 400);
+  display: inline-block;
+}
+
+.call-request-modal__submit-button {
+  margin-bottom: 15px;
+  width: 172px;
+  padding: 7px 25px 7px;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: capitalize;
+
+  order: 1;
+}
+
+@media (max-width: $screen-md) {
+  .call-request-modal {
+    padding: 0;
+    width: 284px;
+  }
+
+  .call-request-modal h2 {
+    margin-top: 35px;
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .call-request-modal__form {
+    width: 244px;
+    margin-bottom: 32px;
+  }
+
+  .call-request-modal__input {
+    margin-bottom: 18px;
+    padding: 10px 19px;
+  }
+
+  .call-request-modal__privacy {
+    display: block;
+    width: 240px;
+    margin: 0;
+    font-size: 10px;
+    line-height: 15px;
+    order: 1;
+  }
+
+  .call-request-modal__privacy-link {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .call-request-modal__submit-button {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 34px;
+  }
+}

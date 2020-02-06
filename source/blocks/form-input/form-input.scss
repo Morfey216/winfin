@@ -7,7 +7,7 @@
   padding-left: 24px;
   padding-right: 24px;
   background-color: #ffffff;
-  border-radius: 4px;
+  border-radius: 8px;
 
   @media (max-width: $screen-lg) {
     padding-top: 18px;
@@ -22,25 +22,28 @@
 }
 
 .form-input input {
+  @include ubuntu(17, 26, 300);
   width: 100%;
-  font-size: 14px;
-  line-height: 1;
   border: none;
   padding: 0;
   outline: none;
-  color: rgba(103, 76, 51, 0.4);
+  color: $very-light-gray;
 
   &:hover {
-    color: rgba(103, 76, 51, 0.6);
+    color: $light-gray;
   }
 
   &:active,
   &:focus {
-    color: rgba(103, 76, 51, 1);
+    color: $gray;
 
     &::placeholder {
-      color: rgba(103, 76, 51, 1);
+      color: $header-gray;
     }
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 14px;
   }
 }
 
@@ -50,11 +53,11 @@
   left: 24px;
   width: calc(100% - 48px);
   transform: translateY(-50%);
-  font-size: 14px;
-  line-height: 1;
-  color: rgba(103, 76, 51, 0.4);
+  color: $very-light-gray;
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
+
+  @include ubuntu(17, 26, 300);
 
   @media (max-width: $screen-lg) {
     left: 14px;
@@ -64,6 +67,7 @@
   @media (max-width: $screen-md) {
     left: 20px;
     width: calc(100% - 44px);
+    font-size: 14px;
   }
 }
 

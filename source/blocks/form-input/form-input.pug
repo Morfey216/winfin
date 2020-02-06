@@ -2,7 +2,7 @@ include ../svg/svg
 
 mixin form-input(data)
   label(class="form-input" + (attributes.class ? ' ' + attributes.class : ''))
-    input(placeholder=" " id=attributes.id required).js-form-input
+    input(placeholder=" " id=attributes.id type=attributes.type required).js-form-input
     span.form-input__label!= data.label
     span.form-input__error!= data.error
     +svg('warning')(width="15" height="15")

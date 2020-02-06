@@ -1,0 +1,23 @@
+include ../modal/modal
+include ../link/link
+include ../button/button
+include ../form-input/form-input
+
+mixin discount-modal
+  +modal('discount-modal').discount-modal
+    div.discount-modal__wrapper
+      //- Для открытия модального окна управляющему элементу
+      //- нужно добавить класс .js-discount-open
+      h2.visually-hidden Воспользоваться скидкой
+      p.discount-modal__title Только до 3 января!
+      p.discount-modal__label Дополнительная скидка -15%
+      p.discount-modal__description на установку деревянных дверей и фурнитуры
+      form.discount-modal__form.js-dmf(action="#" method="post")
+        +form-input({label: 'Ваше имя', error: 'Введите имя',})(type="text").discount-modal__input.js-dmf-name#dmf-name
+        +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',})(type="tel").discount-modal__input.js-dmf-phone#dmf-phone
+        +button('Воспользоваться', 'green')(type="submit").discount-modal__submit-button.js-dmf-submit
+        p.discount-modal__privacy
+          | Оставляя заявку, Вы&nbsp;даете свое согласие на&nbsp;обработку
+          |
+          +link('персональных данных', '#', 'under-solid').discount-modal__privacy-link
+      img.discount-modal__logo-img(src="img/logos/logo-header.png" width="196" height="52" alt="Логотип компании WINFIN")
