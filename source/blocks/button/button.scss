@@ -92,6 +92,44 @@
       background-color: $gray-disabled;
     }
   }
+
+  &--control {
+    @include ubuntu(18, 20, 500);
+    text-transform: uppercase;
+    color: $light-gray;
+    margin: 0 6px;
+    padding: 3px 0;
+    display: inline-block;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $gray;
+    }
+
+    @include tablet-max {
+      font-size: 16px;
+    }
+
+    @include mobile-max {
+      font-size: 14px;
+    }
+  }
+
+  &--control.active {
+    cursor: auto;
+    color: $gray;
+    border-bottom: 4px solid $green;
+    outline: transparent;
+
+    @include mobile-max {
+      border-bottom-width: 3px;
+    }
+  }
 }
 
 .button__icon-arrow-right {

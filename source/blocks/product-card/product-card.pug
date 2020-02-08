@@ -1,0 +1,70 @@
+include ../link/link
+include ../effect-level/effect-level
+
+//- -
+//-   const data = {
+//-     title: 'Деревянное окно из дуба и алюминия, профиль 90 мм',
+//-     image: 'win-1.jpg',
+//-     alt: 'Деревянное окно',
+//-     effects: [
+//-       {
+//-         name: 'noise',
+//-         level: 80
+//-       },
+//-       {
+//-         name: 'heat',
+//-         level: 40
+//-       },
+//-     ],
+//-     param: {
+//-       material: 'сосна',
+//-       heatLossKoef1: 15,
+//-       notOpen: 'Да',
+//-       heatLossKoef2: 15,
+//-     },
+//-     price: '34 844',
+//-     link: '#',
+//-     isQuickInstallationMarker: true,
+//-     isMaterialMarker: true,
+//-   }
+
+mixin product-card(data, mod)
+  div(class='product-card' + (mod ? ' product-card--' + mod : ''))&attributes(attributes)
+    h3.product-card__title!= data.title
+    if (mod === 'win')
+      img(src="../img/windows/" + data.image width="366" height="322" alt=data.alt).product-card__preview
+    if (mod === 'door')
+      img(src="../img/doors/" + data.image width="366" height="322" alt=data.alt).product-card__preview
+    if (mod === 'win')
+      div.product-card__effects-level
+        each effect in data.effects
+          +effect-level(effect.name, effect.level)
+    table.product-card__parameters
+      tr
+        td Материал:
+          |
+          |#{data.param.material}
+      tr
+        td Коэффициент теплопотерь:
+          |
+          |#{data.param.heatLossKoef1}
+      tr
+        td Глухие окна:
+          |
+          |#{data.param.notOpen}
+      tr
+        td Коэффициент теплопотерь:
+          |
+          |#{data.param.heatLossKoef2}
+    p.product-card__price Цена от
+      |
+      |
+      span!= data.price
+      |
+      |р./м
+      sup 2
+    +link('Подробнее', data.link, 'card-details').product-card__details-link
+    if (data.isQuickInstallationMarker)
+      img(src="../img/icons/quick-install.png" width="61" height="58" alt="").product-card__install-icon
+    if (data.isMaterialMarker)
+      img(src="../img/icons/tree.png" width="58" height="58" alt="").product-card__material-icon

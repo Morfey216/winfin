@@ -1,5 +1,6 @@
 include ../svg/svg
 include ../title/title
+include ../quality/quality
 
 -
   const qualitiesList = [
@@ -35,10 +36,7 @@ include ../title/title
 
 section.company-promo.container
   +title('ФИНСКИЕ ДЕРЕВЯННЫЕ ОКНА', 'section')
-  p Первая компания в&nbsp;России по производству окон и&nbsp;дверей из&nbsp;дерева. На протяжении 28-ми&nbsp;лет мы производим и устанавливаем деревянные окна в&nbsp;Москве и Московской области, адаптированные для российского климата и соответствующие самым высоким стандартам качества и&nbsp;безопасности.
+  p.company-promo__description Первая компания в&nbsp;России по производству окон и&nbsp;дверей из&nbsp;дерева. На протяжении 28-ми&nbsp;лет мы производим и устанавливаем деревянные окна в&nbsp;Москве и Московской области, адаптированные для российского климата и соответствующие самым высоким стандартам качества и&nbsp;безопасности.
   div.company-promo__qualities
     each quality in qualitiesList
-      div.company-promo__quality
-        div.company-promo__quality-img
-          img(src="../img/company-promo/" + quality.image width=quality.w height=quality.h alt=quality.alt)
-        p!= quality.title
+      +quality(quality).company-promo__quality

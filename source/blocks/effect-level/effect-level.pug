@@ -1,0 +1,22 @@
+-
+  const icon = {
+    noise: {
+      image: 'speaker.png',
+      w: 24,
+      h: 20,
+      alt: 'Шумоизоляция'
+    },
+    heat: {
+      image: 'snow.png',
+      w: 25,
+      h: 25,
+      alt: 'Теплоизоляция'
+    },
+  }
+
+mixin effect-level(mod, level)
+  div(class='effect-level' + (mod ? ' effect-level--' + mod : ''))&attributes(attributes)
+    div.effect-level__wrapper
+      img(src="../img/icons/" + icon[mod].image width=icon[mod].w height=icon[mod].h alt=icon[mod].alt)
+      div.effect-level__depth
+        span.effect-level__value!= level + '%'

@@ -1,0 +1,44 @@
+include ../title/title
+include ../button/button
+include ../products-set/products-set
+
+-
+  const woodWindows = [
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-1.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: true,
+    },
+  ]
+
+section.profile-systems.container
+  +title('ПРОФИЛЬНЫЕ СИСТЕМЫ', 'section')
+  div.profile-systems__controls
+    +button('Деревянные', 'control').active.js-pswc-button
+    +button('Дерево-алюминиевые', 'control').js-pswac-button
+  div.profile-systems__contents
+    div.profile-systems__content.js-pswc-content
+      +products-set(woodWindows, 'win').profile-systems__wood-windows
+    div.profile-systems__content.js-pswac-content
+      +products-set(woodWindows, 'win').profile-systems__wood-aluminum-windows
+  a(href='#').profile-systems__link Перейти в каталог

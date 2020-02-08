@@ -1,0 +1,51 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 368px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.product-card__title {
+  @include ubuntu(18, 20, 700);
+  width: 200px;
+  margin-right: auto;
+  margin-left: 45px;
+  margin-bottom: 10px;
+}
+
+.product-card__parameters {
+  @include ubuntu(14, 20, 400);
+  width: 267px;
+  margin-bottom: 15px;
+}
+
+.product-card__parameters td {
+  padding: 7px 0;
+  border-bottom: 1px solid $light-gray;
+}
+
+.product-card__price {
+  @include ubuntu(26, 20, 400);
+  margin-bottom: 20px;
+}
+
+.product-card__price span {
+  @include ubuntu(26, 20, 700);
+}
+
+.product-card__install-icon,
+.product-card__material-icon {
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+
+.product-card__material-icon {
+  top: 95px;
+}
+
+.product-card--win img {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,7 @@
+mixin quality(data)
+  div.quality&attributes(attributes)
+    div.quality-img
+      img(src="../img/company-promo/" + data.image width=data.w height=data.h alt=data.alt)
+    p.quality-title!= data.title
+    if (data.description)
+      p.quality-description!= data.description

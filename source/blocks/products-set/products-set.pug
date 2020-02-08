@@ -1,0 +1,35 @@
+include ../product-card/product-card
+
+//- -
+//-   const data = [
+//-     {
+//-       title: 'Деревянное окно из дуба и алюминия, профиль 90 мм',
+//-       image: 'win-1.jpg',
+//-       alt: 'Деревянное окно',
+//-       effects: [
+//-         {
+//-           name: 'noise',
+//-           level: 80
+//-         },
+//-         {
+//-           name: 'heat',
+//-           level: 40
+//-         },
+//-       ],
+//-       param: {
+//-         material: 'сосна',
+//-         heatLossKoef1: 15,
+//-         notOpen: 'Да',
+//-         heatLossKoef2: 15,
+//-       },
+//-       price: '34 844',
+//-       link: '#',
+//-       isQuickInstallationMarker: true,
+//-       isMaterialMarker: true,
+//-     },
+//-   ]
+
+mixin products-set(data, mod)
+  div(class='products-set' + (mod ? ' products-set--' + mod : ''))&attributes(attributes)
+    each product in data
+      +product-card(product, mod).products-set__product

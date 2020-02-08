@@ -1,0 +1,46 @@
+.effect-level {
+  width: 257px;
+  height: 37px;
+}
+
+.effect-level__wrapper {
+  position: relative;
+  width: 225px;
+  height: 12px;
+  margin-left: 32px;
+  background-color: $border-gray;
+  border-radius: 5px;
+}
+
+.effect-level__wrapper img {
+  position: absolute;
+  top: -50%;
+  left: -32px;
+}
+
+.effect-level__depth {
+  position: absolute;
+  width: 90px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  background-color: $yellow;
+  border-radius: 5px;
+}
+
+.effect-level__value {
+  @include ubuntu(14, 20, 400);
+  position: absolute;
+  display: block;
+  right: -12px;
+  bottom: 10px;
+}
+
+.effect-level--noise .effect-level__depth {
+  width: 180px;
+  background-color: $green-btn;
+}
+
+.effect-level--heat .effect-level__depth {
+  background-color: $yellow;
+}

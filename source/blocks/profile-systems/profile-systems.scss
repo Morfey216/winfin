@@ -1,0 +1,39 @@
+.profile-systems {
+  max-width: 1170px;
+  margin: 0 auto;
+  // margin-bottom: 70px;
+  padding: 72px 15px 0;
+  text-align: center;
+
+  @include mobile-max {
+    padding-top: 38px;
+  }
+}
+
+.profile-systems__controls {
+  margin: 0 auto;
+  margin-bottom: 80px;
+  text-align: center;
+
+  @include mobile-max {
+    margin-bottom: 50px;
+  }
+}
+
+.profile-systems__contents {
+  text-align: left;
+}
+
+.profile-systems__link {
+  @include ubuntu(18, 20, 400);
+  color: $dark-gray;
+  outline: none;
+  border-bottom: 2px solid $dark-gray;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $green;
+    border-bottom: none;
+  }
+}

@@ -2,3 +2,5 @@ mixin link(text, href, mod)
   a(class='link' + (mod ? ' link--' + mod : '') href= href)&attributes(attributes) #{text}
     if (mod === 'arrow')
       img(src='img/icons/arrow-long.png' width="51" height="15" alt="").link__arrow
+    if (mod === 'card-details')
+      +svg('arrow-short-down')(class = 'link__icon-' + mod, width = '7', height = '4')

@@ -45,7 +45,6 @@ export default () => {
       modal.style.width = '';
       modal.classList.remove(classEnabled);
       overlay.classList.remove(classEnabled);
-      overlay.classList.remove(classEnabled);
       document.removeEventListener('keydown', onPopupKeydown);
       overlay.removeEventListener('click', closeModal);
       close.removeEventListener('click', closeModal);
