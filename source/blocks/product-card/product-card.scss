@@ -6,6 +6,10 @@
   position: relative;
   margin-bottom: 20px;
   border-left: 1px solid $border-gray;
+
+  @include mobile-max {
+    border-left: none;
+  }
 }
 
 .product-card__title {
@@ -14,12 +18,22 @@
   margin-right: auto;
   margin-left: 45px;
   margin-bottom: 10px;
+
+  @include mobile-medium-max {
+    margin-left: 24px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .product-card__parameters {
   @include ubuntu(14, 20, 400);
   width: 267px;
   margin-bottom: 15px;
+
+  @include mobile-max {
+    width: 215px;
+  }
 }
 
 .product-card__parameters td {
@@ -30,10 +44,18 @@
 .product-card__price {
   @include ubuntu(26, 20, 400);
   margin-bottom: 20px;
+
+  @include mobile-max {
+    font-size: 20px;
+  }
 }
 
 .product-card__price span {
   @include ubuntu(26, 20, 700);
+
+  @include mobile-max {
+    font-size: 22px;
+  }
 }
 
 .product-card__install-icon,
@@ -41,6 +63,11 @@
   position: absolute;
   top: 25px;
   right: 10px;
+
+  @include mobile-max {
+    width: 40px;
+    top: 50px;
+  }
 }
 
 .product-card__material-icon {

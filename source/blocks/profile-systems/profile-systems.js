@@ -49,18 +49,19 @@ export default () => {
       slidesPerView: 3,
       spaceBetween: 0,
       breakpoints: {
-        1050: {
+        1023: {
           slidesPerView: 2,
           loadPrevNextAmount: 2,
-          spaceBetween: 0,
+          spaceBetween: 40,
           slidesOffsetBefore: 0,
           slidesOffsetAfter: 0,
         },
         767: {
-          slidesOffsetBefore: 18,
-          slidesOffsetAfter: 18,
-          spaceBetween: 0,
-          slidesPerView: 'auto',
+          slidesPerView: 1,
+          loadPrevNextAmount: 2,
+          spaceBetween: 20,
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
         },
       },
       navigation: {

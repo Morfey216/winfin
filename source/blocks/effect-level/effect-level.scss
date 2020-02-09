@@ -10,6 +10,11 @@
   margin-left: 32px;
   background-color: $border-gray;
   border-radius: 5px;
+
+  @include mobile-max {
+    width: 180px;
+    margin-left: 55px;
+  }
 }
 
 .effect-level__wrapper img {
@@ -39,8 +44,16 @@
 .effect-level--noise .effect-level__depth {
   width: 180px;
   background-color: $green-btn;
+
+  @include mobile-max {
+    width: 144px;
+  }
 }
 
 .effect-level--heat .effect-level__depth {
   background-color: $yellow;
+
+  @include mobile-max {
+    width: 72px;
+  }
 }

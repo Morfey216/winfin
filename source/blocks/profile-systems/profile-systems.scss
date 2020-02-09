@@ -3,9 +3,11 @@
   margin: 0 auto;
   padding: 72px 15px 0;
   text-align: center;
+  margin-bottom: 90px;
 
   @include mobile-max {
     padding-top: 38px;
+    margin-bottom: 40px;
   }
 }
 
@@ -23,11 +25,25 @@
   position: relative;
   max-width: 1110px;
   margin: 0 auto;
+  padding: 0 55px;
   text-align: left;
+  margin-bottom: 60px;
+
+  @include mobile-max {
+    margin-bottom: 20px;
+  }
 }
 
 .profile-systems__content {
   max-width: 1080px;
+
+  @include tablet-medium-max {
+    max-width: 774px;
+  }
+
+  @include mobile-max {
+    max-width: 374px;
+  }
 }
 
 .profile-systems__link {
@@ -35,6 +51,11 @@
   color: $dark-gray;
   outline: none;
   border-bottom: 2px solid $dark-gray;
+  margin-bottom: 90px;
+
+  @include mobile-max {
+    margin-bottom: 40px;
+  }
 
   &:hover,
   &:active,
@@ -47,14 +68,14 @@
 .profile-systems__navigation-btn-prev {
   position: absolute;
   top: 50%;
-  left: -30px;
+  left: 0;
   z-index: 1;
 }
 
 .profile-systems__navigation-btn-next {
   position: absolute;
   top: 50%;
-  right: -30px;
+  right: 0;
   z-index: 1;
 }
 
