@@ -32,9 +32,9 @@ mixin product-card(data, mod)
   div(class='product-card' + (mod ? ' product-card--' + mod : ''))&attributes(attributes)
     h3.product-card__title!= data.title
     if (mod === 'win')
-      img(src="../img/windows/" + data.image width="366" height="322" alt=data.alt).product-card__preview
+      img(src="img/windows/" + data.image width="366" height="322" alt=data.alt).product-card__preview
     if (mod === 'door')
-      img(src="../img/doors/" + data.image width="366" height="322" alt=data.alt).product-card__preview
+      img(src="img/doors/" + data.image width="366" height="322" alt=data.alt).product-card__preview
     if (mod === 'win')
       div.product-card__effects-level
         each effect in data.effects
@@ -65,6 +65,6 @@ mixin product-card(data, mod)
       sup 2
     +link('Подробнее', data.link, 'card-details').product-card__details-link
     if (data.isQuickInstallationMarker)
-      img(src="../img/icons/quick-install.png" width="61" height="58" alt="").product-card__install-icon
+      img(src="img/icons/quick-install.png" width="61" height="58" alt="").product-card__install-icon
     if (data.isMaterialMarker)
-      img(src="../img/icons/tree.png" width="58" height="58" alt="").product-card__material-icon
+      img(src="img/icons/tree.png" width="58" height="58" alt="").product-card__material-icon

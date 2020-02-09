@@ -17,6 +17,6 @@
 mixin effect-level(mod, level)
   div(class='effect-level' + (mod ? ' effect-level--' + mod : ''))&attributes(attributes)
     div.effect-level__wrapper
-      img(src="../img/icons/" + icon[mod].image width=icon[mod].w height=icon[mod].h alt=icon[mod].alt)
+      img(src="img/icons/" + icon[mod].image width=icon[mod].w height=icon[mod].h alt=icon[mod].alt)
       div.effect-level__depth
         span.effect-level__value!= level + '%'
