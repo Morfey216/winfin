@@ -13,6 +13,7 @@ import callRequestModal from '../blocks/call-request-modal/call-request-modal';
 import discountModal from '../blocks/discount-modal/discount-modal';
 import header from '../blocks/header/header';
 import pagination from '../blocks/page-pagination/page-pagination';
+import profileSystem from '../blocks/profile-systems/profile-systems';
 
 // endregion
 
@@ -22,3 +23,4 @@ discountModal();
 callRequestModal();
 header();
 pagination();
+profileSystem();
