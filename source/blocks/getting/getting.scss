@@ -1,0 +1,104 @@
+.getting {
+  padding-top: 110px;
+  padding-bottom: 176px;
+
+  background-image: url("../img/decor/win-wave.png");
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+
+  @include tablet-medium-max {
+    padding-top: 65px;
+    padding-bottom: 120px;
+    background-size: cover;
+  }
+
+  @include mobile-max {
+    padding-bottom: 75px;
+  }
+}
+
+.getting__title {
+  margin-bottom: 84px;
+  padding: 0;
+
+  @include tablet-medium-max {
+    margin-bottom: 45px;
+  }
+}
+
+.getting__qualities {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.getting__quality {
+  .quality-title {
+    font-weight: 700;
+  }
+
+  @include mobile-max {
+    flex-direction: row;
+    width: 545px;
+
+    .quality__description-wrapper {
+      width: 435px;
+    }
+
+    .quality-title {
+      margin-left: 11px;
+      font-size: 18px;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .quality-img {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+
+  @include mobile-medium-max {
+    width: 320px;
+
+    .quality__description-wrapper {
+      width: 240px;
+      text-align: left;
+    }
+
+    .quality-img {
+      margin-right: 0;
+      width: 60px;
+      height: 60px;
+
+      img {
+        max-width: 25px;
+      }
+    }
+  }
+
+  .quality-description {
+    margin-top: 10px;
+    font-weight: 500;
+
+    @include tablet-medium-max {
+      margin: 10px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    @include mobile-max {
+      text-align: left;
+    }
+
+    @include mobile-medium-max {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,6 +1,20 @@
 .win-advantages {
   position: relative;
   background-color: $decor-gray;
+  overflow-x: clip;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    background-image: url("../img/decor/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    left: 0;
+    right: 0;
+    bottom: -60px;
+  }
 }
 
 .win-advantages__wrapper {
@@ -26,13 +40,18 @@
   @include ubuntu(36, 36, 700);
   margin-bottom: 26px;
   padding-left: 45px;
+  text-transform: uppercase;
 
   span {
     font-weight: 500;
   }
 
-  @include tablet-medium-max {
+  @include tablet-max {
     font-size: 32px;
+  }
+
+  @include tablet-medium-max {
+    font-size: 28px;
   }
 
   @include mobile-max {
@@ -43,9 +62,9 @@
     width: 280px;
     margin: 0 auto;
     margin-bottom: 26px;
-    padding-left: 15px;
-    font-size: 26px;
-    line-height: 30px;
+    padding-left: 35px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -56,6 +75,10 @@
 }
 
 .win-advantages__quality {
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include mobile-medium-max {
     justify-content: center;
   }

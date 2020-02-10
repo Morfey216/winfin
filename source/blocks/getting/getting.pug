@@ -1,0 +1,37 @@
+include ../title/title
+include ../quality/quality
+
+-
+  const gettingQualitiesList = [
+      {
+        image: 'certificate.png',
+        w: 46,
+        h: 46,
+        title: 'Гарантию на работы',
+        alt: 'Гарантия',
+        description: 'Различные модели деревянных, дерево-алюминиевых, финских, скандинавских окон с&nbsp;европейской гарантией качества сделают ваш&nbsp;дом теплым, уютным и&nbsp;безопасным.'
+      },
+      {
+        image: 'credit-card.png',
+        w: 47,
+        h: 47,
+        title: 'Удобную оплату',
+        alt: 'Оплата',
+        description: 'Различные модели деревянных, дерево-алюминиевых, финских, скандинавских окон с&nbsp;европейской гарантией качества сделают ваш&nbsp;дом теплым, уютным и&nbsp;безопасным.'
+      },
+      {
+        image: 'delivery-truck.png',
+        w: 49,
+        h: 39,
+        title: 'Бережную доставку',
+        alt: 'Доставка',
+        description: 'Различные модели деревянных, дерево-алюминиевых, финских, скандинавских окон с&nbsp;европейской гарантией качества сделают ваш&nbsp;дом теплым, уютным и&nbsp;безопасным.'
+      },
+    ]
+
+section.getting
+  div.getting__wrapper.container
+    +title('С нами вы получите:', 'section-nodecor').getting__title
+    div.getting__qualities
+      each quality in gettingQualitiesList
+        +quality(quality).getting__quality
