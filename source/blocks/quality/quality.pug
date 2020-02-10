@@ -1,7 +1,8 @@
-mixin quality(data)
-  div.quality&attributes(attributes)
+mixin quality(data, mod)
+  div(class='quality' + (mod ? ' quality--' + mod : ''))&attributes(attributes)
     div.quality-img
-      img(src="img/company-promo/" + data.image width=data.w height=data.h alt=data.alt)
-    p.quality-title!= data.title
-    if (data.description)
-      p.quality-description!= data.description
+      img(src="img/icons/" + data.image width=data.w height=data.h alt=data.alt)
+    div.quality__description-wrapper
+      p.quality-title!= data.title
+      if (data.description)
+        p.quality-description!= data.description

@@ -24,11 +24,15 @@
 }
 
 .quality-description {
-  @include ubuntu(16, 22, 400);
+  @include ubuntu(15, 18, 400);
   margin: 0;
 
   @include mobile-max {
-    @include ubuntu(14, 20, 400);
+    @include ubuntu(14, 16, 400);
+  }
+
+  @include mobile-medium-max {
+    font-size: 12px;
   }
 }
 
@@ -52,4 +56,49 @@
 .quality-img img {
   max-width: 48px;
   margin: auto;
+}
+
+.quality--transparent-left {
+  flex-direction: row;
+  width: 570px;
+  justify-items: center;
+  margin-bottom: 16px;
+
+  .quality__description-wrapper {
+    width: 440px;
+  }
+
+  .quality-title {
+    @include ubuntu(19, 24, 700);
+    margin: 0;
+
+    @include mobile-max {
+      @include ubuntu(15, 20, 500);
+    }
+  }
+
+  .quality-img {
+    margin-right: 30px;
+    margin-bottom: 0;
+    background-image: none;
+
+    @include mobile-medium-max {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+
+      img {
+        max-width: 27px;
+      }
+    }
+  }
+
+  @include mobile-medium-max {
+    max-width: 500px;
+    width: auto;
+
+    .quality__description-wrapper {
+      max-width: 225px;
+    }
+  }
 }

@@ -1,0 +1,43 @@
+//- include ../svg/svg
+//- include ../title/title
+include ../quality/quality
+
+-
+  const winQualitiesList = [
+      {
+        image: 'cold.png',
+        w: 41,
+        h: 53,
+        title: 'Термозащита',
+        alt: 'Термозащита',
+        description: 'Мы используем энергосберегающий стеклопакет толщиной от&nbsp;38 до&nbsp;54&nbsp;мм, заполненный инертным газом "Аргон" или "Криптон".'
+      },
+      {
+        image: 'speaker-big.png',
+        w: 57,
+        h: 49,
+        title: 'Высокая шумоизоляция',
+        alt: 'Высокая шумоизоляция',
+        description: 'Мы используем энергосберегающий стеклопакет толщиной от&nbsp;38 до&nbsp;54&nbsp;мм, заполненный инертным газом "Аргон" или "Криптон".'
+      },
+      {
+        image: 'idea.png',
+        w: 50,
+        h: 54,
+        title: 'Энергосберегающее стекло',
+        alt: 'Энергосберегающее стекло',
+        description: 'Мы используем энергосберегающий стеклопакет толщиной от&nbsp;38 до&nbsp;54&nbsp;мм, заполненный инертным газом "Аргон" или "Криптон".'
+      },
+    ]
+
+section.win-advantages
+  div.win-advantages__wrapper.container
+    h2.win-advantages__title ПРЕИМУЩЕСТВА
+      |
+      |
+      span ФИНСКИХ&nbsp;ОКОН
+    div.win-advantages__qualities
+      each quality in winQualitiesList
+        +quality(quality, 'transparent-left').win-advantages__quality
+    img(src="img/logos/logo-page.png" width="137" height="31" alt="Логотип компании WINFIN").win-advantages__logo
+  img(src="img/decor/wave.png" width="1920" height="60" alt="").win-advantages__decoration-wave
