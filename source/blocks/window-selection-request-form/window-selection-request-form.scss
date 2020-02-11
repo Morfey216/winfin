@@ -1,0 +1,92 @@
+.window-selection-request-form {
+  color: $white;
+  background-color: $green;
+  background-image: url("../img/background/window.png"), url("../img/background/l2.jpg");
+  background-position: right center, center top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.window-selection-request-form__wrapper {
+  max-width: 565px;
+  margin-left: 0;
+  padding: 100px 15px 57px;
+
+  @include mobile-medium-max {
+    max-width: 284px;
+    padding: 45px 0 35px;
+  }
+}
+
+.window-selection-request-form__title {
+  margin-bottom: 7px;
+}
+
+.window-selection-request-form__description {
+  @include ubuntu(24, 30, 400);
+  margin-bottom: 10px;
+
+  @include mobile-max {
+    @include ubuntu(20, 24, 400);
+  }
+
+  @include mobile-medium-max {
+    @include ubuntu(16, 20, 400);
+  }
+}
+
+.window-selection-request-form__form {
+  width: 416px;
+
+  @include mobile-medium-max {
+    max-width: 284px;
+  }
+}
+
+.window-selection-request-form__input {
+  border: 1px solid $white;
+  background-color: transparent;
+}
+
+.window-selection-request-form__input input {
+  background-color: transparent;
+}
+
+.window-selection-request-form__privacy-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile-medium-max {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+
+.window-selection-request-form__privacy {
+  @include ubuntu(12, 18, 400);
+  width: 240px;
+}
+
+.window-selection-request-form__privacy-link {
+  @include ubuntu(12, 18, 400);
+  display: inline-block;
+  color: $white;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.window-selection-request-form__submit-button {
+  margin-left: auto;
+  width: 172px;
+  padding: 7px 25px 7px;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: capitalize;
+
+  @include mobile-medium-max {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,19 @@
+include ../title/title
+include ../button/button
+include ../link/link
+include ../form-input/form-input
+
+section.window-selection-request-form
+  div.container
+    div.window-selection-request-form__wrapper
+      +title('Поможем правильно подобрать окна', 'white-decor').window-selection-request-form__title
+      p.window-selection-request-form__description Оставьте заявку и наш менеджер свяжется с&nbsp;вами для бесплатной консультации
+      form.window-selection-request-form__form.js-wsrf(action="#" method="post")
+        +form-input({label: 'Введите имя', error: 'Введите имя',}, 'marker', 'Имя:').window-selection-request-form__input.js-wsrf-validate.js-wsrf-name#wsrf-name
+        +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',}, 'marker', 'Тел.:').window-selection-request-form__input.js-wsrf-validate.js-wsrf-phone#wsrf-phone
+        div.window-selection-request-form__privacy-wrapp
+          p.window-selection-request-form__privacy
+            | Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+            |
+            +link('персональных данных', '#').window-selection-request-form__privacy-link
+          +button('Отправить', 'orange')(type="submit").window-selection-request-form__submit-button.js-wsrf-submit

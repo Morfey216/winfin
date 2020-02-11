@@ -24,6 +24,34 @@
   }
 }
 
+.title--white,
+.title--white-decor {
+  margin-bottom: 32px;
+  padding-top: 23px;
+  color: $white;
+
+  @include mobile-max {
+    margin-bottom: 24px;
+  }
+}
+
+.title--white-decor {
+  position: relative;
+  padding-bottom: 17px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 80px;
+    height: 2px;
+
+    background-color: $orange;
+  }
+}
+
 .title--section {
   position: relative;
   text-align: center;

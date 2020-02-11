@@ -123,3 +123,67 @@
 .form-input.error input:focus ~ svg {
   opacity: 0;
 }
+
+.form-input--marker {
+  margin-bottom: 20px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  color: $decor-gray;
+
+  .form-input__label {
+    @include ubuntu(18, 40, 400);
+    left: 70px;
+    color: $icon-gray;
+
+    @include mobile-medium-max {
+      @include ubuntu(14, 20, 400);
+      width: calc(100% - 80px);
+    }
+  }
+
+  input {
+    @include ubuntu(18, 40, 400);
+    padding-left: 47px;
+    color: $decor-gray;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      color: $white;
+    }
+
+    @include tablet-max {
+      padding-left: 56px;
+    }
+
+    @include mobile-max {
+      padding-left: 47px;
+    }
+  }
+
+  &:hover {
+    .form-input__label {
+      color: $white;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+
+.form-input__marker {
+  @include ubuntu(18, 40, 400);
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  width: calc(100% - 48px);
+  transform: translateY(-50%);
+  color: $white;
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
