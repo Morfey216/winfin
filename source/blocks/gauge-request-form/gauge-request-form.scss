@@ -1,18 +1,49 @@
 .gauge-request-form {
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+
   color: $white;
   background-color: $green;
   background-image: url("../img/background/win.jpg"), linear-gradient(to bottom, $green 0%, $green 100%);
   background-size: auto 100%, 100% 555px;
   background-repeat: no-repeat;
   background-position: right bottom;
+
+  @include mobile-max {
+    background-image: url("../img/background/win.jpg");
+    background-size: auto 100%;
+    background-position: right bottom;
+  }
+}
+
+.gauge-request-form__bg-wrapp {
+  width: 51%;
+  margin: 0 auto;
+  margin-left: 0;
+  background-color: $green;
+
+  box-shadow: 0 8px 0 $green, 0 -10px 0 $green, 0 10px 9px rgba(85, 85, 85, 0.75);
+
+  @include mobile-max {
+    width: 380px;
+  }
+
+  @include mobile-medium-max {
+    width: 100%;
+  }
 }
 
 .gauge-request-form__wrapper {
-  // max-width: 565px;
-  width: 50%;
-  margin-left: 0;
+  max-width: 535px;
+  margin-left: auto;
   padding: 75px 15px 100px;
   background-color: $green;
+
+  @include tablet-medium-max {
+    max-width: 380px;
+    margin: 0 auto;
+  }
 
   @include mobile-medium-max {
     max-width: 284px;
@@ -23,10 +54,22 @@
 .gauge-request-form__title {
   @include ubuntu(40, 60, 700);
   margin-bottom: 35px;
+
+  @include tablet-medium-max {
+    @include ubuntu(32, 40, 700);
+  }
+
+  @include mobile-medium-max {
+    @include ubuntu(26, 30, 700);
+  }
 }
 
 .gauge-request-form__form {
   width: 416px;
+
+  @include tablet-medium-max {
+    max-width: 350px;
+  }
 
   @include mobile-medium-max {
     max-width: 284px;
@@ -47,7 +90,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @include mobile-medium-max {
+  @include tablet-medium-max {
     flex-direction: column-reverse;
     align-items: flex-start;
   }
@@ -76,7 +119,7 @@
   line-height: 40px;
   text-transform: capitalize;
 
-  @include mobile-medium-max {
+  @include tablet-medium-max {
     width: 100%;
     margin-bottom: 15px;
   }
