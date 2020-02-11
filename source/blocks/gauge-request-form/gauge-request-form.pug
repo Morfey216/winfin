@@ -1,0 +1,18 @@
+include ../title/title
+include ../button/button
+include ../link/link
+include ../form-input/form-input
+
+section.gauge-request-form
+  div.container
+    div.gauge-request-form__wrapper
+      +title('Оформите заявку на&nbsp;замер&nbsp;окон', 'white').gauge-request-form__title
+      form.gauge-request-form__form.js-grf(action="#" method="post")
+        +form-input({label: 'Введите имя', error: 'Введите имя',}, 'marker', 'Имя:').gauge-request-form__input.js-grf-validate.js-grf-name#grf-name
+        +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',}, 'marker', 'Тел.:').gauge-request-form__input.js-grf-validate.js-grf-phone#grf-phone
+        div.gauge-request-form__privacy-wrapp
+          p.gauge-request-form__privacy
+            | Нажимая Отправить, Вы&nbsp;даете согласие на&nbsp;обработку
+            |
+            +link('персональных данных', '#').gauge-request-form__privacy-link
+          +button('Отправить', 'orange')(type="submit").gauge-request-form__submit-button.js-grf-submit

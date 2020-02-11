@@ -16,6 +16,7 @@ import header from '../blocks/header/header';
 import pagination from '../blocks/page-pagination/page-pagination';
 import profileSystem from '../blocks/profile-systems/profile-systems';
 import wsrForm from '../blocks/window-selection-request-form/window-selection-request-form';
+import grForm from '../blocks/gauge-request-form/gauge-request-form';
 
 // endregion
 
@@ -28,3 +29,4 @@ header();
 pagination();
 profileSystem();
 wsrForm();
+grForm();
