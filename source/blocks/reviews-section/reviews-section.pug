@@ -1,0 +1,30 @@
+include ../title/title
+include ../slider-navigation/slider-navigation
+include ../review-card/review-card
+
+-
+  const reviewsList = [
+      {
+        dateNumber: '15',
+        dateMonth: 'авг',
+        author: 'Инга Иванова',
+        town: 'Москва',
+        content: 'Долго искал окна с хорошей шумоизоляцией, так как под окнами проходит оживленная магистраль. Нашел нужную конструкцию на сайте Winfin.ru, после подписания Договора и внесения предоплаты спустя 2 месяца привезли окно, качественно и аккуратно произвели демонтаж старого окна - квартира жилая, установили новое окно со всеми лентами. В квартире стало тише, показатели по шумоизолиции впечатлили. Спасибо!',
+      },
+      {
+        dateNumber: '19',
+        dateMonth: 'дек',
+        author: 'Сергей Блинов',
+        town: 'Троицк',
+        content: 'Долго искал окна с хорошей шумоизоляцией, так как под окнами проходит оживленная магистраль. Нашел нужную конструкцию на сайте Winfin.ru, после подписания Договора и внесения предоплаты спустя 2 месяца привезли окно, качественно и аккуратно произвели демонтаж старого окна - квартира жилая, установили новое окно со всеми лентами. В квартире стало тише, показатели по шумоизолиции впечатлили. Спасибо!',
+      },
+    ]
+
+section.reviews-section.container
+  +title('Отзывы наших клиентов', 'section-nodecor').reviews-section__title
+  div.reviews-section__container
+    +slider-navigation(false, 'reviews-section').reviews-section__slider-navigation
+    div.reviews-section__wrapper
+      each review in reviewsList
+        +review-card(review)
+  a(href="#").reviews-section__link Все отзывы

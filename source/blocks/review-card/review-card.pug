@@ -1,0 +1,12 @@
+mixin review-card (data)
+  div.review-card
+    blockquote.review-card__blockquote
+      cite
+        p.review-card__date #{data.dateNumber}
+          |
+          |
+          span #{data.dateMonth}
+        p.review-card__author #{data.author}
+        p.review-card__town #{data.town}
+      div.review-card__text
+        p #{data.content}

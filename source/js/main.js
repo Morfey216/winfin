@@ -17,6 +17,7 @@ import pagination from '../blocks/page-pagination/page-pagination';
 import profileSystem from '../blocks/profile-systems/profile-systems';
 import wsrForm from '../blocks/window-selection-request-form/window-selection-request-form';
 import grForm from '../blocks/gauge-request-form/gauge-request-form';
+import reviewsSection from '../blocks/reviews-section/reviews-section';
 
 // endregion
 
@@ -30,3 +31,4 @@ pagination();
 profileSystem();
 wsrForm();
 grForm();
+reviewsSection();

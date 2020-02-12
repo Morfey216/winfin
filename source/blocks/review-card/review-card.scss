@@ -1,0 +1,88 @@
+.review-card {
+  position: relative;
+  width: 550px;
+  padding: 20px 55px 30px;
+  box-sizing: border-box;
+
+  border: 1px solid $border-gray;
+  box-shadow: 0 6px 13px rgba(185, 185, 185, 0.75);
+
+  @include mobile-max {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.review-card__blockquote {
+  cite {
+    font-style: normal;
+  }
+}
+
+.review-card__date {
+  @include ubuntu(24, 18, 400);
+  width: 85px;
+  height: 85px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: -24px;
+  left: 25px;
+
+  color: $white;
+
+  background-color: $green;
+  border-radius: 8px;
+
+  span {
+    @include ubuntu(18, 18, 300);
+  }
+
+  @include mobile-max {
+    width: 65px;
+    height: 65px;
+    font-size: 18px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.review-card__author {
+  @include ubuntu(18, 18, 700);
+  padding-left: 75px;
+  color: $dark-gray;
+
+  @include mobile-max {
+    font-size: 14px;
+    padding-left: 85px;
+  }
+}
+
+.review-card__town {
+  @include ubuntu(18, 30, 400);
+  padding-left: 75px;
+  color: $breadcrumbs-gray;
+
+  @include mobile-max {
+    @include ubuntu(14, 18, 400);
+    padding-left: 85px;
+  }
+}
+
+.review-card__text {
+  @include ubuntu(17, 28, 400);
+  margin-top: 20px;
+  font-style: italic;
+  color: $medium-gray;
+
+  @include mobile-max {
+    @include ubuntu(13, 18, 300);
+    margin-top: 10px;
+  }
+}
