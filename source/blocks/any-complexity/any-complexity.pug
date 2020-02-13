@@ -1,0 +1,40 @@
+include ../title/title
+
+-
+  const appointments = [
+      {
+        image: 'window-1.png',
+        w: 61,
+        h: 61,
+        title: 'Для квартир',
+        alt: 'Для квартир',
+      },
+      {
+        image: 'window-2.png',
+        w: 61,
+        h: 47,
+        title: 'Для терасс',
+        alt: 'Для терасс',
+      },
+      {
+        image: 'stage.png',
+        w: 65,
+        h: 55,
+        title: 'Для домов',
+        alt: 'Для домов',
+      },
+    ]
+
+mixin any-complexity(title)
+  section.any-complexity.container
+    +title(title).any-complexity__title--before
+    img(src="img/windows/terassa.jpg" width='570' height='445' alt='Окно для терассы').any-complexity__img
+    div.any-complexity__container
+      +title(title).any-complexity__title
+      p.any-complexity__content Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий.
+      ul.any-complexity__appointments
+        each appointment in appointments
+          li.any-complexity__appointment
+            div.any-complexity__appointment-img
+              img(src="img/icons/" + appointment.image width=appointment.w height=appointment.h alt=appointment.alt)
+            p #{appointment.title}

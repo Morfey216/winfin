@@ -1,0 +1,130 @@
+.any-complexity {
+  max-width: 1200px;
+  display: flex;
+  align-items: start;
+  margin-top: 110px;
+
+  @include tablet-medium-max {
+    max-width: 520px;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  @include mobile-max {
+    margin-top: 70px;
+  }
+}
+
+.any-complexity__img {
+  flex-shrink: 0;
+
+  @include tablet-max {
+    width: 420px;
+  }
+
+  @include tablet-medium-max {
+    max-width: 490px;
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+.any-complexity__container {
+  margin-left: 30px;
+
+  @include tablet-max {
+    max-width: 625px;
+  }
+
+  @include tablet-medium-max {
+    max-width: 525px;
+    margin-left: 0;
+  }
+}
+
+.any-complexity__title {
+  @include tablet-max {
+    width: 280px;
+  }
+
+  @include tablet-medium-max {
+    display: none;
+  }
+}
+
+.any-complexity__title--before {
+  display: none;
+
+  @include tablet-medium-max {
+    display: block;
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.any-complexity__content {
+  @include ubuntu(17, 24, 400);
+  padding-top: 35px;
+  padding-bottom: 75px;
+  color: $dark-gray;
+
+  @include tablet-max {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  @include tablet-medium-max {
+    padding-top: 40px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.any-complexity__appointments {
+  @include list-reset;
+  display: flex;
+
+  @include mobile-medium-max {
+    justify-content: space-around;
+  }
+}
+
+.any-complexity__appointment {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile-medium-max {
+    max-width: 320px;
+    width: auto;
+  }
+}
+
+.any-complexity__appointment p {
+  @include ubuntu(18, 48, 700);
+
+  @include tablet-max {
+    font-size: 16px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.any-complexity__appointment-img {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+}
