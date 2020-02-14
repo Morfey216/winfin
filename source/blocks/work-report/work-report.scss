@@ -1,0 +1,129 @@
+.work-report {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 500px;
+  margin-top: 85px;
+
+  @include tablet-max {
+    max-width: 1170px;
+    width: 100%;
+    align-content: space-around;
+  }
+
+  @include tablet-medium-max {
+    max-width: 650px;
+    height: auto;
+    flex-wrap: nowrap;
+    margin-top: 70px;
+  }
+
+  @include mobile-max {
+    margin-top: 45px;
+  }
+}
+
+.work-report__title {
+  position: relative;
+  width: 550px;
+  padding-bottom: 25px;
+
+  @include tablet-max {
+    max-width: 400px;
+    width: auto;
+  }
+
+  @include tablet-medium-max {
+    margin: 0 auto;
+    padding-top: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background-color: #d7d7d7;
+    }
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+  }
+}
+
+.work-report__content {
+  @include ubuntu(17, 24, 400);
+  width: 550px;
+  color: $dark-gray;
+
+  @include tablet-max {
+    max-width: 455px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  @include tablet-medium-max {
+    max-width: 650px;
+    order: 2;
+  }
+
+  @include mobile-medium-max {
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.work-report__content p {
+  padding-bottom: 25px;
+
+  @include mobile-medium-max {
+    padding-bottom: 18px;
+  }
+}
+
+.work-report__link a {
+  color: $green;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.work-report__slider-container {
+  position: relative;
+  width: 603px;
+
+  @include tablet-max {
+    max-width: 515px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  @include tablet-medium-max {
+    max-width: 620px;
+    margin-bottom: 25px;
+    order: 1;
+  }
+}
+
+.work-report__slider-navigation {
+  position: absolute;
+  top: 43%;
+  left: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.work-report__navigation-btn-prev,
+.work-report__navigation-btn-next {
+  background-color: rgba(255, 255, 255, 0.65);
+
+  svg {
+    fill: $dark-gray;
+  }
+}

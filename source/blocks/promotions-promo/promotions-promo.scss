@@ -14,10 +14,13 @@
 .promotions-promo__img-wrapper {
   position: relative;
   width: 490px;
+  min-width: 285px;
   margin-right: 28px;
 
   @include mobile-max {
+    min-width: 220px;
     width: 100%;
+    margin-right: 0;
     margin-bottom: 25px;
   }
 }

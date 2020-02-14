@@ -2,16 +2,16 @@
   max-width: 1200px;
   display: flex;
   align-items: start;
-  margin-top: 110px;
+  margin-top: 55px;
 
   @include tablet-medium-max {
     max-width: 520px;
     flex-direction: column;
-    margin-top: 90px;
+    margin-top: 45px;
   }
 
   @include mobile-max {
-    margin-top: 70px;
+    margin-top: 25px;
   }
 }
 
@@ -57,33 +57,54 @@
 
   @include tablet-medium-max {
     display: block;
+    position: relative;
     margin: 0 auto;
     width: 280px;
     margin-bottom: 40px;
+    padding-top: 24px;
     text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 2px;
+      background-color: #d7d7d7;
+    }
   }
 }
 
 .any-complexity__content {
   @include ubuntu(17, 24, 400);
-  padding-top: 35px;
-  padding-bottom: 75px;
+  margin-top: 35px;
+  margin-bottom: 50px;
   color: $dark-gray;
 
   @include tablet-max {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     font-size: 16px;
     line-height: 23px;
   }
 
   @include tablet-medium-max {
-    padding-top: 40px;
+    margin-top: 40px;
   }
 
   @include mobile-medium-max {
     font-size: 14px;
     line-height: 23px;
+  }
+}
+
+.any-complexity__content p {
+  padding-bottom: 25px;
+
+  @include mobile-medium-max {
+    padding-bottom: 18px;
   }
 }
 

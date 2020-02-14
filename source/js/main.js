@@ -18,6 +18,7 @@ import profileSystem from '../blocks/profile-systems/profile-systems';
 import wsrForm from '../blocks/window-selection-request-form/window-selection-request-form';
 import grForm from '../blocks/gauge-request-form/gauge-request-form';
 import reviewsSection from '../blocks/reviews-section/reviews-section';
+import workReport from '../blocks/work-report/work-report';
 
 // endregion
 
@@ -32,3 +33,4 @@ profileSystem();
 wsrForm();
 grForm();
 reviewsSection();
+workReport();

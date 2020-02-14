@@ -13,6 +13,7 @@
 
 .news-promo__img {
   width: 278px;
+  min-width: 278px;
   margin-right: 75px;
 
   @include tablet-medium-max {
@@ -21,6 +22,7 @@
 
   @include mobile-max {
     width: 100%;
+    min-width: 220px;
     margin-bottom: 25px;
   }
 }
