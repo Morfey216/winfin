@@ -1,0 +1,139 @@
+.last-news {
+  padding: 116px 0;
+  text-align: center;
+
+  background: $decor-gray url("../img/background/news-bg.jpg") center bottom no-repeat;
+
+  @include tablet-medium-max {
+    padding: 55px 0;
+
+    background-position: center center;
+    background-size: auto 100%;
+  }
+
+  @include mobile-medium-max {
+    background-image: none;
+  }
+}
+
+.last-news__list {
+  @include list-reset;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 69px;
+  text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 240px;
+    background-color: $border-gray;
+  }
+
+  @include tablet-medium-max {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.last-news__item {
+  display: flex;
+  align-items: start;
+
+  @include tablet-medium-max {
+    margin-bottom: 30px;
+  }
+
+  @include mobile-medium-max {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+}
+
+.last-news__thumbnail {
+  @include tablet-medium-max {
+    width: 135px;
+    height: auto;
+  }
+
+  @include mobile-medium-max {
+    margin: 18px;
+  }
+}
+
+.last-news__news-wrapper {
+  width: 310px;
+  margin-left: 20px;
+
+  @include tablet-medium-max {
+    max-width: 545px;
+  }
+
+  @include mobile-medium-max {
+    max-width: 360px;
+    width: 100%;
+  }
+}
+
+.last-news__date {
+  @include ubuntu(14, 14, 700);
+  color: $orange-date;
+}
+
+.last-news__news-title {
+  @include ubuntu(20, 24, 700);
+  padding-bottom: 4px;
+  color: $gray;
+
+  @include tablet-medium-max {
+    font-size: 19px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 18px;
+  }
+}
+
+.last-news__text {
+  @include ubuntu(16, 20, 400);
+  padding-bottom: 6px;
+  color: $gray;
+
+  @include mobile-medium-max {
+    font-size: 14px;
+  }
+}
+
+.last-news__link {
+  @include ubuntu(15, 20, 400);
+  color: $breadcrumbs-gray;
+
+  &:hover,
+  &:focus {
+    color: $medium-gray;
+  }
+}
+
+.last-news__all-news-link {
+  @include ubuntu(16, 20, 400);
+  color: $medium-gray;
+  outline: none;
+  border-bottom: 2px solid $medium-gray;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: transparent;
+  }
+}

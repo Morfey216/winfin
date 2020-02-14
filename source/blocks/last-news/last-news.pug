@@ -1,0 +1,36 @@
+include ../title/title
+include ../link/link
+
+-
+  const lastNews = [
+      {
+        image: 'last-news-thumbnail-1.jpg',
+        alt: "Новость",
+        date: '18.11.2019',
+        title: 'Деревянные окна для&nbsp;веранды',
+        text: 'Хотите расширить площадь дома, увеличить его функциональность и комфорт? Терасса и веранда как нельзя лучше решают эту проблему.',
+        href: '#',
+      },
+      {
+        image: 'last-news-thumbnail-2.jpg',
+        alt: "Новость",
+        date: '18.11.2019',
+        title: 'Деревянные окна для&nbsp;веранды',
+        text: 'Хотите расширить площадь дома, увеличить его функциональность и комфорт? Терасса и веранда как нельзя лучше решают эту проблему.',
+        href: '#',
+      },
+    ]
+
+section.last-news
+  div.last-news__wrapper.container
+    +title('Новости', 'section').last-news__title
+    ul.last-news__list
+      each news in lastNews
+        li.last-news__item
+          img(src='img/thumbnail/' + news.image width="156" height="170" alt= news.alt).last-news__thumbnail
+          div.last-news__news-wrapper
+            p.last-news__date #{news.date}
+            h3.last-news__news-title!= news.title
+            p.last-news__text!= news.text
+            +link('Читать далее', news.href).last-news__link
+    a(href="#").last-news__all-news-link Все новости
