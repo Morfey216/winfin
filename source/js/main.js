@@ -19,6 +19,7 @@ import wsrForm from '../blocks/window-selection-request-form/window-selection-re
 import grForm from '../blocks/gauge-request-form/gauge-request-form';
 import reviewsSection from '../blocks/reviews-section/reviews-section';
 import workReport from '../blocks/work-report/work-report';
+import brands from '../blocks/brands/brands';
 
 // endregion
 
@@ -34,3 +35,4 @@ wsrForm();
 grForm();
 reviewsSection();
 workReport();
+brands();

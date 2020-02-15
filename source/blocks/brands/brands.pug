@@ -1,0 +1,56 @@
+include ../slider-navigation/slider-navigation
+
+-
+  const brandsList = [
+      {
+        image: 'fenestra.jpg',
+        alt: "Fenestra",
+        w: '164',
+        h: '46',
+      },
+      {
+        image: 'sokolka.jpg',
+        alt: "Sokolka",
+        w: '155',
+        h: '45',
+      },
+      {
+        image: 'green-house.jpg',
+        alt: "Green House",
+        w: '131',
+        h: '54',
+      },
+      {
+        image: 'skaala.jpg',
+        alt: "Skaala",
+        w: '100',
+        h: '59',
+      },
+      {
+        image: 'lammin.jpg',
+        alt: "Lammin",
+        w: '97',
+        h: '93',
+      },
+      {
+        image: 'acristalia.jpg',
+        alt: "Acristalia",
+        w: '140',
+        h: '50',
+      },
+      {
+        image: 'tiivi.jpg',
+        alt: "tiivi",
+        w: '130',
+        h: '60',
+      },
+    ]
+
+section.brands
+  div.container.brands__container
+    h2.visually-hidden Бренды
+    ul.brands__list
+      each brand in brandsList
+        li.brands__brand-item
+          img(src='img/brands/' + brand.image width=brand.w height=brand.h alt= brand.alt).brands__brand-logo
+    +slider-navigation(false, 'brands').brands__slider-navigation

@@ -62,6 +62,8 @@
 }
 
 .last-news__thumbnail {
+  border-radius: 10px;
+
   @include tablet-medium-max {
     width: 135px;
     height: auto;
