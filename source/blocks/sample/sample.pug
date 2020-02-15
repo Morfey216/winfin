@@ -1,0 +1,16 @@
+include ../button/button
+
+mixin sample(data)
+  div(class='sample')&attributes(attributes)
+    div.sample__image
+      img(src='img/' + data.image width=data.w height=data.h alt= data.alt)
+    h3.sample__title!= data.title
+    each parametr in data.params
+      p.sample__parametr!= parametr
+    p.sample__price Цена от
+      |
+      |
+      span!= data.price
+      |
+      | руб.
+    +button('Рассчитать', 'orange')(type="button").sample__calc-btn

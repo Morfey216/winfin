@@ -1,0 +1,49 @@
+.sample {
+  color: $gray;
+}
+
+.sample__image {
+  max-width: 287px;
+  width: auto;
+  height: 225px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.sample__title {
+  @include ubuntu(18, 48, 400);
+  text-transform: uppercase;
+
+  @include mobile-medium-max {
+    font-size: 16px;
+  }
+}
+
+.sample__parametr {
+  @include ubuntu(15, 24, 400);
+  width: 200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sample__price {
+  @include ubuntu(18, 20, 700);
+  padding: 10px 10px 14px;
+
+  @include mobile-medium-max {
+    font-size: 17px;
+  }
+}
+
+.sample__calc-btn {
+  @include ubuntu(16, 27, 500);
+  margin: 0 auto;
+  padding: 10px 18px;
+  text-transform: capitalize;
+}

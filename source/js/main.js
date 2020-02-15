@@ -20,6 +20,7 @@ import grForm from '../blocks/gauge-request-form/gauge-request-form';
 import reviewsSection from '../blocks/reviews-section/reviews-section';
 import workReport from '../blocks/work-report/work-report';
 import brands from '../blocks/brands/brands';
+import popularWindows from '../blocks/popular-windows/popular-windows';
 
 // endregion
 
@@ -36,3 +37,4 @@ grForm();
 reviewsSection();
 workReport();
 brands();
+popularWindows();
