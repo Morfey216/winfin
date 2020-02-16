@@ -5,6 +5,14 @@
   background-color: $decor-gray;
 
   text-align: center;
+
+  @include tablet-max {
+    padding-top: 90px;
+  }
+
+  @include mobile-max {
+    padding-top: 70px;
+  }
 }
 
 .popular-windows__controls {

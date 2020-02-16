@@ -1,0 +1,55 @@
+include ../title/title
+include ../slider-navigation/slider-navigation
+
+-
+  const promoList = [
+      {
+        title: 'Скидки пенсионерам до -10%&nbsp;на&nbsp;установку&nbsp;окна',
+        date: '10.12.19 - 10.01.20',
+        promoLink: '#',
+        dataAttr: 'promo-1',
+      },
+      {
+        title: 'Акция "Новые&nbsp;окна в&nbsp;Новый&nbsp;год"',
+        date: '10.12.19 - 10.01.20',
+        promoLink: '#',
+        dataAttr: 'promo-2',
+      },
+      {
+        title: 'Больше окон, больше скидки Название&nbsp;акции',
+        date: '10.12.19 - 10.01.20',
+        promoLink: '#',
+        dataAttr: 'promo-3',
+      },
+      {
+        title: 'Больше окон, больше скидки Название&nbsp;акции',
+        date: '10.12.19 - 10.01.20',
+        promoLink: '#',
+        dataAttr: 'promo-4',
+      },
+    ]
+
+section.promotions-section.container
+  +title('Акции WINFIN', 'section-nodecor').promotions-section__title
+  div.promotions-section__content-container
+    div(data-promo-control='promo-1').promotions-section__content.promotions-section__content--promo-1
+      img(src='img/promotions/promo-slide-1.jpg' width="973" height="351" alt="Скидки пенсионерам до -10%")
+      a(href="#").button.button--orange Воспользоваться
+    div(data-promo-control='promo-2').promotions-section__content.promotions-section__content--promo-2
+      img(src='img/promotions/promo-slide-1.jpg' width="973" height="351" alt="Скидки пенсионерам до -10%")
+      a(href="#").button.button--orange Новые окна
+    div(data-promo-control='promo-3').promotions-section__content.promotions-section__content--promo-3
+      img(src='img/promotions/promo-slide-1.jpg' width="973" height="351" alt="Скидки пенсионерам до -10%")
+      a(href="#").button.button--orange Больше скидок
+    div(data-promo-control='promo-4').promotions-section__content.promotions-section__content--promo-4
+      img(src='img/promotions/promo-slide-1.jpg' width="973" height="351" alt="Скидки пенсионерам до -10%")
+      a(href="#").button.button--orange Воспользоваться
+  div.promotions-section__slider-container
+    div.promotions-section__promo-list
+      each promo in promoList
+        a(href=promo.promoLink data-promo-control=promo.dataAttr).promotions-section__promo-item
+          div
+            h3!= promo.title
+            span!= promo.date
+  +slider-navigation(false, 'promotions-section').promotions-section__slider-navigation
+  a(href="#").promotions-section__all-promo-link Все акции

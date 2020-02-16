@@ -21,6 +21,7 @@ import reviewsSection from '../blocks/reviews-section/reviews-section';
 import workReport from '../blocks/work-report/work-report';
 import brands from '../blocks/brands/brands';
 import popularWindows from '../blocks/popular-windows/popular-windows';
+import promoSection from '../blocks/promotions-section/promotions-section';
 
 // endregion
 
@@ -38,3 +39,4 @@ reviewsSection();
 workReport();
 brands();
 popularWindows();
+promoSection();

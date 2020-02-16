@@ -1,0 +1,137 @@
+.promotions-section {
+  position: relative;
+  padding-top: 58px;
+  margin-bottom: 30px;
+
+  @include mobile-max {
+    padding-top: 36px;
+  }
+
+  @include mobile-medium-max {
+    padding-top: 25px;
+  }
+}
+
+.promotions-section__content-container {
+  width: 973px;
+  margin: 0 auto;
+
+  @include tablet-medium-max {
+    max-width: 973px;
+    width: auto;
+  }
+}
+
+.promotions-section__content {
+  position: relative;
+
+  a {
+    @include ubuntu(18, 60, 700);
+    position: absolute;
+    right: 38px;
+    bottom: 14px;
+    padding: 0 55px;
+    text-transform: capitalize;
+
+    @include tablet-medium-max {
+      right: 20px;
+      line-height: 48px;
+      padding: 0 40px;
+    }
+
+    @include mobile-medium-max {
+      font-size: 16px;
+      line-height: 44px;
+      padding: 0 30px;
+    }
+  }
+}
+
+.promotions-section__content.disabled {
+  display: none;
+}
+
+.promotions-section__slider-container {
+  position: relative;
+  width: 976px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 17px 0;
+  border-bottom: 1px solid $icon-bg-gray;
+
+  @include tablet-max {
+    width: 855px;
+  }
+
+  @include tablet-medium-max {
+    width: 590px;
+  }
+
+  @include mobile-max {
+    max-width: 590px;
+    width: auto;
+    margin-left: 49px;
+    margin-right: 49px;
+  }
+}
+
+.promotions-section__promo-list {
+  margin: 0 auto;
+}
+
+.promotions-section__promo-item {
+  display: block;
+  width: 270px;
+
+  border-right: 1px solid $icon-bg-gray;
+
+  &:hover h3 {
+    color: $green;
+  }
+}
+
+.promotions-section__promo-item h3 {
+  @include ubuntu(18, 24, 700);
+  color: $gray;
+
+  @include mobile-max {
+    font-size: 16px;
+  }
+}
+
+.promotions-section__promo-item span {
+  @include ubuntu(16, 24, 400);
+  color: $green;
+
+  @include mobile-max {
+    font-size: 15px;
+  }
+}
+
+.promotions-section__slider-navigation {
+  position: absolute;
+  bottom: 75px;
+  left: 25px;
+  right: 25px;
+  z-index: 0;
+
+  @include mobile-max {
+    bottom: 85px;
+  }
+}
+
+.promotions-section__all-promo-link {
+  @include ubuntu(16, 20, 400);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: $medium-gray;
+  outline: none;
+  border-bottom: 2px solid $medium-gray;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: transparent;
+  }
+}
