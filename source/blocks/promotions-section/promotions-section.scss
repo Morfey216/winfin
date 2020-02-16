@@ -40,9 +40,9 @@
     }
 
     @include mobile-medium-max {
-      font-size: 16px;
-      line-height: 44px;
-      padding: 0 30px;
+      font-size: 14px;
+      line-height: 36px;
+      padding: 0 20px;
     }
   }
 }
@@ -97,6 +97,10 @@
   @include mobile-max {
     font-size: 16px;
   }
+
+  @include mobile-medium-max {
+    @include ubuntu(14, 18, 500);
+  }
 }
 
 .promotions-section__promo-item span {
@@ -105,6 +109,11 @@
 
   @include mobile-max {
     font-size: 15px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 13px;
+    line-height: 22px;
   }
 }
 

@@ -1,0 +1,41 @@
+include ../title/title
+
+-
+  const additionsList = [
+      {
+        image: 'handle.jpg',
+        w: 174,
+        h: 173,
+        alt: 'Ручки',
+        linkTitle: 'Ручки',
+      },
+      {
+        image: 'safety.jpg',
+        w: 174,
+        h: 173,
+        alt: 'Безопасность',
+        linkTitle: 'Безопасность',
+      },
+      {
+        image: 'ventilation.jpg',
+        w: 174,
+        h: 173,
+        alt: 'Проветривание',
+        linkTitle: 'Проветривание',
+      },
+      {
+        image: 'locks.jpg',
+        w: 174,
+        h: 173,
+        alt: 'Замки',
+        linkTitle: 'Замки',
+      },
+    ]
+
+section.additions.container
+  +title('Что у нас есть к окнам?', 'section-nodecor').additions__title
+  div.additions__list
+    each addition in additionsList
+      div.additions__item
+        img(src="img/additions/" + addition.image width=addition.w height=addition.h alt=addition.alt).additions__item-image
+        a(href="#").additions__item-link #{addition.linkTitle}
