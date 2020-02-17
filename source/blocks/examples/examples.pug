@@ -1,0 +1,82 @@
+include ../title/title
+include ../slider-navigation/slider-navigation
+
+-
+  const examplesList = [
+      {
+        image: 'ex-1.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-2.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-3.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-4.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-5.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+    ]
+
+    const thumbsList = [
+      {
+        image: 'thumbs-1.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-2.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-3.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-4.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-5.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+    ]
+
+section.examples.container
+  +title('Наши проекты', 'section-nodecor').examples__title
+  div.examples__container.examples__gallery-top
+    div.examples__wrapper
+      each ex in examplesList
+        img(src="img/examples/" + ex.image width=ex.w height=ex.h alt=ex.alt).examples__slide
+  +slider-navigation(false, 'examples').examples__slider-navigation
+  div.examples__container.examples__gallery-thumbs
+    div.thumbs__wrapper
+      each thumbs in thumbsList
+        img(src="img/examples/" + thumbs.image width=thumbs.w height=thumbs.h alt=thumbs.alt).thumbs__slide
+  a(href="#").examples__all-projects-link Все проекты

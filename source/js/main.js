@@ -20,6 +20,7 @@ import grForm from '../blocks/gauge-request-form/gauge-request-form';
 import reviewsSection from '../blocks/reviews-section/reviews-section';
 import workReport from '../blocks/work-report/work-report';
 import brands from '../blocks/brands/brands';
+import examples from '../blocks/examples/examples';
 import popularWindows from '../blocks/popular-windows/popular-windows';
 import promoSection from '../blocks/promotions-section/promotions-section';
 
@@ -38,5 +39,6 @@ grForm();
 reviewsSection();
 workReport();
 brands();
+examples();
 popularWindows();
 promoSection();

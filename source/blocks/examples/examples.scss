@@ -1,0 +1,67 @@
+.examples {
+  position: relative;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 74px 55px 30px 55px;
+  margin-bottom: 30px;
+
+  @include mobile-max {
+    padding-top: 36px;
+  }
+
+  @include mobile-medium-max {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+}
+
+.examples__container {
+  max-width: 946px;
+  width: auto;
+  margin: 0 auto;
+}
+
+.examples__gallery-top {
+  margin-bottom: 8px;
+}
+
+.examples__gallery-thumbs .swiper-slide {
+  opacity: 0.4;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.examples__gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.examples__slider-navigation {
+  position: absolute;
+  top: 40%;
+  left: 5px;
+  right: 5px;
+
+  @include mobile-max {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+.examples__all-projects-link {
+  @include ubuntu(16, 20, 400);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 55px;
+  color: $medium-gray;
+  outline: none;
+  border-bottom: 2px solid $medium-gray;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: transparent;
+  }
+}
