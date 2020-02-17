@@ -8,7 +8,7 @@ export default () => {
     [
       55.859069,
       37.602726,
-      '<div><span class="img"><img src="../img/logos/logo-footer.png" width="300" height="150"></span><br><h3>Наш офис:</h3><br>г. Москва, Отрадная, 2<br>ежедневно с 10:00 - 20:00<br><hr>e-mail: window@winfin.ru<br><b>+7 (499) 904 14 88  +7(499) 904 01 71</b><br>Viber / WhatsApp +79169495077</div>',
+      '<div><span class="img"><img src="img/logos/logo-footer.png" width="300" height="150"></span><br><h3>Наш офис:</h3><br>г. Москва, Отрадная, 2<br>ежедневно с 10:00 - 20:00<br><hr>e-mail: window@winfin.ru<br><b>+7 (499) 904 14 88  +7(499) 904 01 71</b><br>Viber / WhatsApp +79169495077</div>',
       'Офис компании WINFIN',
     ],
   ];
