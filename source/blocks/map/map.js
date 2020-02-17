@@ -23,8 +23,8 @@ export default () => {
   const markers = L.layerGroup();
 
   const greenIcon = new L.Icon({
-    iconUrl: '../img/logos/map-big-logo.png',
-    shadowUrl: '../img/logos/map-big-logo-shadow.png',
+    iconUrl: 'img/logos/map-big-logo.png',
+    shadowUrl: 'img/logos/map-big-logo-shadow.png',
     iconSize: [85, 26],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
