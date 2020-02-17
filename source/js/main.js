@@ -23,6 +23,7 @@ import brands from '../blocks/brands/brands';
 import examples from '../blocks/examples/examples';
 import popularWindows from '../blocks/popular-windows/popular-windows';
 import promoSection from '../blocks/promotions-section/promotions-section';
+import map from '../blocks/map/map';
 
 // endregion
 
@@ -42,3 +43,4 @@ brands();
 examples();
 popularWindows();
 promoSection();
+map();

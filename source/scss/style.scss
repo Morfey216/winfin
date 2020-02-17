@@ -10,6 +10,9 @@
 // region libs
 // @import "libs/choices/choices";
 @import "libs/swiper/swiper";
+// @import "libs/leaflet/leaflet";
+// @import "libs/leaflet/MarkerCluster";
+// @import "libs/leaflet/MarkerCluster.Default";
 // @import "libs/range-slider/range-slider";
 // @import "libs/simplebar/simplebar";
 //endregion
@@ -67,6 +70,7 @@
 @import "../blocks/services-heading/services-heading";
 @import "../blocks/service-post/service-post";
 @import "../blocks/services-post-section/services-post-section";
+@import "../blocks/map/map";
 
 
 //endregion

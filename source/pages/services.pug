@@ -1,6 +1,7 @@
 include ../blocks/head/head
 include ../blocks/header/header
 include ../blocks/gauge-request-form/gauge-request-form
+include ../blocks/map/map
 include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/page-footer/page-footer
 include ../blocks/overlay/overlay
@@ -22,6 +23,7 @@ html(lang='ru')
 
       +gauge-request-form('Оформите заявку на&nbsp;замер')
       include ../blocks/brands/brands
+      +map
 
       +feedback-contacts
     +overlay.js-modal-overlay
