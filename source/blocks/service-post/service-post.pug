@@ -1,0 +1,7 @@
+mixin service-post(post, elementBaseClass)
+  div.service-post&attributes(attributes)
+    img(src='img/service/' + post.image width=post.w height=post.h alt=post.alt)
+    div.service-post__content-wrapper(class=elementBaseClass ? elementBaseClass + '__post-content-wrapper': '')
+      h3.service-post__title!= post.title
+      p.service-post__content!= post.content
+      a(href=post.link).service-post__link Подробнее

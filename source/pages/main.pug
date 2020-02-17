@@ -3,6 +3,7 @@ include ../blocks/header/header
 include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/work-report/work-report
 include ../blocks/any-complexity/any-complexity
+include ../blocks/gauge-request-form/gauge-request-form
 include ../blocks/page-footer/page-footer
 include ../blocks/overlay/overlay
 include ../blocks/gager-modal/gager-modal
@@ -30,7 +31,7 @@ html(lang='ru')
       include ../blocks/promotions-section/promotions-section
       include ../blocks/additions/additions
       include ../blocks/getting/getting
-      include ../blocks/gauge-request-form/gauge-request-form
+      +gauge-request-form('Оформите заявку на&nbsp;замер&nbsp;окон')
       include ../blocks/brands/brands
 
       +feedback-contacts

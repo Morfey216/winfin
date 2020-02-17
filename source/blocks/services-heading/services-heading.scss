@@ -1,0 +1,85 @@
+.services-heading {
+  margin: 0 auto;
+}
+
+.services-heading__holder {
+  min-height: 387px;
+  padding-top: 135px;
+  padding-bottom: 100px;
+  background-image: url("../img/background/service-holder.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @include mobile-max {
+    padding-top: 125px;
+  }
+
+  @include mobile-medium-max {
+    padding-top: 95px;
+    padding-bottom: 90px;
+  }
+}
+
+.services-heading__heading-nav {
+  margin-bottom: 15px;
+}
+
+.services-heading__seo {
+  @include ubuntu(16, 24, 400);
+  margin-bottom: 15px;
+
+  @include tablet-max {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @include mobile-max {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.services-heading__title {
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+  @include tablet-max {
+    margin-top: 30px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 20px;
+  }
+}
+
+.services-heading__services-list {
+  @include ubuntu(18, 36, 500);
+  list-style: none;
+  margin-bottom: 40px;
+
+  @include mobile-max {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+.services-heading__services-list li {
+  position: relative;
+  padding-left: 25px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+
+    background-image: url("../img/icons/tick-inside-circle.png");
+
+    @include mobile-max {
+      top: 9px;
+    }
+  }
+}

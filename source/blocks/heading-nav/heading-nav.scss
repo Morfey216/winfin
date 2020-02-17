@@ -1,0 +1,49 @@
+.heading-nav {
+  padding: 8px 0;
+  background-color: $green;
+}
+
+.heading-nav__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.heading-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+
+  svg {
+    transform: rotate(-90deg);
+    fill: $white;
+  }
+}
+
+.heading-nav__link {
+  @include ubuntu(16, 30, 400);
+  color: $white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-right: 9px;
+  margin-left: 9px;
+  border-bottom: 1px solid transparent;
+
+  @include tablet-max {
+    @include ubuntu(12, 26, 400);
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $white;
+  }
+
+  &:active {
+    border-bottom: 1px solid $white;
+  }
+}
+

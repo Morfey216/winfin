@@ -1,0 +1,33 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/gauge-request-form/gauge-request-form
+include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/page-footer/page-footer
+include ../blocks/overlay/overlay
+include ../blocks/gager-modal/gager-modal
+include ../blocks/call-request-modal/call-request-modal
+include ../blocks/discount-modal/discount-modal
+
+doctype html
+html(lang='ru')
+  +head('Услуги')
+  body
+    +header
+
+    main
+      h1.visually-hidden Сайт компании "WINFIN"
+
+      include ../blocks/services-heading/services-heading
+      include ../blocks/services-post-section/services-post-section
+
+      +gauge-request-form('Оформите заявку на&nbsp;замер')
+      include ../blocks/brands/brands
+
+      +feedback-contacts
+    +overlay.js-modal-overlay
+    +gager-modal
+    +call-request-modal
+    +discount-modal
+    +page-footer
+
+    include ../blocks/_scripts-block/_scripts-block

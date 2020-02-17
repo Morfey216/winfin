@@ -1,0 +1,9 @@
+include ../svg/svg
+
+mixin heading-nav(list)
+  div.heading-nav&attributes(attributes)
+    ul.heading-nav__list
+      each item in list
+        li.heading-nav__item
+          +svg('arrow-short-down')(width="8" height="5")
+          a.heading-nav__link(href=item.link)!=item.title

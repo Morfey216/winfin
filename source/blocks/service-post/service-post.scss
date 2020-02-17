@@ -1,0 +1,53 @@
+.service-post {
+  width: 384px;
+
+  @include tablet-max {
+    max-width: 364px;
+  }
+
+  @include mobile-max {
+    max-width: 314px;
+  }
+}
+
+.service-post__content-wrapper {
+  padding-bottom: 10px;
+}
+
+.service-post h3 {
+  @include ubuntu(20, 24, 700);
+  padding: 13px 0;
+
+  @include tablet-max {
+    font-size: 18px;
+  }
+
+  @include mobile-max {
+    font-size: 16px;
+  }
+}
+
+.service-post p {
+  @include ubuntu(16, 20, 400);
+  padding-bottom: 10px;
+
+  @include tablet-max {
+    font-size: 15px;
+  }
+
+  @include mobile-max {
+    font-size: 14px;
+  }
+}
+
+.service-post a {
+  @include ubuntu(15, 20, 500);
+  color: $green;
+  border-bottom: 1px solid $green;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+    border-bottom-color: $orange;
+  }
+}

@@ -1,0 +1,78 @@
+include ../holder/holder
+include ../breadcrumbs/breadcrumbs
+include ../heading-nav/heading-nav
+include ../title/title
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Услуги',
+      link: '#',
+    }
+  ]
+
+  const headingNavList = [
+    {
+      title: 'Мы&nbsp;на&nbsp;ТВ',
+      link: '#',
+    },
+    {
+      title: 'Наше&nbsp;производство',
+      link: '#',
+    },
+    {
+      title: 'Отзывы',
+      link: '#',
+    },
+    {
+      title: 'Партнеры',
+      link: '#',
+    },
+    {
+      title: 'Реквизиты',
+      link: '#',
+    },
+    {
+      title: 'Вопрос-ответ',
+      link: '#',
+    },
+    {
+      title: 'Архитекторам&nbsp;и&nbsp;строителям',
+      link: '#',
+    },
+    {
+      title: '3D&nbsp;тур&nbsp;по&nbsp;шоуруму',
+      link: '#',
+    },
+  ]
+
+  const servicesList = [
+    'Подоконника;',
+    'Оконного отлива;',
+    'Остекления;',
+    'Спейсера;',
+    'Утепления в проем окна;',
+  ]
+
+  const holderData = {
+    title: 'Наш девиз - качество!',
+    slogan: 'Тут краткий текст или слоган</br>Подробности акции уточняйте у менеджеров',
+    bg: 'service-holder.jpg'
+  }
+
+
+div.services-heading
+  +holder(holderData).services-heading__holder
+  +breadcrumbs(breadcrumbs).services-heading__breadcrumbs.container
+  +heading-nav(headingNavList).services-heading__heading-nav
+  div.services-heading__seo.container
+    p Вы затеяли ремонт в доме или квартире? Но не знаете где купить евроокна и двери по выгодной цене? Наш магазин то, что вам нужно! Наша компания предоставляет услуги по продаже деревянных финских окон и дверей. Мы более 20 лет на рынке и за это время успели обслужить 3000 клиентов. Вы не услышите ни одного негативного отзыва о нас во всей Москве и другим регионам РФ. Поэтому приобрести продукцию у нас – разумно. Так же мы предоставляем услуги профессиональных замерщиков и монтажников, которые поставят окно или вставят дверь за короткий срок.
+    p Стоимость услуг задекларирована в прайсе на сайте нашего магазина. Там вы найдете большое количество информации о предоставляемых услугах и их стоимости. Вам не придется самим вставлять и утеплять стекла наша команда сделает точный замер и выполнит всю работу.
+  +title('МЫ ПРЕДОСТАВЛЯЕМ СЛЕДУЮЩИЕ УСЛУГИ:', 'bold').services-heading__title.container
+  ul.services-heading__services-list.container
+    each item in servicesList
+      li!= item
