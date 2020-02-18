@@ -1,0 +1,32 @@
+include ../title/title
+
+-
+  const questionsList = [
+      {
+        label: '1.',
+        content: 'Здравствуйте, скажите, пожалуйста, какой срок изготовления деревянных окон? И можно устанавливать окна в зимний период?'
+      },
+      {
+        label: '2.',
+        content: 'Добрый день! В чем принципиальное отличие финских окон от так называемых евроокон.'
+      },
+      {
+        label: '3.',
+        content: 'Проконсультируйте пожалуйста, по стоимости окон из сосны с алюминием снаружи?'
+      },
+      {
+        label: '4.',
+        content: 'Возможно ли доставка в Дальние регионы РФ?'
+      },
+    ]
+
+section.faq
+  div.faq__wrapper
+    +title('Часто задаваемые вопросы', 'section').faq__title
+    ul.faq__questions
+      each question in questionsList
+        li.faq__question
+          span #{question.label}
+          p!= question.content
+    a(href="#").faq__ask-question-link Задать вопрос
+    img(src="img/decor/thinking-woman.png" width="300" height="525" alt="").faq__decor-img

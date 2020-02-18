@@ -1,0 +1,129 @@
+.faq {
+  padding-top: 36px;
+  padding-bottom: 200px;
+  background-color: $decor-gray;
+  background-image: url("../img/background/decor-wave.jpg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  @include mobile-max {
+    padding-bottom: 130px;
+  }
+
+  @include mobile-medium-max {
+    padding-bottom: 95px;
+  }
+}
+
+.faq__wrapper {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
+  padding: 40px 47px;
+  background-color: $decor-gray;
+  box-shadow: 0 10px 27px 8px rgba(181, 181, 181, 0.75);
+
+  @include tablet-medium-max {
+    width: 680px;
+  }
+
+  @include mobile-max {
+    max-width: 680px;
+    width: 90%;
+    padding: 40px 24px;
+  }
+}
+
+.faq__questions {
+  @include list-reset;
+  @include ubuntu(17, 24, 400);
+  margin-bottom: 49px;
+  color: $gray;
+
+  @include tablet-medium-max {
+    font-size: 15px;
+    line-height: 21px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 38px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  padding: 18px 10px;
+  border-bottom: 1px solid $border-gray;
+
+  &:first-child {
+    border-top: 1px solid $border-gray;
+  }
+
+  p {
+    margin-left: 28px;
+  }
+
+  @include mobile-medium-max {
+    flex-direction: column;
+
+    p {
+      margin-left: 0;
+    }
+  }
+}
+
+.faq__questions span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $orange-date;
+
+  @include mobile-max {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+.faq__ask-question-link {
+  @include ubuntu(17, 24, 700);
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  color: $gray;
+  border-bottom: 1px solid $gray;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+    border-color: $green;
+  }
+}
+
+.faq__decor-img {
+  position: absolute;
+  bottom: -200px;
+  right: -120px;
+
+  @include tablet-max {
+    width: 250px;
+    right: -30px;
+  }
+
+  @include tablet-medium-max {
+    width: 210px;
+    right: -20px;
+  }
+
+  @include mobile-max {
+    display: none;
+  }
+}
