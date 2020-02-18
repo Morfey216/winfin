@@ -1,0 +1,144 @@
+.main-slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 579px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $white;
+  background: url("../img/main-slider/slide-1.jpg"), linear-gradient(to bottom, $brown 0%, $brown 57%, $light-brown 57%, $light-brown 100%);
+  background-size: auto 579px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.main-slider__container {
+  position: relative;
+  width: 1005px;
+  margin: 0 auto;
+  padding: 75px 15px;
+
+  @include tablet-max {
+    width: 730px;
+  }
+}
+
+.main-slider__description-container {
+  position: relative;
+}
+
+.main-slider__data {
+  @include ubuntu(19, 25, 500);
+  padding: 10px 22px;
+  background-color: $orange-date;
+
+  position: absolute;
+  top: 135px;
+  left: 605px;
+
+  @include tablet-max {
+    font-size: 18px;
+    // top: 135px;
+    left: 530px;
+  }
+
+  @include mobile-max {
+    font-size: 18px;
+    top: 5px;
+    left: 340px;
+  }
+
+  @include mobile-medium-max {
+    padding: 8px 18px;
+    font-size: 14px;
+    left: 150px;
+  }
+}
+
+.main-slider__promo-marker {
+  @include ubuntu(36, 48, 400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include tablet-max {
+    font-size: 32px;
+  }
+}
+
+.main-slider__title {
+  @include ubuntu(60, 48, 700);
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include tablet-max {
+    font-size: 55px;
+    letter-spacing: 0;
+  }
+
+  @include mobile-max {
+    font-size: 42px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 34px;
+    line-height: 36px;
+  }
+}
+
+.main-slider__slogan {
+  @include ubuntu(24, 36, 400);
+
+  @include mobile-max {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  @include mobile-medium-max {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.main-slider__details-link {
+  @include ubuntu(19, 25, 700);
+  width: fit-content;
+  margin-top: 15px;
+  padding: 19px 30px;
+  text-transform: capitalize;
+  border-radius: 0;
+  background-color: $green;
+  transition: background-color 0.3s;
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    margin-left: 8px;
+    width: 12px;
+    height: 23px;
+  }
+
+  @include mobile-max {
+    padding: 14px 20px;
+    font-size: 18px;
+  }
+
+  @include mobile-medium-max {
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+.main-slider__pagination {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  left: 50% !important;
+  transform: translateX(-50%);
+  width: auto !important;
+  height: 12px;
+}

@@ -1,0 +1,20 @@
+.pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: $white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active {
+    background-color: $orange;
+  }
+}
+
+.pagination-bullet:not(:last-of-type) {
+  margin-right: 7px;
+
+  @include mobile-max {
+    margin-right: 7px;
+  }
+}
