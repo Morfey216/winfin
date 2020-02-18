@@ -21,6 +21,10 @@
   @include mobile-max {
     margin-top: 45px;
   }
+
+  &--no-top {
+    margin-top: 35px;
+  }
 }
 
 .work-report__title {

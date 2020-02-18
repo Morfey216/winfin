@@ -3,6 +3,7 @@
   display: flex;
   align-items: start;
   margin-top: 55px;
+  margin-bottom: 35px;
 
   @include tablet-medium-max {
     max-width: 520px;

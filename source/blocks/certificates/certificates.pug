@@ -1,0 +1,18 @@
+include ../title/title
+include ../slider-navigation/slider-navigation
+
+section.certificates.container
+  +title('Сертифицированное производство', 'no-decor').certificates__title
+  div.certificates__container
+    div.certificates__wrapper
+      div.certificates__slide
+        img(src="img/certificates/certificate-1.jpg" width="163" height="229" alt="Сертификат")
+      div.certificates__slide
+        img(src="img/certificates/certificate-1.jpg" width="163" height="229" alt="Сертификат")
+      div.certificates__slide
+        img(src="img/certificates/certificate-1.jpg" width="163" height="229" alt="Сертификат")
+      div.certificates__slide
+        img(src="img/certificates/certificate-1.jpg" width="163" height="229" alt="Сертификат")
+      div.certificates__slide
+        img(src="img/certificates/certificate-1.jpg" width="163" height="229" alt="Сертификат")
+  +slider-navigation(false, 'certificates').certificates__slider-navigation

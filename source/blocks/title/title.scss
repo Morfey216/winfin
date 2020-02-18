@@ -76,6 +76,28 @@
   }
 }
 
+.title--left-decor {
+  position: relative;
+  padding-left: 11px;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 6px;
+    height: 29px;
+
+    background-color: $green;
+
+    @include tablet-max {
+      height: 24px;
+    }
+  }
+}
+
 .title--section-nodecor {
   position: relative;
   text-align: center;

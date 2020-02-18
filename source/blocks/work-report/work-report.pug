@@ -1,9 +1,9 @@
 include ../title/title
 include ../slider-navigation/slider-navigation
 
-mixin work-report(title)
-  section.work-report.container
-    +title(title).work-report__title
+mixin work-report(title, titleMod, sectionMod)
+  section.work-report.container(class= sectionMod ? 'work-report--' + sectionMod : '')
+    +title(title, titleMod).work-report__title
     div.work-report__content
       p Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий.
       p Панорамное остекление, представляющее собой конструкцию, занимающую часть или всю стену, а иногда и смежные, широко используется как в загородном строительстве для оформления террас, веранд, так и пользуется популярностью в городе для остекления лоджий и балконов или оформления современных высотных зданий.

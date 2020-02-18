@@ -25,6 +25,7 @@ import examples from '../blocks/examples/examples';
 import popularWindows from '../blocks/popular-windows/popular-windows';
 import promoSection from '../blocks/promotions-section/promotions-section';
 import map from '../blocks/map/map';
+import certificates from '../blocks/certificates/certificates';
 
 // endregion
 
@@ -46,3 +47,4 @@ examples();
 popularWindows();
 promoSection();
 map();
+certificates();

@@ -1,0 +1,39 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/work-report/work-report
+include ../blocks/any-complexity/any-complexity
+include ../blocks/gauge-request-form/gauge-request-form
+include ../blocks/map/map
+include ../blocks/page-footer/page-footer
+include ../blocks/overlay/overlay
+include ../blocks/gager-modal/gager-modal
+include ../blocks/call-request-modal/call-request-modal
+include ../blocks/discount-modal/discount-modal
+
+doctype html
+html(lang='ru')
+  +head('О компании')
+  body
+    +header
+
+    main
+      h1.visually-hidden Сайт компании "WINFIN"
+      include ../blocks/about-heading/about-heading
+      +work-report('Наше производство', 'left-decor', 'no-top')
+      +any-complexity('Изготовим на заказ любой&nbsp;сложности')
+      include ../blocks/last-news/last-news
+      include ../blocks/certificates/certificates
+      include ../blocks/getting/getting
+      +gauge-request-form('Оформите заявку на&nbsp;замер&nbsp;окон')
+      include ../blocks/brands/brands
+      +map
+
+      +feedback-contacts
+    +overlay.js-modal-overlay
+    +gager-modal
+    +call-request-modal
+    +discount-modal
+    +page-footer
+
+    include ../blocks/_scripts-block/_scripts-block

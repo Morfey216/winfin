@@ -1,0 +1,51 @@
+.certificates {
+  position: relative;
+  padding: 55px 15px 75px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.certificates__container {
+  max-width: 945px;
+  margin: 0 auto;
+  margin-top: 70px;
+
+  @include tablet-max {
+    max-width: 895px;
+  }
+
+  @include tablet-medium-max {
+    max-width: 630px;
+  }
+
+  @include mobile-max {
+    margin-top: 50px;
+  }
+}
+
+.certificates__slide img {
+  margin: 0 auto;
+}
+
+.certificates__slider-navigation {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 55%;
+
+  @include tablet-max {
+    left: 7px;
+    right: 7px;
+  }
+
+  @include tablet-medium-max {
+    left: 20px;
+    right: 20px;
+  }
+
+  @include mobile-max {
+    left: 40%;
+    right: 40%;
+    top: 86%;
+  }
+}

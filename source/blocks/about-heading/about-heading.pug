@@ -1,0 +1,69 @@
+include ../holder/holder
+include ../breadcrumbs/breadcrumbs
+include ../heading-nav/heading-nav
+include ../title/title
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'О компании',
+      link: '#',
+    }
+  ]
+
+  const headingNavList = [
+    {
+      title: 'Мы&nbsp;на&nbsp;ТВ',
+      link: '#',
+    },
+    {
+      title: 'Наше&nbsp;производство',
+      link: '#',
+    },
+    {
+      title: 'Отзывы',
+      link: '#',
+    },
+    {
+      title: 'Партнеры',
+      link: '#',
+    },
+    {
+      title: 'Реквизиты',
+      link: '#',
+    },
+    {
+      title: 'Вопрос-ответ',
+      link: '#',
+    },
+    {
+      title: 'Архитекторам&nbsp;и&nbsp;строителям',
+      link: '#',
+    },
+    {
+      title: '3D&nbsp;тур&nbsp;по&nbsp;шоуруму',
+      link: '#',
+    },
+  ]
+
+  const holderData = {
+    title: 'Более 15 лет на рынке',
+    slogan: 'Тут краткий текст или слоган</br>Подробности акции уточняйте у менеджеров',
+    bg: 'service-holder.jpg'
+  }
+
+
+div.about-heading
+  +holder(holderData).about-heading__holder
+  +breadcrumbs(breadcrumbs).about-heading__breadcrumbs.container
+  +heading-nav(headingNavList).about-heading__heading-nav
+  div.about-heading__seo.container
+    p Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002
+    p Торговая марка WINFIN образована в 1997 году и объединяет группу финских компаний.
+    p Предоставляет эксклюзивные строительные товары финских и других европейских производителей на рынке Москвы
+    p Менеджеры помогут Вам определиться с окнами из дерева, которые отвечают Вашим требованиям, расскажут о преимуществах той или иной конструкции окон. Замерщик подскажет, как лучше спроектировать окно, для дальнейшей удобной его эксплуатации
+  +title('ЭЛИТНЫЕ ДЕРЕВО-АЛЮМИНИЕВЫЕ ОКНА</br>И&nbsp;ДЕРЕВЯННЫЕ ОКНА&nbsp;ОТ&nbsp;winfin', 'bold').about-heading__title.container
