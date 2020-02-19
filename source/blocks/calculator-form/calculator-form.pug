@@ -78,6 +78,50 @@ include ../button/button
     },
   ]
 
+-
+  const constructionTypes = [
+    {
+      id: 'single-window',
+      value: 'single-window',
+      label: 'Одностворчатое',
+      checked: 'checked',
+      image: 'win-icon-1.png',
+      w: 26,
+      h: 34,
+      alt: 'Одностворчатое',
+    },
+    {
+      id: 'double-window',
+      value: 'double-window',
+      label: 'Двустворчатое',
+      checked: '',
+      image: 'win-icon-2.png',
+      w: 47,
+      h: 34,
+      alt: 'Двустворчатое',
+    },
+    {
+      id: 'triple-window',
+      value: 'triple-window',
+      label: 'Трехстворчатое',
+      checked: '',
+      image: 'win-icon-3.png',
+      w: 56,
+      h: 34,
+      alt: 'Трехстворчатое',
+    },
+    {
+      id: 'arched-window',
+      value: 'arched-window',
+      label: 'Арочное',
+      checked: '',
+      image: 'win-icon-4.png',
+      w: 28,
+      h: 37,
+      alt: 'Арочное',
+    },
+  ]
+
 section.calculator-form
   +title('Рассчитать стоимость').calculator-form__title
   form.calculator-form__form(action="#" method="post")
@@ -111,4 +155,32 @@ section.calculator-form
               label.calculator-form__check-label(for= element.id data-explanation= element.explanation) #{element.label}
                 span.calculator-form__label-explanation ?
       +button('Оформить заказ', 'green')(type='submit').calculator-form__submit-btn
-
+    div.calculator-form__right-side
+      fieldset.calculator-form__item
+        legend.calculator-form__sub-title Тип конструкции
+        ul.calculator-form__construction-type-list
+          each icon in constructionTypes
+            li.calculator-form__construction-type-item
+              input.calculator-form__construction-type-box.visually-hidden(type="radio" id= icon.id name="construction-type" value=icon.value checked= icon.checked ? true : false)
+              label.calculator-form__construction-type-label(for= icon.id)
+                img(src="img/calculator-form/win-icons/" + icon.image width= icon.w height= icon.h alt= icon.alt title= icon.alt).calculator-form__construction-type-img
+                span.visually-hidden #{icon.label}
+      fieldset.calculator-form__item.calculator-form__item--size
+        legend.visually-hidden Выбор размеров
+        div.calculator-form__size-wrapper
+          div.calculator-form__size.calculator-form__size--height
+            input(type="text" id="win-height" name="win-height" required)
+            label(for="win-height") Высота
+          div.calculator-form__size-img
+            img(src="img/calculator-form/window.jpg" width="137" height="136" alt="Образец окна")
+            div.calculator-form__size
+              label(for="win-width") Ширина
+              input(type="text" id="win-width" name="win-width" required)
+      div.calculator-form__price
+        h3.calculator-form__price-title Стоимость окна
+        span.calculator-form__price-value 13 632 р.
+        p.calculator-form__price-description Обращаем Ваше внимание, что данный расчет является приблизительным. Наш менеджер сообщит Вам точную стоимость после уточнения информации.
+        p.calculator-form__price-description Нажимая кнопку “Оформить заказ”, Вы принимаете
+          |
+          |
+          a(href="#") политику конфиденциальности

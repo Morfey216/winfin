@@ -706,6 +706,32 @@
               </ul>
             </fieldset><button class="button button--green calculator-form__submit-btn" type="submit"><span>Оформить заказ</span></button>
           </div>
+          <div class="calculator-form__right-side">
+            <fieldset class="calculator-form__item">
+              <legend class="calculator-form__sub-title">Тип конструкции</legend>
+              <ul class="calculator-form__construction-type-list">
+                <li class="calculator-form__construction-type-item"><input class="calculator-form__construction-type-box visually-hidden" type="radio" id="single-window" name="construction-type" value="single-window" checked><label class="calculator-form__construction-type-label" for="single-window"><img class="calculator-form__construction-type-img" src="img/calculator-form/win-icons/win-icon-1.png" width="26" height="34" alt="Одностворчатое" title="Одностворчатое"><span class="visually-hidden">Одностворчатое</span></label></li>
+                <li class="calculator-form__construction-type-item"><input class="calculator-form__construction-type-box visually-hidden" type="radio" id="double-window" name="construction-type" value="double-window"><label class="calculator-form__construction-type-label" for="double-window"><img class="calculator-form__construction-type-img" src="img/calculator-form/win-icons/win-icon-2.png" width="47" height="34" alt="Двустворчатое" title="Двустворчатое"><span class="visually-hidden">Двустворчатое</span></label></li>
+                <li class="calculator-form__construction-type-item"><input class="calculator-form__construction-type-box visually-hidden" type="radio" id="triple-window" name="construction-type" value="triple-window"><label class="calculator-form__construction-type-label" for="triple-window"><img class="calculator-form__construction-type-img" src="img/calculator-form/win-icons/win-icon-3.png" width="56" height="34" alt="Трехстворчатое" title="Трехстворчатое"><span class="visually-hidden">Трехстворчатое</span></label></li>
+                <li class="calculator-form__construction-type-item"><input class="calculator-form__construction-type-box visually-hidden" type="radio" id="arched-window" name="construction-type" value="arched-window"><label class="calculator-form__construction-type-label" for="arched-window"><img class="calculator-form__construction-type-img" src="img/calculator-form/win-icons/win-icon-4.png" width="28" height="37" alt="Арочное" title="Арочное"><span class="visually-hidden">Арочное</span></label></li>
+              </ul>
+            </fieldset>
+            <fieldset class="calculator-form__item calculator-form__item--size">
+              <legend class="visually-hidden">Выбор размеров</legend>
+              <div class="calculator-form__size-wrapper">
+                <div class="calculator-form__size calculator-form__size--height"><input type="text" id="win-height" name="win-height" required><label for="win-height">Высота</label></div>
+                <div class="calculator-form__size-img"><img src="img/calculator-form/window.jpg" width="137" height="136" alt="Образец окна">
+                  <div class="calculator-form__size"><label for="win-width">Ширина</label><input type="text" id="win-width" name="win-width" required></div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="calculator-form__price">
+              <h3 class="calculator-form__price-title">Стоимость окна</h3><span class="calculator-form__price-value">13 632 р.</span>
+              <p class="calculator-form__price-description">Обращаем Ваше внимание, что данный расчет является приблизительным. Наш менеджер сообщит Вам точную стоимость после уточнения информации.</p>
+              <p class="calculator-form__price-description">Нажимая кнопку “Оформить заказ”, Вы принимаете
+                <a href="#">политику конфиденциальности</a></p>
+            </div>
+          </div>
         </form>
       </section>
     </section>

@@ -1,5 +1,10 @@
 .calculator-form__form {
   margin-top: 45px;
+  display: flex;
+}
+
+.calculator-form__left-side {
+  margin-right: 25px;
 }
 
 .calculator-form__sub-title {
@@ -26,6 +31,7 @@
   margin-top: 4px;
   padding: 8px 17px 9px;
   color: $header-gray;
+  outline: none;
   cursor: pointer;
 
   appearance: none;
@@ -35,9 +41,21 @@
   background-size: 12px auto;
 }
 
-.calculator-form__select:hover {
+.calculator-form__select:hover,
+.calculator-form__select:focus,
+.calculator-form__select:active {
   color: $green;
   box-shadow: 0 4px 12px 4px rgba(185, 185, 185, 0.75);
+}
+
+.calculator-form__select:disabled,
+.calculator-form__select[aria-disabled="true"] {
+  color: $gray-disabled;
+}
+
+.calculator-form__select:disabled:hover,
+.calculator-form__select[aria-disabled="true"] {
+  border-color: $gray-disabled;
 }
 
 .calculator-form__select option {
@@ -53,7 +71,8 @@
 }
 
 .calculator-form__radio-list,
-.calculator-form__check-list {
+.calculator-form__check-list,
+.calculator-form__construction-type-list {
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
@@ -190,5 +209,183 @@
   &:hover,
   &:focus {
     background-color: $orange;
+  }
+}
+
+// Правая часть формы
+
+.calculator-form__right-side {
+  width: 270px;
+}
+
+// Блок Выбора типа конструкции
+
+.calculator-form__construction-type-list {
+  width: 270px;
+  justify-content: space-between;
+}
+
+.calculator-form__construction-type-label {
+  @include ubuntu(14, 24, 400);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $medium-gray;
+  cursor: pointer;
+}
+
+.calculator-form__construction-type-label:hover .calculator-form__construction-type-img,
+.calculator-form__construction-type-label:focus .calculator-form__construction-type-img,
+.calculator-form__construction-type-label:active .calculator-form__construction-type-img {
+  opacity: 0.7;
+}
+
+.calculator-form__construction-type-box:disabled + label,
+.calculator-form__construction-type-box:disabled + label::before {
+  border-color: $gray-disabled;
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calculator-form__construction-type-box:checked + label {
+  color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -11px;
+    width: 25px;
+    height: 25px;
+    background: $white url("../img/calculator-form/tick.png") center center no-repeat;
+    border: 1px solid $orange;
+    border-radius: 50%;
+  }
+}
+
+// Блок размера окна
+
+.calculator-form__item--size {
+  width: 205px;
+  margin: 0 auto;
+}
+
+.calculator-form__size-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-form__size {
+  @include ubuntu(15, 24, 400);
+  color: $medium-gray;
+}
+
+.calculator-form__size--height {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-form__size input {
+  @include ubuntu(14, 24, 400);
+  box-sizing: border-box;
+  width: 48px;
+  margin: 7px;
+  padding: 3px 6px;
+  color: $header-gray;
+  border: 1px solid $breadcrumbs-gray;
+  outline: none;
+
+  &:hover {
+    color: $very-light-gray;
+    border: 1px solid $very-light-gray;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: rgba(103, 76, 51, 1);
+    border-color: $gray;
+
+    &::placeholder {
+      color: rgba(103, 76, 51, 1);
+    }
+  }
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.calculator-form__size-img {
+  position: relative;
+
+  img {
+    margin-bottom: 7px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 136px;
+    background-color: $gray;
+
+    position: absolute;
+    top: 0;
+    left: -7px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 137px;
+    height: 1px;
+    background-color: $gray;
+
+    position: absolute;
+    right: 0;
+    top: 143px;
+  }
+}
+
+// Блок стоимости
+
+.calculator-form__price {
+  width: 270px;
+  padding: 25px 28px;
+  background-color: $decor-gray;
+}
+
+.calculator-form__price-title {
+  @include ubuntu(20, 24, 700);
+  color: $dark-gray;
+  text-transform: uppercase;
+}
+
+.calculator-form__price-value {
+  @include ubuntu(40, 24, 700);
+  display: block;
+  padding: 12px 0;
+  color: $dark-gray;
+}
+
+.calculator-form__price-description {
+  @include ubuntu(14, 18, 400);
+  color: $light-gray;
+}
+
+.calculator-form__price a {
+  border-bottom: 1px solid $light-gray;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $green;
+    border-color: $green;
   }
 }
