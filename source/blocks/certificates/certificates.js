@@ -21,7 +21,6 @@ export default () => {
       preloadImages: true,
       loadPrevNext: true,
       loadPrevNextAmount: 1,
-      // centeredSlides: true,
       slidesPerView: 5,
       spaceBetween: 10,
       slidesOffsetBefore: 0,

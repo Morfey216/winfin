@@ -664,6 +664,51 @@
         </div><a class="popular-windows__catalog-link" href="#">В каталог</a>
       </div>
     </section>
+    <section class="calculator-section container">
+      <section class="calculator-form">
+        <h2 class="title calculator-form__title">Рассчитать стоимость</h2>
+        <form class="calculator-form__form" action="#" method="post">
+          <div class="calculator-form__left-side">
+            <div class="calculator-form__select-block"><label class="calculator-form__sub-title">Выберите тип окна</label><select class="calculator-form__select" name="window-type">
+                <option value="wooden">Деревянные</option>
+                <option value="wood-aluminum">Дерево-алюминиевые</option>
+              </select></div>
+            <div class="calculator-form__select-block"><label class="calculator-form__sub-title">Выберите тип пакета</label><select class="calculator-form__select" name="window-glass">
+                <option value="wooden">Однокамерный + Стекло</option>
+                <option value="wood-aluminum">Двухкамерный + Стекло</option>
+              </select></div>
+            <fieldset class="calculator-form__item">
+              <legend class="calculator-form__sub-title">Выберите тип дерева</legend>
+              <ul class="calculator-form__radio-list">
+                <li class="calculator-form__radio-item"><input class="calculator-form__radiobox visually-hidden" type="radio" id="pine-tree" name="tree-type" value="pine-tree" checked><label class="calculator-form__radio-label" for="pine-tree">
+                    <div class="calculator-form__radio-img-wrapp"><img class="calculator-form__radio-img" src="img/calculator-form/tree-type/pine.jpg" width="63" height="63" alt="Сосна"></div><span>Сосна</span>
+                  </label></li>
+                <li class="calculator-form__radio-item"><input class="calculator-form__radiobox visually-hidden" type="radio" id="larch-tree" name="tree-type" value="larch-tree"><label class="calculator-form__radio-label" for="larch-tree">
+                    <div class="calculator-form__radio-img-wrapp"><img class="calculator-form__radio-img" src="img/calculator-form/tree-type/larch.jpg" width="63" height="63" alt="Лиственница"></div><span>Лиственница</span>
+                  </label></li>
+                <li class="calculator-form__radio-item"><input class="calculator-form__radiobox visually-hidden" type="radio" id="oak-tree" name="tree-type" value="oak-tree"><label class="calculator-form__radio-label" for="oak-tree">
+                    <div class="calculator-form__radio-img-wrapp"><img class="calculator-form__radio-img" src="img/calculator-form/tree-type/oak.jpg" width="63" height="63" alt="Дуб"></div><span>Дуб</span>
+                  </label></li>
+                <li class="calculator-form__radio-item"><input class="calculator-form__radiobox visually-hidden" type="radio" id="meranti-tree" name="tree-type" value="meranti-tree"><label class="calculator-form__radio-label" for="meranti-tree">
+                    <div class="calculator-form__radio-img-wrapp"><img class="calculator-form__radio-img" src="img/calculator-form/tree-type/meranti.jpg" width="63" height="63" alt="Меранти"></div><span>Меранти</span>
+                  </label></li>
+              </ul>
+            </fieldset>
+            <fieldset class="calculator-form__item">
+              <legend class="calculator-form__sub-title calculator-form__sub-title--orange">Дополнительные элементы</legend>
+              <ul class="calculator-form__check-list">
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="otliv" name="otliv" checked><label class="calculator-form__check-label" for="otliv" data-explanation="Заказ отлива">Отлив<span class="calculator-form__label-explanation">?</span></label></li>
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="folding" name="folding"><label class="calculator-form__check-label" for="folding" data-explanation="Комплектация откидным механизмом">Откидной механизм<span class="calculator-form__label-explanation">?</span></label></li>
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="lock" name="lock"><label class="calculator-form__check-label" for="lock" data-explanation="Замок безопасности">Детский замок<span class="calculator-form__label-explanation">?</span></label></li>
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="sill" name="sill"><label class="calculator-form__check-label" for="sill" data-explanation="Заказ подоконника / порога">Подоконник/Порог<span class="calculator-form__label-explanation">?</span></label></li>
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="energy-saving" name="energy-saving"><label class="calculator-form__check-label" for="energy-saving" data-explanation="Защита от теплопотерь">Энергосберегающий<span class="calculator-form__label-explanation">?</span></label></li>
+                <li class="calculator-form__check-item"><input class="calculator-form__checkbox visually-hidden" type="checkbox" id="mounting" name="mounting"><label class="calculator-form__check-label" for="mounting" data-explanation="Монтаж всей системы">Монтаж<span class="calculator-form__label-explanation">?</span></label></li>
+              </ul>
+            </fieldset><button class="button button--green calculator-form__submit-btn" type="submit"><span>Оформить заказ</span></button>
+          </div>
+        </form>
+      </section>
+    </section>
     <section class="examples container">
       <h2 class="title title--section-nodecor examples__title">Наши проекты</h2>
       <div class="examples__container examples__gallery-top">

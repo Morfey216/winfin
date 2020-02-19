@@ -1,0 +1,114 @@
+include ../title/title
+include ../button/button
+
+-
+  const elementsData = [
+    {
+      label: 'Отлив',
+      id: 'otliv',
+      name: 'otliv',
+      checked: 'checked',
+      explanation: 'Заказ отлива',
+    },
+    {
+      label: 'Откидной механизм',
+      id: 'folding',
+      name: 'folding',
+      explanation: 'Комплектация откидным механизмом',
+    },
+    {
+      label: 'Детский замок',
+      id: 'lock',
+      name: 'lock',
+      explanation: 'Замок безопасности',
+    },
+    {
+      label: 'Подоконник/Порог',
+      id: 'sill',
+      name: 'sill',
+      explanation: 'Заказ подоконника / порога',
+    },
+    {
+      label: 'Энергосберегающий',
+      id: 'energy-saving',
+      name: 'energy-saving',
+      explanation: 'Защита от теплопотерь',
+    },
+    {
+      label: 'Монтаж',
+      id: 'mounting',
+      name: 'mounting',
+      explanation: 'Монтаж всей системы',
+    },
+  ]
+
+-
+  const radioButtons = [
+    {
+      id: 'pine-tree',
+      value: 'pine-tree',
+      label: 'Сосна',
+      checked: 'checked',
+      image: 'pine.jpg',
+      alt: 'Сосна',
+    },
+    {
+      id: 'larch-tree',
+      value: 'larch-tree',
+      label: 'Лиственница',
+      checked: '',
+      image: 'larch.jpg',
+      alt: 'Лиственница',
+    },
+    {
+      id: 'oak-tree',
+      value: 'oak-tree',
+      label: 'Дуб',
+      checked: '',
+      image: 'oak.jpg',
+      alt: 'Дуб',
+    },
+    {
+      id: 'meranti-tree',
+      value: 'meranti-tree',
+      label: 'Меранти',
+      checked: '',
+      image: 'meranti.jpg',
+      alt: 'Меранти',
+    },
+  ]
+
+section.calculator-form
+  +title('Рассчитать стоимость').calculator-form__title
+  form.calculator-form__form(action="#" method="post")
+    div.calculator-form__left-side
+      div.calculator-form__select-block
+        label.calculator-form__sub-title Выберите тип окна
+        select(name="window-type").calculator-form__select
+          option(value="wooden") Деревянные
+          option(value="wood-aluminum") Дерево-алюминиевые
+      div.calculator-form__select-block
+        label.calculator-form__sub-title Выберите тип пакета
+        select(name="window-glass").calculator-form__select
+          option(value="wooden") Однокамерный + Стекло
+          option(value="wood-aluminum") Двухкамерный + Стекло
+      fieldset.calculator-form__item
+        legend.calculator-form__sub-title Выберите тип дерева
+        ul.calculator-form__radio-list
+          each item in radioButtons
+            li.calculator-form__radio-item
+              input.calculator-form__radiobox.visually-hidden(type="radio" id= item.id name="tree-type" value=item.value checked= item.checked ? true : false)
+              label.calculator-form__radio-label(for= item.id)
+                div.calculator-form__radio-img-wrapp
+                  img(src="img/calculator-form/tree-type/" + item.image width="63" height="63" alt= item.alt).calculator-form__radio-img
+                span #{item.label}
+      fieldset.calculator-form__item
+        legend.calculator-form__sub-title.calculator-form__sub-title--orange Дополнительные элементы
+        ul.calculator-form__check-list
+          each element in elementsData
+            li.calculator-form__check-item
+              input.calculator-form__checkbox.visually-hidden(type="checkbox" id= element.id name= element.name checked= element.checked ? true : false)
+              label.calculator-form__check-label(for= element.id data-explanation= element.explanation) #{element.label}
+                span.calculator-form__label-explanation ?
+      +button('Оформить заказ', 'green')(type='submit').calculator-form__submit-btn
+

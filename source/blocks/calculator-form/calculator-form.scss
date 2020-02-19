@@ -1,0 +1,194 @@
+.calculator-form__form {
+  margin-top: 45px;
+}
+
+.calculator-form__sub-title {
+  @include ubuntu(18, 24, 400);
+  color: $medium-gray;
+}
+
+.calculator-form__sub-title--orange {
+  color: $orange-date;
+}
+
+// select block
+
+.calculator-form__select-block {
+  width: 370px;
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-form__select {
+  @include ubuntu(17, 24, 400);
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 8px 17px 9px;
+  color: $header-gray;
+  cursor: pointer;
+
+  appearance: none;
+  background-image: url("../img/calculator-form/angle-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+}
+
+.calculator-form__select:hover {
+  color: $green;
+  box-shadow: 0 4px 12px 4px rgba(185, 185, 185, 0.75);
+}
+
+.calculator-form__select option {
+  cursor: pointer;
+}
+
+// check block
+
+.calculator-form__item {
+  width: 375px;
+  padding: 18px 0;
+  border: none;
+}
+
+.calculator-form__radio-list,
+.calculator-form__check-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Блок Выбора типа дерева
+
+.calculator-form__radio-list {
+  justify-content: space-between;
+}
+
+.calculator-form__radio-item {
+  width: 90px;
+}
+
+.calculator-form__radio-img {
+  border-radius: 50%;
+}
+
+.calculator-form__radio-label {
+  @include ubuntu(14, 24, 400);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $medium-gray;
+  cursor: pointer;
+}
+
+.calculator-form__radio-img-wrapp {
+  width: 71px;
+  height: 71px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.calculator-form__radio-label:hover .calculator-form__radio-img-wrapp,
+.calculator-form__radio-label:focus .calculator-form__radio-img-wrapp {
+  border: 1px solid $green;
+}
+
+.calculator-form__radiobox:disabled + label,
+.calculator-form__radiobox:disabled + label::before {
+  border-color: $gray-disabled;
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calculator-form__radiobox:checked + label {
+  color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 9px;
+    width: 71px;
+    height: 71px;
+    border: 1px solid $green;
+    border-radius: 50%;
+  }
+}
+
+// Блок Дополнительные элементы
+
+.calculator-form__check-item {
+  margin-bottom: 11px;
+}
+
+.calculator-form__check-label {
+  @include ubuntu(15, 24, 400);
+  position: relative;
+  padding-left: 36px;
+  padding-right: 27px;
+  color: $medium-gray;
+  cursor: pointer;
+}
+
+.calculator-form__checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border: 1px solid $breadcrumbs-gray;
+}
+
+.calculator-form__checkbox:hover + label::before,
+.calculator-form__checkbox:focus + label::before {
+  border-color: $very-light-gray;
+}
+
+.calculator-form__checkbox:disabled + label,
+.calculator-form__checkbox:disabled + label::before {
+  border-color: $gray-disabled;
+  opacity: 0.3;
+  cursor: default;
+}
+
+.calculator-form__checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 15px;
+  height: 11px;
+  background-image: url("../img/calculator-form/tick.png");
+}
+
+.calculator-form__label-explanation {
+  display: block;
+  width: 16px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+
+  color: $white;
+  border-radius: 50%;
+  background-color: $icon-bg-gray;
+
+  cursor: pointer;
+}
+
+.calculator-form__submit-btn {
+  padding: 24px 76px 22px;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+  }
+}
