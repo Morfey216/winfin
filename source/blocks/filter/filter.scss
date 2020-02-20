@@ -1,0 +1,117 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  border-top: 1px solid $border-gray;
+  border-bottom: 1px solid $border-gray;
+}
+
+// select block
+
+.filter__title {
+  @include ubuntu(17, 27, 400);
+  margin-top: 7px;
+  margin-right: 10px;
+  color: $light-gray;
+}
+
+.filter__legend {
+  @include ubuntu(13, 13, 400);
+  color: $dark-gray;
+}
+
+.filter__select-block {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  padding: 0;
+  border: none;
+
+  @include mobile-medium-max {
+    width: 270px;
+  }
+}
+
+.filter__select {
+  @include ubuntu(13, 13, 400);
+  box-sizing: border-box;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding: 11px 11px 10px;
+  color: $light-gray;
+  outline: none;
+  cursor: pointer;
+
+  appearance: none;
+  background-image: url("../img/calculator-form/angle-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  background-size: 12px auto;
+}
+
+.filter__select-block--price select {
+  width: 167px;
+}
+
+.filter__select-block--profile select {
+  width: 165px;
+
+  @include tablet-max {
+    width: 167px;
+  }
+}
+
+.filter__select-block--window select {
+  width: 211px;
+
+  @include tablet-max {
+    width: 167px;
+  }
+}
+
+.filter__select-block--material select {
+  width: 103px;
+
+  @include tablet-max {
+    width: 167px;
+  }
+}
+
+.filter__select-block--parametr select {
+  width: 167px;
+}
+
+.filter__select:hover,
+.filter__select:focus,
+.filter__select:active {
+  color: $green;
+  box-shadow: 0 4px 12px 4px rgba(185, 185, 185, 0.75);
+}
+
+.filter__select:disabled,
+.filter__select[aria-disabled="true"] {
+  color: $gray-disabled;
+}
+
+.filter__select:disabled:hover,
+.filter__select[aria-disabled="true"] {
+  border-color: $gray-disabled;
+}
+
+.filter__select option {
+  cursor: pointer;
+}
+
+.filter__submit-button {
+  @include ubuntu(14, 27, 400);
+  width: 167px;
+  margin-top: 4px;
+  padding: 4px 15px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  text-transform: capitalize;
+}

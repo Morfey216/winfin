@@ -7398,3 +7398,176 @@ button.swiper-pagination-bullet {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; } }
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7; }
+
+.filter__title {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-top: 7px;
+  margin-right: 10px;
+  color: #787878; }
+
+.filter__legend {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #181715; }
+
+.filter__select-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 10px;
+  padding: 0;
+  border: none; }
+  @media (max-width: 579px) {
+    .filter__select-block {
+      width: 270px; } }
+
+.filter__select {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding: 11px 11px 10px;
+  color: #787878;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../img/calculator-form/angle-arrow-down.png");
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+  background-size: 12px auto; }
+
+.filter__select-block--price select {
+  width: 167px; }
+
+.filter__select-block--profile select {
+  width: 165px; }
+  @media (max-width: 1199px) {
+    .filter__select-block--profile select {
+      width: 167px; } }
+
+.filter__select-block--window select {
+  width: 211px; }
+  @media (max-width: 1199px) {
+    .filter__select-block--window select {
+      width: 167px; } }
+
+.filter__select-block--material select {
+  width: 103px; }
+  @media (max-width: 1199px) {
+    .filter__select-block--material select {
+      width: 167px; } }
+
+.filter__select-block--parametr select {
+  width: 167px; }
+
+.filter__select:hover,
+.filter__select:focus,
+.filter__select:active {
+  color: #64892e;
+  -webkit-box-shadow: 0 4px 12px 4px rgba(185, 185, 185, 0.75);
+          box-shadow: 0 4px 12px 4px rgba(185, 185, 185, 0.75); }
+
+.filter__select:disabled,
+.filter__select[aria-disabled="true"] {
+  color: #c5c5c5; }
+
+.filter__select:disabled:hover,
+.filter__select[aria-disabled="true"] {
+  border-color: #c5c5c5; }
+
+.filter__select option {
+  cursor: pointer; }
+
+.filter__submit-button {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 27px;
+  font-weight: 400;
+  width: 167px;
+  margin-top: 4px;
+  padding: 4px 15px;
+  letter-spacing: 1px;
+  border-radius: 0;
+  text-transform: capitalize; }
+
+.windows-heading {
+  margin: 0 auto; }
+
+.windows-heading__holder {
+  min-height: 387px;
+  padding-top: 135px;
+  padding-bottom: 100px;
+  background-image: url("../img/background/windows-holder.jpg");
+  background-size: cover;
+  background-position: center; }
+  @media (max-width: 767px) {
+    .windows-heading__holder {
+      padding-top: 125px; } }
+  @media (max-width: 579px) {
+    .windows-heading__holder {
+      padding-top: 95px;
+      padding-bottom: 90px; } }
+
+.windows-heading__heading-nav {
+  margin-bottom: 15px; }
+
+.windows-heading__seo {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 15px; }
+  .windows-heading__seo p:not(:last-child) {
+    padding-bottom: 26px; }
+  @media (max-width: 1199px) {
+    .windows-heading__seo {
+      font-size: 14px;
+      line-height: 22px; }
+      .windows-heading__seo p:not(:last-child) {
+        padding-bottom: 16px; } }
+  @media (max-width: 767px) {
+    .windows-heading__seo {
+      font-size: 12px;
+      line-height: 20px; }
+      .windows-heading__seo p:not(:last-child) {
+        padding-bottom: 8px; } }
+
+.windows-heading__title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 500; }
+  @media (max-width: 1199px) {
+    .windows-heading__title {
+      margin-top: 30px; } }
+  @media (max-width: 767px) {
+    .windows-heading__title {
+      margin-bottom: 15px; } }

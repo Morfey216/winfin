@@ -1,0 +1,74 @@
+include ../holder/holder
+include ../breadcrumbs/breadcrumbs
+include ../heading-nav/heading-nav
+include ../title/title
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Все окна',
+      link: '#',
+    }
+  ]
+
+  const headingNavList = [
+    {
+      title: 'Все&nbsp;окна',
+      link: '#',
+    },
+    {
+      title: 'Панорамные&nbsp;деревянные&nbsp;окна',
+      link: '#',
+    },
+    {
+      title: 'Деревянные&nbsp;окна&nbsp;для&nbsp;квартиры',
+      link: '#',
+    },
+    {
+      title: 'Деревянные&nbsp;окна&nbsp;для&nbsp;дома',
+      link: '#',
+    },
+    {
+      title: 'Деревянные&nbsp;окна&nbsp;из&nbsp;сосны',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;сосны',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;дуба',
+      link: '#',
+    },
+    {
+      title: 'Еще&nbsp;параметр',
+      link: '#',
+    },
+    {
+      title: 'Еще&nbsp;параметр',
+      link: '#',
+    },
+    {
+      title: 'Еще&nbsp;параметр',
+      link: '#',
+    },
+  ]
+
+  const holderData = {
+    title: 'Деревянные окна',
+    slogan: 'Только до 20.12.19 дополнительная скидка<br>на установку',
+    bg: 'windows-holder.jpg'
+  }
+
+
+div.windows-heading
+  +holder(holderData).windows-heading__holder
+  +breadcrumbs(breadcrumbs).windows-heading__breadcrumbs.container
+  +heading-nav(headingNavList).windows-heading__heading-nav
+  div.windows-heading__seo.container
+    +title('ДЕРЕВЯННЫЕ ОКНА', 'bold').windows-heading__title.container
+    p Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002

@@ -1,0 +1,66 @@
+.windows-heading {
+  margin: 0 auto;
+}
+
+.windows-heading__holder {
+  min-height: 387px;
+  padding-top: 135px;
+  padding-bottom: 100px;
+  background-image: url("../img/background/windows-holder.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @include mobile-max {
+    padding-top: 125px;
+  }
+
+  @include mobile-medium-max {
+    padding-top: 95px;
+    padding-bottom: 90px;
+  }
+}
+
+.windows-heading__heading-nav {
+  margin-bottom: 15px;
+}
+
+.windows-heading__seo {
+  @include ubuntu(17, 24, 400);
+  margin-bottom: 15px;
+
+  p:not(:last-child) {
+    padding-bottom: 26px;
+  }
+
+  @include tablet-max {
+    font-size: 14px;
+    line-height: 22px;
+
+    p:not(:last-child) {
+      padding-bottom: 16px;
+    }
+  }
+
+  @include mobile-max {
+    font-size: 12px;
+    line-height: 20px;
+
+    p:not(:last-child) {
+      padding-bottom: 8px;
+    }
+  }
+}
+
+.windows-heading__title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 500;
+
+  @include tablet-max {
+    margin-top: 30px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 15px;
+  }
+}

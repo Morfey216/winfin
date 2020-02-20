@@ -1,0 +1,32 @@
+include ../button/button
+
+mixin filter(mod)
+  form.filter(action="#" method="post").container.js-filter-form
+    h3.filter__title Фильтрация
+    fieldset.filter__select-block.filter__select-block--price
+      select(name="price").filter__select
+        option(value="20-80") от 20 000 до 80 000
+        option(value="80-100") от 80 000 до 100 000
+      span.filter__legend Стоимость
+    fieldset.filter__select-block.filter__select-block--profile
+      select(name="profile").filter__select
+        option(value="oak") дуб
+        option(value="oak-aluminum") дуб/аллюминий
+      span.filter__legend Профиль
+    fieldset.filter__select-block.filter__select-block--window
+      select(name="window").filter__select
+        option(value="single-window") одностворчатое
+        option(value="double-window") двустворчатое
+      span.filter__legend Тип окна
+    fieldset.filter__select-block.filter__select-block--material
+      select(name="material").filter__select
+        option(value="pine-tree") сосна
+        option(value="larch-tree") лиственница
+        option(value="oak-tree") дуб
+      span.filter__legend Материал
+    fieldset.filter__select-block.filter__select-block--parametr
+      select(name="parametr").filter__select
+        option(value="parameter-1") название 1
+        option(value="parameter-2") название 2
+      span.filter__legend Параметр
+    +button('Применить', 'green')(type="submit").filter__submit-button.js-filter-form-submit
