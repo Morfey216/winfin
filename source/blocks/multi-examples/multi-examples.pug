@@ -1,0 +1,184 @@
+include ../title/title
+include ../slider-navigation/slider-navigation
+
+-
+  const examplesList = [
+      {
+        image: 'ex-1.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-2.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-3.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-4.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-5.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+    ]
+
+    const thumbsList = [
+      {
+        image: 'thumbs-1.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-2.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-3.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-4.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-5.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+    ]
+
+    const examplesList2 = [
+      {
+        image: 'ex-2.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-4.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-3.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-1.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'ex-5.jpg',
+        w: 946,
+        h: 557,
+        alt: 'Вид окна',
+      },
+    ]
+
+    const thumbsList2 = [
+      {
+        image: 'thumbs-2.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-4.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-3.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-1.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+      {
+        image: 'thumbs-5.jpg',
+        w: 231,
+        h: 145,
+        alt: 'Вид окна',
+      },
+    ]
+
+section.multi-examples.container
+  //- div.container
+  +title('Наши проекты деревянных&nbsp;окон', 'section-nodecor').multi-examples__title
+  div.multi-examples__controls
+    +button('Для домов', 'control').active.js-mec-control-button(data-mec-control='set-1' type='button')
+    +button('Для офисов', 'control').js-mec-control-button(data-mec-control='set-2' type='button')
+    +button('Для дачи', 'control').js-mec-control-button(data-mec-control='set-3' type='button')
+    +button('Для квартир', 'control').js-mec-control-button(data-mec-control='set-4' type='button')
+
+  div.multi-examples__contents
+    div.multi-examples__set(data-mec-control='set-1')
+      div.multi-examples__container.multi-examples__gallery-top
+        div.multi-examples__wrapper
+          each ex in examplesList
+            img(src="img/examples/" + ex.image width=ex.w height=ex.h alt=ex.alt).multi-examples__slide
+      div.multi-examples__container.multi-examples__gallery-thumbs
+        div.multi-examples__thumbs-wrapper
+          each thumbs in thumbsList
+            img(src="img/examples/" + thumbs.image width=thumbs.w height=thumbs.h alt=thumbs.alt).multi-examples__thumbs-slide
+    div.multi-examples__set(data-mec-control='set-2')
+      div.multi-examples__container.multi-examples__gallery-top
+        div.multi-examples__wrapper
+          each ex in examplesList2
+            img(src="img/examples/" + ex.image width=ex.w height=ex.h alt=ex.alt).multi-examples__slide
+      div.multi-examples__container.multi-examples__gallery-thumbs
+        div.multi-examples__thumbs-wrapper
+          each thumbs in thumbsList2
+            img(src="img/examples/" + thumbs.image width=thumbs.w height=thumbs.h alt=thumbs.alt).multi-examples__thumbs-slide
+    div.multi-examples__set(data-mec-control='set-3')
+      div.multi-examples__container.multi-examples__gallery-top
+        div.multi-examples__wrapper
+          each ex in examplesList
+            img(src="img/examples/" + ex.image width=ex.w height=ex.h alt=ex.alt).multi-examples__slide
+      div.multi-examples__container.multi-examples__gallery-thumbs
+        div.multi-examples__thumbs-wrapper
+          each thumbs in thumbsList
+            img(src="img/examples/" + thumbs.image width=thumbs.w height=thumbs.h alt=thumbs.alt).multi-examples__thumbs-slide
+    div.multi-examples__set(data-mec-control='set-4')
+      div.multi-examples__container.multi-examples__gallery-top
+        div.multi-examples__wrapper
+          each ex in examplesList2
+            img(src="img/examples/" + ex.image width=ex.w height=ex.h alt=ex.alt).multi-examples__slide
+      div.multi-examples__container.multi-examples__gallery-thumbs
+        div.multi-examples__thumbs-wrapper
+          each thumbs in thumbsList2
+            img(src="img/examples/" + thumbs.image width=thumbs.w height=thumbs.h alt=thumbs.alt).multi-examples__thumbs-slide
+    +slider-navigation(false, 'multi-examples').multi-examples__slider-navigation
+  a(href="#").multi-examples__all-projects-link Все проекты
