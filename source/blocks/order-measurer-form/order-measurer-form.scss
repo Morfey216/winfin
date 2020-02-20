@@ -1,0 +1,139 @@
+.order-measurer-form {
+  position: relative;
+  width: 425px;
+  padding: 43px 25px 50px;
+  background-color: $green;
+
+  @include tablet-max {
+    margin-top: 20px;
+  }
+
+  @include mobile-medium-max {
+    padding: 20px 10px 30px;
+    width: 270px;
+  }
+}
+
+.order-measurer-form__title {
+  @include ubuntu(24, 30, 500);
+  margin-bottom: 18px;
+
+  @include mobile-medium-max {
+    @include ubuntu(18, 24, 500);
+    margin-bottom: 15px;
+  }
+}
+
+.order-measurer-form__gauge {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+}
+
+.order-measurer-form__gauge-img {
+  border-radius: 50%;
+
+  @include mobile-medium-max {
+    width: 100px;
+    height: 100px;
+    margin-top: 18px;
+  }
+}
+
+.order-measurer-form__gauge-description {
+  width: 180px;
+  padding-top: 18px;
+
+  @include mobile-medium-max {
+    width: 140px;
+    padding-top: 0;
+  }
+}
+
+.order-measurer-form__gauge-name {
+  @include ubuntu(18, 30, 500);
+}
+
+.order-measurer-form__gauge-position {
+  @include ubuntu(16, 18, 400);
+  padding-bottom: 18px;
+}
+
+.order-measurer-form__gauge-experience {
+  @include ubuntu(14, 18, 500);
+}
+
+.order-measurer-form__gauge-fast {
+  @include ubuntu(18, 30, 500);
+  width: 200px;
+  padding-bottom: 10px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.order-measurer-form__form {
+  width: 310px;
+  margin: 0 auto;
+
+  @include mobile-medium-max {
+    width: 240px;
+  }
+}
+
+.order-measurer-form__submit-button {
+  @include ubuntu(15, 30, 700);
+  width: 100%;
+  margin-top: 28px;
+  padding: 8px 15px;
+  border-radius: 0;
+}
+
+.order-measurer-form__ruletka {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+
+  @include mobile-medium-max {
+    width: 31px;
+    height: 230px;
+    left: -7px;
+  }
+}
+
+.order-measurer-form__logo {
+  position: absolute;
+  right: 5px;
+  bottom: 70px;
+
+  @include mobile-medium-max {
+    width: 21px;
+    height: 102px;
+    bottom: 350px;
+  }
+}
+
+.order-measurer-form__input {
+  @include ubuntu(14, 30, 400);
+  margin-bottom: 21px;
+  border-radius: 0;
+  color: $breadcrumbs-gray;
+
+  .form-input__label {
+    @include ubuntu(14, 30, 400);
+  }
+
+  .form-input__marker {
+    @include ubuntu(14, 30, 400);
+    color: $breadcrumbs-gray;
+  }
+
+  .form-input__error,
+  .form-textarea__error {
+    background-color: $decor-gray;
+  }
+}
+
+.order-measurer-form__input.form-textarea {
+  min-height: 147px;
+}

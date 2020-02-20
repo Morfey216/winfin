@@ -8,6 +8,7 @@ import lazyload from './general/lazyload';
 // region Blocks
 
 import formInput from '../blocks/form-input/form-input';
+import formTextarea from '../blocks/form-textarea/form-textarea';
 import modal from '../blocks/modal/modal';
 import gagerModal from '../blocks/gager-modal/gager-modal';
 import callRequestModal from '../blocks/call-request-modal/call-request-modal';
@@ -26,10 +27,13 @@ import popularWindows from '../blocks/popular-windows/popular-windows';
 import promoSection from '../blocks/promotions-section/promotions-section';
 import map from '../blocks/map/map';
 import certificates from '../blocks/certificates/certificates';
+import calculatorForm from '../blocks/calculator-form/calculator-form';
+import orderMeasurerForm from '../blocks/order-measurer-form/order-measurer-form';
 
 // endregion
 
 formInput();
+formTextarea();
 modal();
 gagerModal();
 discountModal();
@@ -48,3 +52,5 @@ popularWindows();
 promoSection();
 map();
 certificates();
+calculatorForm();
+orderMeasurerForm();

@@ -1,0 +1,21 @@
+include ../title/title
+include ../button/button
+include ../link/link
+include ../form-input/form-input
+include ../form-textarea/form-textarea
+
+section.order-measurer-form
+  +title('Вызвать специалиста на&nbsp;замер', 'white').order-measurer-form__title
+  div.order-measurer-form__gauge
+    img(src="img/calculator-form/measurer/master.jpg" width="178" height="178" alt="Замерщик").order-measurer-form__gauge-img
+    div.order-measurer-form__gauge-description
+      p.order-measurer-form__gauge-name Олег Иванов
+      p.order-measurer-form__gauge-position менеджер компании WinFin
+      p.order-measurer-form__gauge-experience Опыт работы в компании WinFin более 10 лет
+  form.order-measurer-form__form.js-omf(action="#" method="post")
+    p.order-measurer-form__gauge-fast Возможен выезд в&nbsp;день обращения
+    +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',}, '', '').order-measurer-form__input.js-omf-validate.js-omf-phone#omf-phone
+    +form-textarea({label: 'Комментарий', error: 'Оставьте комментарий',}).order-measurer-form__input.js-omf-validate#question
+    +button('Вызвать на замер', 'orange')(type="submit").order-measurer-form__submit-button.js-omf-submit
+  img(src="img/calculator-form/measurer/ruletka.png" width="62" height="459" alt="").order-measurer-form__ruletka
+  img(src="img/calculator-form/measurer/logo.png" width="41" height="203" alt="").order-measurer-form__logo

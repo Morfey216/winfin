@@ -1,10 +1,50 @@
+.calculator-form {
+  padding: 30px 10px 10px 55px;
+  background: $decor-gray url("../img/calculator-form/bg-decor.png") left top no-repeat;
+  background-size: auto 100%;
+
+  @include tablet-max {
+    padding-right: 40px;
+  }
+
+  @include mobile-max {
+    background-size: 100% auto;
+  }
+
+  @include mobile-medium-max {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.calculator-form__title {
+  @include mobile-max {
+    font-size: 22px;
+  }
+}
+
 .calculator-form__form {
   margin-top: 45px;
   display: flex;
+
+  @include mobile-max {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 85px;
+  }
 }
 
 .calculator-form__left-side {
-  margin-right: 25px;
+  margin-right: 22px;
+
+  @include tablet-medium-max {
+    margin-right: 15px;
+  }
+
+  @include mobile-max {
+    margin-right: 0;
+  }
 }
 
 .calculator-form__sub-title {
@@ -23,6 +63,10 @@
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
+
+  @include mobile-medium-max {
+    width: 270px;
+  }
 }
 
 .calculator-form__select {
@@ -65,9 +109,13 @@
 // check block
 
 .calculator-form__item {
-  width: 375px;
+  width: 366px;
   padding: 18px 0;
   border: none;
+
+  @include mobile-medium-max {
+    width: 270px;
+  }
 }
 
 .calculator-form__radio-list,
@@ -86,6 +134,10 @@
 
 .calculator-form__radio-item {
   width: 90px;
+
+  @include mobile-medium-max {
+    width: 49px;
+  }
 }
 
 .calculator-form__radio-img {
@@ -109,6 +161,16 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  @include mobile-medium-max {
+    width: 61px;
+    height: 61px;
+
+    img {
+      width: 55px;
+      height: 55px;
+    }
+  }
 }
 
 .calculator-form__radio-label:hover .calculator-form__radio-img-wrapp,
@@ -135,6 +197,12 @@
     height: 71px;
     border: 1px solid $green;
     border-radius: 50%;
+
+    @include mobile-medium-max {
+      width: 61px;
+      height: 61px;
+      left: -6px;
+    }
   }
 }
 
@@ -147,8 +215,8 @@
 .calculator-form__check-label {
   @include ubuntu(15, 24, 400);
   position: relative;
-  padding-left: 36px;
-  padding-right: 27px;
+  padding-left: 33px;
+  padding-right: 10px;
   color: $medium-gray;
   cursor: pointer;
 }
@@ -186,14 +254,14 @@
 }
 
 .calculator-form__label-explanation {
-  display: block;
+  display: inline-block;
   width: 16px;
   height: 16px;
   line-height: 17px;
   text-align: center;
 
-  position: absolute;
-  right: 10px;
+  position: relative;
+  right: -1px;
   bottom: 5px;
 
   color: $white;
@@ -201,6 +269,22 @@
   background-color: $icon-bg-gray;
 
   cursor: pointer;
+
+  &:hover::before {
+    content: attr(data-explanation);
+
+    @include ubuntu(12, 16, 300);
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    display: block;
+    width: 100px;
+    min-height: 32px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: $header-gray;
+    z-index: 1;
+  }
 }
 
 .calculator-form__submit-btn {
@@ -210,18 +294,39 @@
   &:focus {
     background-color: $orange;
   }
+
+  @include mobile-max {
+    padding: 18px 30px 16px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+  }
+
+  @include mobile-medium-max {
+    left: 50px;
+    transform: none;
+  }
 }
 
 // Правая часть формы
 
 .calculator-form__right-side {
   width: 270px;
+
+  @include mobile-max {
+    margin-top: 20px;
+  }
 }
 
 // Блок Выбора типа конструкции
 
+.calculator-form__item--construction {
+  width: 265px;
+}
+
 .calculator-form__construction-type-list {
-  width: 270px;
+  width: 240px;
   justify-content: space-between;
 }
 
@@ -358,7 +463,7 @@
 .calculator-form__price {
   width: 270px;
   padding: 25px 28px;
-  background-color: $decor-gray;
+  background-color: #f0f0f0;
 }
 
 .calculator-form__price-title {

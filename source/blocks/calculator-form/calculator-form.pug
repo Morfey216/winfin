@@ -124,7 +124,7 @@ include ../button/button
 
 section.calculator-form
   +title('Рассчитать стоимость').calculator-form__title
-  form.calculator-form__form(action="#" method="post")
+  form.calculator-form__form(action="#" method="post").js-cf
     div.calculator-form__left-side
       div.calculator-form__select-block
         label.calculator-form__sub-title Выберите тип окна
@@ -134,8 +134,8 @@ section.calculator-form
       div.calculator-form__select-block
         label.calculator-form__sub-title Выберите тип пакета
         select(name="window-glass").calculator-form__select
-          option(value="wooden") Однокамерный + Стекло
-          option(value="wood-aluminum") Двухкамерный + Стекло
+          option(value="single-chamber") Однокамерный + Стекло
+          option(value="dual-chamber") Двухкамерный + Стекло
       fieldset.calculator-form__item
         legend.calculator-form__sub-title Выберите тип дерева
         ul.calculator-form__radio-list
@@ -152,11 +152,11 @@ section.calculator-form
           each element in elementsData
             li.calculator-form__check-item
               input.calculator-form__checkbox.visually-hidden(type="checkbox" id= element.id name= element.name checked= element.checked ? true : false)
-              label.calculator-form__check-label(for= element.id data-explanation= element.explanation) #{element.label}
-                span.calculator-form__label-explanation ?
+              label.calculator-form__check-label(for= element.id) #{element.label}
+                span.calculator-form__label-explanation(data-explanation= element.explanation) ?
       +button('Оформить заказ', 'green')(type='submit').calculator-form__submit-btn
     div.calculator-form__right-side
-      fieldset.calculator-form__item
+      fieldset.calculator-form__item.calculator-form__item--construction
         legend.calculator-form__sub-title Тип конструкции
         ul.calculator-form__construction-type-list
           each icon in constructionTypes
@@ -168,14 +168,14 @@ section.calculator-form
       fieldset.calculator-form__item.calculator-form__item--size
         legend.visually-hidden Выбор размеров
         div.calculator-form__size-wrapper
-          div.calculator-form__size.calculator-form__size--height
-            input(type="text" id="win-height" name="win-height" required)
+          div.calculator-form__size.calculator-form__size--height.js-cf-size
+            input(type="text" id="win-height" name="win-height" maxlength="4" required)
             label(for="win-height") Высота
           div.calculator-form__size-img
             img(src="img/calculator-form/window.jpg" width="137" height="136" alt="Образец окна")
-            div.calculator-form__size
+            div.calculator-form__size.js-cf-size
               label(for="win-width") Ширина
-              input(type="text" id="win-width" name="win-width" required)
+              input(type="text" id="win-width" name="win-width" maxlength="4" required)
       div.calculator-form__price
         h3.calculator-form__price-title Стоимость окна
         span.calculator-form__price-value 13 632 р.
