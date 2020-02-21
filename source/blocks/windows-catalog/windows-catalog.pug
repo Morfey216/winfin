@@ -1,0 +1,161 @@
+include ../title/title
+include ../products-set/products-set
+
+-
+  const woodWindows = [
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-1.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: true,
+    },
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-2.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-3.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: false,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-2.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: false,
+      isMaterialMarker: true,
+    },
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-2.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянное окно из&nbsp;дуба и алюминия, профиль 90&nbsp;мм',
+      image: 'win-3.jpg',
+      alt: 'Деревянное окно',
+      effects: [
+        {
+          name: 'noise',
+          level: 80
+        },
+        {
+          name: 'heat',
+          level: 40
+        },
+      ],
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: false,
+      isMaterialMarker: false,
+    },
+  ]
+
+section.windows-catalog.container
+  h2.visually-hidden Каталог окон
+  +products-set(woodWindows, 'win', 'windows-catalog').windows-catalog__contents
+  a(href='#').windows-catalog__next-link Показать еще 30

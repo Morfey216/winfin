@@ -28,8 +28,8 @@ include ../effect-level/effect-level
 //-     isMaterialMarker: true,
 //-   }
 
-mixin product-card(data, mod)
-  div(class='product-card' + (mod ? ' product-card--' + mod : ''))&attributes(attributes)
+mixin product-card(data, mod, elementBaseClass)
+  div(class='product-card' + (mod ? ' product-card--' + mod : '') + (elementBaseClass ? ' ' + elementBaseClass + '__product-card' : ''))&attributes(attributes)
     h3.product-card__title!= data.title
     if (mod === 'win')
       img(src="img/windows/" + data.image width="366" height="322" alt=data.alt).product-card__preview

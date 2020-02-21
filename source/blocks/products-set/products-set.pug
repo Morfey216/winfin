@@ -29,7 +29,7 @@ include ../product-card/product-card
 //-     },
 //-   ]
 
-mixin products-set(data, mod)
+mixin products-set(data, mod, elementBaseClass)
   div(class='products-set' + (mod ? ' products-set--' + mod : ''))&attributes(attributes)
     each product in data
-      +product-card(product, mod).products-set__product
+      +product-card(product, mod, elementBaseClass).products-set__product
