@@ -1,8 +1,8 @@
 include ../button/button
 
-mixin sample(data)
+mixin sample(data, elementBaseClass)
   div(class='sample')&attributes(attributes)
-    div.sample__image
+    div.sample__image(class= elementBaseClass ? elementBaseClass + '__sample-image' : '')
       img(src='img/' + data.image width=data.w height=data.h alt= data.alt)
     h3.sample__title!= data.title
     each parametr in data.params

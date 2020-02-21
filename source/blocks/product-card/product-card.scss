@@ -74,6 +74,42 @@
   top: 95px;
 }
 
+.product-card--door .product-card__install-icon {
+  @include tablet-max {
+    width: 54px;
+  }
+
+  @include tablet-medium-max {
+    width: 61px;
+  }
+
+  @include mobile-max {
+    width: 38px;
+    right: 4px;
+  }
+}
+
+.product-card--door .product-card__material-icon {
+  @include tablet-max {
+    width: 54px;
+  }
+
+  @include tablet-medium-max {
+    width: 58px;
+  }
+
+  @include mobile-max {
+    width: 38px;
+    right: 4px;
+  }
+}
+
+.product-card--door .product-card__preview {
+  @include mobile-max {
+    width: 190px;
+  }
+}
+
 .product-card--win img {
   margin-bottom: 20px;
 }

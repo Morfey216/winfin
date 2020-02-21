@@ -1,0 +1,75 @@
+.popular-doors {
+  margin: 0 auto;
+  padding-top: 114px;
+  padding-bottom: 45px;
+  background-color: $decor-gray;
+
+  text-align: center;
+
+  @include tablet-max {
+    padding-top: 90px;
+  }
+
+  @include mobile-max {
+    padding-top: 70px;
+  }
+}
+
+.popular-doors__controls {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.popular-doors__models-set {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+
+  text-align: center;
+
+  @include tablet-max {
+    width: 736px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @include mobile-max {
+    width: 100%;
+  }
+}
+
+.popular-doors__model {
+  width: 290px;
+
+  @include tablet-max {
+    margin-bottom: 35px;
+  }
+}
+
+.popular-doors__sample-image {
+  height: 260px;
+}
+
+.popular-doors__catalog-link {
+  @include ubuntu(18, 24, 700);
+  display: inline-block;
+  color: $gray;
+  padding: 10px 35px;
+
+  border: 1px solid $gray;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: $green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.popular-doors__models-set.disabled {
+  display: none;
+}

@@ -1,6 +1,8 @@
 include ../blocks/head/head
 include ../blocks/header/header
 include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/popular-windows/popular-windows
+include ../blocks/calculator-section/calculator-section
 include ../blocks/work-report/work-report
 include ../blocks/any-complexity/any-complexity
 include ../blocks/gauge-request-form/gauge-request-form
@@ -24,8 +26,8 @@ html(lang='ru')
       include ../blocks/profile-systems/profile-systems
       include ../blocks/win-advantages/win-advantages
       include ../blocks/window-selection-request-form/window-selection-request-form
-      include ../blocks/popular-windows/popular-windows
-      include ../blocks/calculator-section/calculator-section
+      +popular-windows
+      +calculator-section
       include ../blocks/examples/examples
       +work-report('Мы на дочном ответе')
       +any-complexity('Деревянные окна любой&nbsp;сложности')

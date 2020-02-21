@@ -1,0 +1,105 @@
+.doors-catalog {
+  margin: 0 auto;
+  margin-bottom: 95px;
+  padding-top: 65px;
+  padding-bottom: 45px;
+
+  @include tablet-max {
+    padding-top: 45px;
+  }
+
+  @include mobile-max {
+    padding-top: 30px;
+  }
+}
+
+.doors-catalog__contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 67px;
+
+  @include mobile-medium-max {
+    max-width: 525px;
+  }
+}
+
+.doors-catalog__product-card {
+  margin-bottom: 0;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $border-gray;
+  border-left: none;
+  width: 350px;
+
+  @include tablet-max {
+    width: 325px;
+  }
+
+  @include tablet-medium-max {
+    width: 350px;
+  }
+
+  @include mobile-max {
+    width: 263px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 700px;
+    background-color: $border-gray;
+
+    position: absolute;
+    left: 0;
+
+    @include mobile-max {
+      height: 635px;
+    }
+
+    @include mobile-medium-max {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 700px;
+    background-color: $border-gray;
+
+    position: absolute;
+    right: -1px;
+
+    @include mobile-max {
+      height: 635px;
+    }
+
+    @include mobile-medium-max {
+      display: none;
+    }
+  }
+}
+
+.doors-catalog__next-link {
+  @include ubuntu(18, 24, 700);
+  display: block;
+  width: fit-content;
+  padding: 10px 35px;
+  margin: 0 auto;
+  color: $gray;
+
+  border: 1px solid $gray;
+
+  &:hover,
+  &:focus {
+    color: $green;
+    border-color: $green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

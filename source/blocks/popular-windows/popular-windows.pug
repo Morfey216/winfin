@@ -180,29 +180,31 @@ include ../sample/sample
       },
     ]
 
-section.popular-windows
-  div.container
-    +title('Популярные модели окон', 'section')
-    div.popular-windows__controls
-      +button('Сосна', 'control').active.js-pwc-button(data-pwc='set-1' type='button')
-      +button('Лиственница', 'control').js-pwc-button(data-pwc='set-2' type='button')
-      +button('Меранти', 'control').js-pwc-button(data-pwc='set-3' type='button')
-      +button('Дуб', 'control').js-pwc-button(data-pwc='set-4' type='button')
-      +button('Дерево-алюминиевые', 'control').js-pwc-button(data-pwc='set-5' type='button')
-    div.popular-windows__contents
-      div.popular-windows__models-set(data-pwc='set-1')
-        each model in modelsList
-          +sample(model).popular-windows__model
-      div.popular-windows__models-set.disabled(data-pwc='set-2')
-        each model in modelsList2
-          +sample(model).popular-windows__model
-      div.popular-windows__models-set.disabled(data-pwc='set-3')
-        each model in modelsList3
-          +sample(model).popular-windows__model
-      div.popular-windows__models-set.disabled(data-pwc='set-4')
-        each model in modelsList
-          +sample(model).popular-windows__model
-      div.popular-windows__models-set.disabled(data-pwc='set-5')
-        each model in modelsList2
-          +sample(model).popular-windows__model
-    a(href="#").popular-windows__catalog-link В каталог
+mixin popular-windows(mod)
+  section.popular-windows
+    div.container
+      +title('Популярные модели окон', 'section')
+      div.popular-windows__controls
+        +button('Сосна', 'control').active.js-pwc-button(data-pwc='set-1' type='button')
+        +button('Лиственница', 'control').js-pwc-button(data-pwc='set-2' type='button')
+        +button('Меранти', 'control').js-pwc-button(data-pwc='set-3' type='button')
+        +button('Дуб', 'control').js-pwc-button(data-pwc='set-4' type='button')
+        +button('Дерево-алюминиевые', 'control').js-pwc-button(data-pwc='set-5' type='button')
+      div.popular-windows__contents
+        div.popular-windows__models-set(data-pwc='set-1')
+          each model in modelsList
+            +sample(model).popular-windows__model
+        div.popular-windows__models-set.disabled(data-pwc='set-2')
+          each model in modelsList2
+            +sample(model).popular-windows__model
+        div.popular-windows__models-set.disabled(data-pwc='set-3')
+          each model in modelsList3
+            +sample(model).popular-windows__model
+        div.popular-windows__models-set.disabled(data-pwc='set-4')
+          each model in modelsList
+            +sample(model).popular-windows__model
+        div.popular-windows__models-set.disabled(data-pwc='set-5')
+          each model in modelsList2
+            +sample(model).popular-windows__model
+      if (!mod)
+        a(href="#").popular-windows__catalog-link В каталог

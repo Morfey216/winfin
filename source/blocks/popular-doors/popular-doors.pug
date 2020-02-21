@@ -1,0 +1,92 @@
+include ../title/title
+include ../button/button
+include ../sample/sample
+
+-
+  const modelsList = [
+      {
+        name: '',
+        image: 'popular/door/door-1.png',
+        w: 122,
+        h: 260,
+        alt: 'Metro 2.0 & Metro Arctic.',
+        title: 'Metro 2.0 & Metro Arctic',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: '',
+        image: 'popular/door/door-1.png',
+        w: 122,
+        h: 260,
+        alt: 'Metro 2.0 & Metro Arctic.',
+        title: 'Metro 2.0 & Metro Arctic',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: '',
+        image: 'popular/door/door-1.png',
+        w: 122,
+        h: 260,
+        alt: 'Metro 2.0 & Metro Arctic.',
+        title: 'Metro 2.0 & Metro Arctic',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: '',
+        image: 'popular/door/door-1.png',
+        w: 122,
+        h: 260,
+        alt: 'Metro 2.0 & Metro Arctic.',
+        title: 'Metro 2.0 & Metro Arctic',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+    ]
+
+mixin popular-doors(mod)
+  section.popular-doors
+    div.container
+      +title('Популярные модели дверей', 'section')
+      div.popular-doors__controls
+        +button('Сосна', 'control').active.js-pdc-button(data-pdc='set-1' type='button')
+        +button('Лиственница', 'control').js-pdc-button(data-pdc='set-2' type='button')
+        +button('Меранти', 'control').js-pdc-button(data-pdc='set-3' type='button')
+        +button('Дуб', 'control').js-pdc-button(data-pdc='set-4' type='button')
+        +button('Дерево-алюминиевые', 'control').js-pdc-button(data-pdc='set-5' type='button')
+      div.popular-doors__contents
+        div.popular-doors__models-set(data-pdc='set-1')
+          each model in modelsList
+            +sample(model, 'popular-doors').popular-doors__model
+        div.popular-doors__models-set.disabled(data-pdc='set-2')
+          each model in modelsList
+            +sample(model, 'popular-doors').popular-doors__model
+        div.popular-doors__models-set.disabled(data-pdc='set-3')
+          each model in modelsList
+            +sample(model, 'popular-doors').popular-doors__model
+        div.popular-doors__models-set.disabled(data-pdc='set-4')
+          each model in modelsList
+            +sample(model, 'popular-doors').popular-doors__model
+        div.popular-doors__models-set.disabled(data-pdc='set-5')
+          each model in modelsList
+            +sample(model, 'popular-doors').popular-doors__model
+      if (!mod)
+        a(href="#").popular-doors__catalog-link В каталог

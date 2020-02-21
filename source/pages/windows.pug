@@ -1,6 +1,9 @@
 include ../blocks/head/head
 include ../blocks/header/header
 include ../blocks/filter/filter
+include ../blocks/calculator-section/calculator-section
+include ../blocks/multi-examples/multi-examples
+include ../blocks/popular-windows/popular-windows
 include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/gauge-request-form/gauge-request-form
 include ../blocks/page-footer/page-footer
@@ -20,10 +23,10 @@ html(lang='ru')
       include ../blocks/windows-heading/windows-heading
       +filter
       include ../blocks/windows-catalog/windows-catalog
-      include ../blocks/calculator-section/calculator-section
+      +calculator-section
 
-      include ../blocks/multi-examples/multi-examples
-      include ../blocks/popular-windows/popular-windows
+      +multi-examples('Наши проекты деревянных&nbsp;окон')
+      +popular-windows('catalog')
       include ../blocks/promotions-section/promotions-section
 
       +feedback-contacts

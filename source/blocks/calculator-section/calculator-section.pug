@@ -1,3 +1,6 @@
-section.calculator-section.container
-  include ../calculator-form/calculator-form
-  include ../order-measurer-form/order-measurer-form
+include ../calculator-form/calculator-form
+
+mixin calculator-section(mod)
+  section.calculator-section.container(class= mod ? 'calculator-section--' + mod : '')
+    +calculator-form(mod)
+    include ../order-measurer-form/order-measurer-form

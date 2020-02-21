@@ -458,6 +458,38 @@
   }
 }
 
+.calculator-form__size-img.calculator-form__size-img--door {
+  position: relative;
+
+  img {
+    margin-bottom: 7px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 238px;
+    background-color: $gray;
+
+    position: absolute;
+    top: 10px;
+    left: -7px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 132px;
+    height: 1px;
+    background-color: $gray;
+
+    position: absolute;
+    right: 0;
+    top: 255px;
+  }
+}
+
 // Блок стоимости
 
 .calculator-form__price {

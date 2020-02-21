@@ -1,0 +1,101 @@
+include ../products-set/products-set
+
+-
+  const woodDoors = [
+    {
+      title: 'Деревянная дверь из&nbsp;сосны',
+      image: 'door-1.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: true,
+    },
+    {
+      title: 'Деревянная дверь из&nbsp;сосны&nbsp;AZUR',
+      image: 'door-2.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянная дверь из&nbsp;сосны&nbsp;AZUR',
+      image: 'door-3.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '45 000',
+      link: '#',
+      isQuickInstallationMarker: false,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянная дверь из&nbsp;сосны',
+      image: 'door-4.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: true,
+    },
+    {
+      title: 'Деревянная дверь из&nbsp;сосны&nbsp;AZUR',
+      image: 'door-5.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '34 844',
+      link: '#',
+      isQuickInstallationMarker: true,
+      isMaterialMarker: false,
+    },
+    {
+      title: 'Деревянная дверь из&nbsp;сосны&nbsp;AZUR',
+      image: 'door-6.jpg',
+      alt: 'Деревянная дверь',
+      param: {
+        material: 'сосна',
+        heatLossKoef1: 15,
+        notOpen: 'Да',
+        heatLossKoef2: 15,
+      },
+      price: '45 000',
+      link: '#',
+      isQuickInstallationMarker: false,
+      isMaterialMarker: false,
+    },
+  ]
+
+section.doors-catalog.container
+  h2.visually-hidden Каталог окон
+  +products-set(woodDoors, 'door', 'doors-catalog').doors-catalog__contents
+  a(href='#').doors-catalog__next-link Показать еще 30
+

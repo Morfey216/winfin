@@ -1,0 +1,39 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/filter/filter
+include ../blocks/calculator-section/calculator-section
+include ../blocks/multi-examples/multi-examples
+include ../blocks/popular-doors/popular-doors
+include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/gauge-request-form/gauge-request-form
+include ../blocks/page-footer/page-footer
+include ../blocks/overlay/overlay
+include ../blocks/gager-modal/gager-modal
+include ../blocks/call-request-modal/call-request-modal
+include ../blocks/discount-modal/discount-modal
+
+doctype html
+html(lang='ru')
+  +head('Двери')
+  body
+    +header
+
+    main
+      h1.visually-hidden Сайт компании "WINFIN"
+      include ../blocks/doors-heading/doors-heading
+      +filter
+      include ../blocks/doors-catalog/doors-catalog
+      +calculator-section('door')
+
+      +multi-examples('Наши проекты деревянных&nbsp;дверей')
+      +popular-doors('catalog')
+      include ../blocks/promotions-section/promotions-section
+
+      +feedback-contacts
+    +overlay.js-modal-overlay
+    +gager-modal
+    +call-request-modal
+    +discount-modal
+    +page-footer
+
+    include ../blocks/_scripts-block/_scripts-block
