@@ -147,7 +147,7 @@ mixin calculator-form(mod)
               li.calculator-form__radio-item
                 input.calculator-form__radiobox.visually-hidden(type="radio" id= item.id name="tree-type" value=item.value checked= item.checked ? true : false)
                 label.calculator-form__radio-label(for= item.id)
-                  div.calculator-form__radio-img-wrapp
+                  span.calculator-form__radio-img-wrapp
                     img(src="img/calculator-form/tree-type/" + item.image width="63" height="63" alt= item.alt).calculator-form__radio-img
                   span #{item.label}
         fieldset.calculator-form__item
