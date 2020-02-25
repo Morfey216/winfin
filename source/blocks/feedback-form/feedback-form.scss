@@ -1,174 +1,102 @@
 .feedback-form {
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
+  max-width: 570px;
+  margin: 0 auto;
+  margin-bottom: 110px;
 
-  @media (max-width: $screen-lg) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title empty-space" "paragraph empty-space" "form form";
-    padding-top: 52px;
-    padding-bottom: 52px;
-    padding-left: 34px;
-    padding-right: 34px;
-    border-radius: 0;
+  @include mobile-max {
+    max-width: 540px;
+    margin-bottom: 70px;
   }
 
-  @media (max-width: $screen-md) {
-    display: block;
-    padding-top: 37px;
-    padding-bottom: 40px;
-    padding-left: 18px;
-    padding-right: 18px;
+  @include mobile-medium-max {
+    max-width: 280px;
   }
 }
 
-.feedback-form > h2 {
-  margin-bottom: 20px;
-  font-size: 18px;
+.feedback-form__title {
   font-weight: 700;
-  line-height: 1.33;
 
-  @media (max-width: $screen-lg) {
-    grid-area: title;
-    margin-bottom: 12px;
-    font-size: 16px;
+  @include tablet-max {
+    font-size: 32px;
   }
 
-  @media (max-width: $screen-md) {
-    margin-bottom: 14px;
-  }
-}
-
-.feedback-form > p {
-  margin-bottom: 40px;
-  font-size: 14px;
-  line-height: 1.7;
-
-  @media (max-width: $screen-lg) {
-    grid-area: paragraph;
-    margin-bottom: 30px;
-    font-size: 12px;
+  @include mobile-max {
+    font-size: 24px;
   }
 }
 
 .feedback-form__form {
-  @media (max-width: $screen-lg) {
-    grid-area: form;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "name phone" "question footer" "question footer";
-  }
-
-  @media (max-width: $screen-md) {
-    display: block;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .feedback-form__input {
-  margin-bottom: 24px;
+  width: 270px;
+  margin: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $border-gray;
+  border-radius: 0;
 
-  @media (max-width: $screen-lg) {
-    margin-bottom: 0;
+  @include mobile-max {
+    max-width: 255px;
   }
 
-  @media (max-width: $screen-md) {
-    margin-bottom: 20px;
-  }
-}
-
-.feedback-form__input:nth-of-type(1) {
-  @media (max-width: $screen-lg) {
-    grid-area: name;
-  }
-}
-
-.feedback-form__input:nth-of-type(2) {
-  @media (max-width: $screen-lg) {
-    grid-area: phone;
+  @include mobile-medium-max {
+    max-width: 280px;
+    width: 100%;
   }
 }
 
-.feedback-form__input:nth-of-type(3) {
-  @media (max-width: $screen-lg) {
-    grid-area: question;
-  }
-}
+.feedback-form__input--textarea {
+  width: 570px;
+  min-height: 110px;
 
-.feedback-form__input:last-of-type {
-  @media (max-width: $screen-md) {
-    margin-bottom: 0;
+  @include mobile-max {
+    max-width: 540px;
+  }
+
+  textarea {
+    min-height: 110px;
+  }
+
+  .form-textarea__label {
+    top: 10px;
   }
 }
 
 .feedback-form__footer {
-  @media (max-width: $screen-lg) {
-    grid-area: footer;
-    padding-top: 4px;
-  }
+  width: 570px;
 
-  @media (max-width: $screen-md) {
-    padding-top: 16px;
+  @include mobile-max {
+    max-width: 540px;
   }
 }
 
 .feedback-form__note {
-  font-size: 12px;
-  line-height: 1.33;
-  color: #b29375;
-
-  @media (max-width: $screen-lg) {
-    font-size: 10px;
-    line-height: 1.6;
-  }
-}
-
-.feedback-form__note br {
-  @media (max-width: $screen-lg) {
-    display: none;
-  }
+  @include ubuntu(14, 18, 400);
+  color: $icon-bg-gray;
+  text-align: center;
 }
 
 .feedback-form__note a {
-  color: $light-brown;
-  border-bottom: 1px solid $light-brown;
-  transition: border-bottom-color 0.3s;
+  border-bottom: 1px solid $border-gray;
 
   &:hover,
   &:focus {
-    color: $brown;
-    text-decoration: none;
-    border-bottom-color: transparent;
-  }
-
-  &:active {
-    color: black;
+    color: $light-gray;
+    border-bottom: transparent;
   }
 }
 
 .feedback-form__submit {
-  min-width: 280px;
-  min-height: 56px;
-  margin-top: 32px;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1.82;
+  margin: 16px auto;
+  margin-top: 28px;
+  padding: 17px 43px;
+  text-transform: none;
 
-  @media (max-width: $screen-lg) {
-    min-width: 284px;
-    min-height: 52px;
-    margin-top: 18px;
-    margin-bottom: 0;
-  }
-
-  @media (max-width: $screen-md) {
-    margin-top: 28px;
-    margin-left: auto;
-    margin-right: auto;
+  @include mobile-max {
+    font-size: 16px;
   }
 }

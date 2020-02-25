@@ -1,0 +1,13 @@
+include ../form-input/form-input
+
+section.define-city-form.container
+  h2.visually-hidden Указание вашего города
+  p.define-city-form__city-options Ваш город
+    |
+    |
+    a(href="#") Москва?
+    |
+    |
+    a(href="#") Санкт-Петербург
+  form.define-city-form__form
+    +form-input({label: 'Введите название города', error: 'Введите название города',}).define-city-form__input#city

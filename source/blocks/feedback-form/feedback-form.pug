@@ -1,20 +1,19 @@
 include ../svg/svg
 include ../button/button
 include ../link/link
+include ../title/title
 include ../form-input/form-input
 include ../form-textarea/form-textarea
 
 section.feedback-form
-  h2 Задать вопрос
-  p Мы&nbsp;с&nbsp;большим удовольствием расскажем Вам про все&nbsp;действующие акции и&nbsp;ответим на&nbsp;любые вопросы
+  +title('Обратная связь', 'section').feedback-form__title
   form.feedback-form__form.js-fbf
     +form-input({label: 'Введите имя', error: 'Введите имя',}).feedback-form__input.js-fbf-validate.js-fbf-name#name
     +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',}).feedback-form__input.js-fbf-validate.js-fbf-phone#phone
-    +form-textarea({label: 'Ваш вопрос', error: 'Задайте вопрос',}).feedback-form__input.js-fbf-validate#question
+    +form-textarea({label: 'Текст сообщения', error: 'Напишите сообщение',}).feedback-form__input.feedback-form__input--textarea.js-fbf-validate#message
     footer.feedback-form__footer
+      +button('Отправить', 'orange')(type="submit").feedback-form__submit.js-fbf-submit
       p.feedback-form__note
-        | Нажимая на&nbsp;кнопку &laquo;Заказать звонок&raquo;, я&nbsp;даю
-        br
+        | Нажимая &laquo;Отправить&raquo;, вы&nbsp;даете согласие на&nbsp;обработку
         |
-        a(href="#")  согласие на&nbsp;обработку персональных данных
-      +button('Задать вопрос', 'orange', {name: "arrow-right", width: 12, height: 8, isRight: true}).feedback-form__submit.js-fbf-submit
+        a(href="#") персональных&nbsp;данных

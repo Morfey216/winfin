@@ -132,8 +132,16 @@
   .form-textarea__error {
     background-color: $decor-gray;
   }
+
+  .form-textarea__label {
+    font-size: 14px;
+  }
 }
 
 .order-measurer-form__input.form-textarea {
   min-height: 147px;
+
+  textarea {
+    min-height: 147px;
+  }
 }

@@ -31,6 +31,7 @@ import certificates from '../blocks/certificates/certificates';
 import calculatorForm from '../blocks/calculator-form/calculator-form';
 import orderMeasurerForm from '../blocks/order-measurer-form/order-measurer-form';
 import multiExamples from '../blocks/multi-examples/multi-examples';
+import feedbackForm from '../blocks/feedback-form/feedback-form';
 
 // endregion
 
@@ -58,3 +59,4 @@ certificates();
 calculatorForm();
 orderMeasurerForm();
 multiExamples();
+feedbackForm();

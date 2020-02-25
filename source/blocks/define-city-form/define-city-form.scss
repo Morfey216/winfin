@@ -1,0 +1,42 @@
+.define-city-form {
+  max-width: 1110px;
+  margin: 0 auto;
+  margin-bottom: 120px;
+}
+
+.define-city-form__city-options {
+  @include ubuntu(16, 24, 400);
+
+  @include mobile-max {
+    font-size: 14px;
+  }
+}
+
+.define-city-form__city-options a {
+  @include ubuntu(17, 24, 400);
+  color: $green;
+  border-bottom: 1px solid $green;
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+  }
+
+  @include mobile-max {
+    font-size: 15px;
+  }
+}
+
+.define-city-form__form {
+  margin-top: 15px;
+}
+
+.define-city-form__input {
+  margin: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+  border: 1px solid $border-gray;
+  border-radius: 0;
+}

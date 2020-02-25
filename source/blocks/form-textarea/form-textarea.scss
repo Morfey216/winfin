@@ -22,9 +22,8 @@
 }
 
 .form-textarea textarea {
+  @include ubuntu(14, 18, 400);
   width: 100%;
-  font-size: 14px;
-  line-height: 1.43;
   border: none;
   padding: 0;
   outline: none;
@@ -46,12 +45,11 @@
 }
 
 .form-textarea__label {
+  @include ubuntu(17, 21, 400);
   position: absolute;
   top: 20px;
   left: 24px;
   width: calc(100% - 48px);
-  font-size: 14px;
-  line-height: 1.43;
   transition: transform 0.3s, opacity 0.3s;
   color: $icon-gray;
   pointer-events: none;
@@ -63,6 +61,7 @@
   }
 
   @media (max-width: $screen-md) {
+    font-size: 14px;
     left: 20px;
     width: calc(100% - 44px);
   }

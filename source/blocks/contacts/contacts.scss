@@ -1,5 +1,10 @@
 .contacts {
   margin: 0 auto;
+  margin-bottom: 75px;
+
+  @include mobile-max {
+    margin-bottom: 35px;
+  }
 }
 
 .contacts__title {
