@@ -1,0 +1,25 @@
+include ../holder/holder
+include ../breadcrumbs/breadcrumbs
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Контакты',
+      link: '#',
+    }
+  ]
+
+  const holderData = {
+    title: 'Привезем и установим в срок.',
+    slogan: 'Вы можете связаться с нами удобным<br>для вас способом',
+    bg: 'contacts-holder.jpg'
+  }
+
+
+div.contacts-heading
+  +holder(holderData).contacts-heading__holder
+  +breadcrumbs(breadcrumbs).contacts-heading__breadcrumbs.container

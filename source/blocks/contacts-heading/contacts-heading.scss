@@ -1,0 +1,22 @@
+.contacts-heading {
+  margin: 0 auto;
+  border-bottom: 1px solid $border-gray;
+}
+
+.contacts-heading__holder {
+  min-height: 387px;
+  padding-top: 135px;
+  padding-bottom: 100px;
+  background-image: url("../img/background/contacts-holder.jpg");
+  background-size: cover;
+  background-position: center;
+
+  @include mobile-max {
+    padding-top: 125px;
+  }
+
+  @include mobile-medium-max {
+    padding-top: 95px;
+    padding-bottom: 90px;
+  }
+}

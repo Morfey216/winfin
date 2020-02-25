@@ -1,0 +1,65 @@
+include ../title/title
+
+-
+  const messendgersList = [
+    {
+      icon: 'telegram.png',
+      w: 25,
+      h: 21,
+      alt: 'Telegram',
+      link: '#',
+      desc: 'Наш Telegram',
+    },
+    {
+      icon: 'whatsapp.png',
+      w: 23,
+      h: 23,
+      alt: 'WhatsApp',
+      link: '#',
+      desc: 'Наш WhatsApp',
+    },
+    {
+      icon: 'viber.png',
+      w: 22,
+      h: 24,
+      alt: 'Viber',
+      link: '#',
+      desc: 'Наш Viber',
+    },
+  ]
+
+section.contacts.container
+  +title('Контакты', 'bold').contacts__title
+  div.contacts__wrapper
+    div.contacts__contact.contacts__address-contact
+      h3.contacts__contact-title Адрес:
+      div.contacts__contact-icon-wrapper
+        img(src = "img/contacts/pin.png", width = "16", height = "23", alt='').contacts__contact-icon
+      p.contacts__location 127273, Москва, Отрадная, 2
+      p.contacts__schedule Пн.-Пт.: с 10:00 до 19:00
+      p.contacts__schedule-addition В выходные дни - по предварительной договоренности
+      p.contacts__affiliated Филиалы
+        |
+        |
+        a(href="#") на карте
+    div.contacts__contact.contacts__phone-contact
+      h3.contacts__contact-title Тел:
+      div.contacts__contact-icon-wrapper
+        img(src = "img/contacts/phone.png", width = "22", height = "22", alt='').contacts__contact-icon
+      a(href="tel:+74999041488").contacts__phone +7 (499) 904 14 88 Москва
+      a(href="tel:+74999040171").contacts__phone +7 (499) 904 01 71
+      a(href="tel:+79119252807").contacts__phone +7 (911) 925 28 07 Санкт-Петербург
+      div.contacts__messengers
+        span.contacts__messengers-title Мессенджеры:
+        ul.contacts__messengers-list
+          each messendger in messendgersList
+            li.contacts__messengers-item
+              a(href = messendger.link).contacts__messenger-link
+                img(src='img/contacts/' + messendger.icon width = messendger.w height = messendger.h alt = messendger.alt).contacts__messenger-icon
+                span.visually-hidden #{messendger.desc}
+    div.contacts__contact.contacts__email-contact
+      h3.contacts__contact-title Email:
+      div.contacts__contact-icon-wrapper
+        img(src = "img/contacts/mail.png", width = "22", height = "16", alt='').contacts__contact-icon
+      a(href="mailto:window@winfin.ru").contacts__mail-link window@winfin.ru Москва
+      a(href="mailto:winfin@mail.ru").contacts__mail-link winfin@mail.ru Санкт-Петербург

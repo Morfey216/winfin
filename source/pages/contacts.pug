@@ -1,0 +1,28 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/page-footer/page-footer
+include ../blocks/overlay/overlay
+include ../blocks/gager-modal/gager-modal
+include ../blocks/call-request-modal/call-request-modal
+include ../blocks/discount-modal/discount-modal
+
+doctype html
+html(lang='ru')
+  +head('Контакты')
+  body
+    +header
+
+    main
+      h1.visually-hidden Сайт компании "WINFIN"
+      include ../blocks/contacts-heading/contacts-heading
+      include ../blocks/contacts/contacts
+
+      +feedback-contacts
+    +overlay.js-modal-overlay
+    +gager-modal
+    +call-request-modal
+    +discount-modal
+    +page-footer
+
+    include ../blocks/_scripts-block/_scripts-block

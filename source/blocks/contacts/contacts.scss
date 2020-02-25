@@ -1,0 +1,253 @@
+.contacts {
+  margin: 0 auto;
+}
+
+.contacts__title {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 500;
+
+  @include tablet-max {
+    margin-top: 30px;
+  }
+
+  @include tablet-medium-max {
+    width: 710px;
+    margin: 30px auto;
+    margin-bottom: 15px;
+  }
+
+  @include mobile-max {
+    width: 525px;
+  }
+
+  @include mobile-medium-max {
+    width: 285px;
+  }
+}
+
+.contacts__wrapper {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 90px;
+
+  @include tablet-medium-max {
+    width: 710px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+
+  @include mobile-max {
+    width: 525px;
+  }
+
+  @include mobile-medium-max {
+    width: 285px;
+    margin-top: 35px;
+  }
+}
+
+.contacts__contact {
+  position: relative;
+  padding-left: 90px;
+
+  @include tablet-max {
+    padding-left: 80px;
+  }
+
+  @include tablet-medium-max {
+    margin-bottom: 25px;
+  }
+
+  @include mobile-max {
+    margin-bottom: 40px;
+    padding-left: 0;
+    padding-top: 80px;
+  }
+}
+
+.contacts__address-contact {
+  width: 390px;
+
+  @include tablet-medium-max {
+    width: 355px;
+  }
+
+  @include mobile-max {
+    width: 255px;
+  }
+}
+
+.contacts__phone-contact {
+  width: 415px;
+
+  @include tablet-medium-max {
+    width: 355px;
+  }
+
+  @include mobile-max {
+    width: 265px;
+  }
+}
+
+.contacts__email-contact {
+  width: 385px;
+
+  @include mobile-medium-max {
+    width: 270px;
+  }
+}
+
+.contacts__contact-title {
+  @include ubuntu(20, 48, 700);
+  letter-spacing: -1px;
+
+  @include mobile-max {
+    font-size: 18px;
+    line-height: 40px;
+  }
+}
+
+.contacts__contact-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+
+  border: 1px solid $green;
+  border-radius: 50%;
+
+  @include tablet-max {
+    width: 50px;
+    height: 50px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+
+    position: absolute;
+    border: 1px solid $border-gray;
+    border-radius: 50%;
+
+    @include tablet-max {
+      width: 65px;
+      height: 65px;
+    }
+  }
+}
+
+.contacts__location,
+.contacts__schedule {
+  @include ubuntu(17, 24, 700);
+
+  @include tablet-max {
+    font-size: 16px;
+  }
+
+  @include mobile-max {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.contacts__schedule-addition {
+  @include ubuntu(17, 18, 400);
+  margin-top: 12px;
+  margin-bottom: 8px;
+
+  @include tablet-medium-max {
+    font-size: 15px;
+  }
+
+  @include mobile-max {
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+}
+
+.contacts__affiliated {
+  @include ubuntu(16, 24, 700);
+
+  @include mobile-max {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+.contacts__affiliated a {
+  color: $green;
+  border-bottom: 1px solid $green;
+  transition: border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    border-color: transparent;
+  }
+}
+
+.contacts__phone {
+  @include ubuntu(18, 24, 700);
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 6px;
+
+  @include tablet-max {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  @include mobile-max {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+}
+
+.contacts__messengers {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__messengers-title {
+  @include ubuntu(17, 48, 700);
+  padding-right: 9px;
+  letter-spacing: -1px;
+
+  @include mobile-max {
+    font-size: 15px;
+    line-height: 36px;
+  }
+}
+
+.contacts__messengers-list {
+  @include list-reset;
+  display: flex;
+}
+
+.contacts__messengers-item {
+  margin-right: 22px;
+  transition: opacity 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.contacts__mail-link {
+  @include ubuntu(17, 28, 700);
+  display: inline-block;
+  vertical-align: top;
+
+  @include mobile-max {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
