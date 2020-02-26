@@ -1,0 +1,133 @@
+.page-not-found {
+  padding-top: 196px;
+  padding-bottom: 270px;
+  color: $white;
+  background: $green url("../img/background/404.jpg") no-repeat center center;
+  background-size: cover;
+
+  @include mobile-max {
+    padding-top: 100px;
+    padding-bottom: 145px;
+  }
+}
+
+.page-not-found__wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.page-not-found__title {
+  @include ubuntu(36, 48, 700);
+  width: 245px;
+  margin: 0 auto;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+
+  span {
+    font-size: 122px;
+    line-height: 100px;
+  }
+}
+
+.page-not-found__note {
+  @include ubuntu(24, 36, 400);
+  text-align: center;
+
+  @include mobile-max {
+    @include ubuntu(20, 30, 400);
+  }
+
+  @include mobile-medium-max {
+    @include ubuntu(16, 24, 400);
+  }
+}
+
+.page-not-found__search-form {
+  max-width: 530px;
+  margin: 38px auto;
+  margin-top: 17px;
+  position: relative;
+
+  @include mobile-max {
+    margin-bottom: 17px;
+  }
+}
+
+.page-not-found__submit-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+
+  svg {
+    fill: $white;
+  }
+
+  &:hover svg {
+    fill: $icon-gray;
+  }
+}
+
+.page-not-found__search {
+  max-width: 530px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  border: 1px solid $white;
+  border-radius: 0;
+  background-color: transparent;
+
+  &:hover {
+    .form-input__label {
+      color: $white;
+    }
+  }
+
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+
+.page-not-found__search input {
+  max-width: 530px;
+  background-color: transparent;
+  color: $decor-gray;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+
+.page-not-found__redirection {
+  width: 360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  @include mobile-medium-max {
+    width: 290px;
+    flex-direction: column;
+  }
+}
+
+.page-not-found__button {
+  @include ubuntu(18, 40, 700);
+  width: 172px;
+  padding: 7px;
+  text-transform: capitalize;
+
+  @include mobile-medium-max {
+    @include ubuntu(16, 32, 500);
+    width: 290px;
+    margin-bottom: 15px;
+  }
+}

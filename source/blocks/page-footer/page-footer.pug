@@ -41,6 +41,10 @@ mixin page-footer(mod)
             p.page-footer__company-requisites ИНН&nbsp;7715868422 КПП&nbsp;771501001 ОГРН&nbsp;1117746421539
         else
           p.page-footer__logo-description Деревянные окна "под ключ" производство, поставка и установка по России
+            if (mod === '404')
+              |
+              |
+              span.page-footer__404-requisites ОГРН&nbsp;1117746421539 ИНН&nbsp;7715868422
         div.page-footer__technology
           img(src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии").page-footer__technology-img.lz-img
           p.page-footer__technology-description Finland Technology

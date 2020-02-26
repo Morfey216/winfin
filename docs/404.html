@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>Контакты</title>
+  <title>Страница не найдена</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
   <link rel="preload" href="css/style.css" as="style" />
   <link rel="stylesheet" href="css/style.css" media="screen" />
@@ -113,74 +113,20 @@
   </header>
   <main>
     <h1 class="visually-hidden">Сайт компании "WINFIN"</h1>
-    <div class="contacts-heading">
-      <div class="holder contacts-heading__holder">
-        <div class="holder__description container">
-          <p class="holder__title">Привезем и установим в&nbsp;срок.</p>
-          <p class="holder__slogan">Вы можете связаться с нами удобным<br>для вас способом</p>
-        </div>
-      </div>
-      <div class="breadcrumbs contacts-heading__breadcrumbs container">
-        <ul class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Главная</a></li>
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Контакты</a></li>
-        </ul>
-      </div>
-    </div>
-    <section class="contacts container">
-      <h2 class="title title--bold contacts__title">Контакты</h2>
-      <div class="contacts__wrapper">
-        <div class="contacts__contact contacts__address-contact">
-          <h3 class="contacts__contact-title">Адрес:</h3>
-          <div class="contacts__contact-icon-wrapper"><img class="contacts__contact-icon" src="img/contacts/pin.png" width="16" height="23" alt=""></div>
-          <p class="contacts__location">127273, Москва, Отрадная, 2</p>
-          <p class="contacts__schedule">Пн.-Пт.: с 10:00 до 19:00</p>
-          <p class="contacts__schedule-addition">В выходные дни - по предварительной договоренности</p>
-          <p class="contacts__affiliated">Филиалы
-            <a href="#">на карте</a></p>
-        </div>
-        <div class="contacts__contact contacts__phone-contact">
-          <h3 class="contacts__contact-title">Тел:</h3>
-          <div class="contacts__contact-icon-wrapper"><img class="contacts__contact-icon" src="img/contacts/phone.png" width="22" height="22" alt=""></div><a class="contacts__phone" href="tel:+74999041488">+7 (499) 904 14 88 Москва</a><a class="contacts__phone" href="tel:+74999040171">+7 (499) 904 01 71</a><a class="contacts__phone" href="tel:+79119252807">+7 (911) 925 28 07 Санкт-Петербург</a>
-          <div class="contacts__messengers"><span class="contacts__messengers-title">Мессенджеры:</span>
-            <ul class="contacts__messengers-list">
-              <li class="contacts__messengers-item"><a class="contacts__messenger-link" href="#"><img class="contacts__messenger-icon" src="img/contacts/telegram.png" width="25" height="21" alt="Telegram"><span class="visually-hidden">Наш Telegram</span></a></li>
-              <li class="contacts__messengers-item"><a class="contacts__messenger-link" href="#"><img class="contacts__messenger-icon" src="img/contacts/whatsapp.png" width="23" height="23" alt="WhatsApp"><span class="visually-hidden">Наш WhatsApp</span></a></li>
-              <li class="contacts__messengers-item"><a class="contacts__messenger-link" href="#"><img class="contacts__messenger-icon" src="img/contacts/viber.png" width="22" height="24" alt="Viber"><span class="visually-hidden">Наш Viber</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="contacts__contact contacts__email-contact">
-          <h3 class="contacts__contact-title">Email:</h3>
-          <div class="contacts__contact-icon-wrapper"><img class="contacts__contact-icon" src="img/contacts/mail.png" width="22" height="16" alt=""></div><a class="contacts__mail-link" href="mailto:window@winfin.ru">window@winfin.ru Москва</a><a class="contacts__mail-link" href="mailto:winfin@mail.ru">winfin@mail.ru Санкт-Петербург</a>
-        </div>
+    <section class="page-not-found">
+      <div class="page-not-found__wrapper">
+        <h2 class="page-not-found__title">Ошибка
+          <span>404</span></h2>
+        <p class="page-not-found__note">Сожалеем, запрашиваемая страница отсутствует</p>
+        <form class="page-not-found__search-form" action="#" method="get"><label class="form-input page-not-found__search"><input class="js-form-input" placeholder=" " id="search" required><span class="form-input__label">поиск</span><span class="form-input__error">Введите имя</span><svg width="15" height="15">
+              <use xlink:href="img/sprite.svg#warning"></use>
+            </svg></label><button class="button page-not-found__submit-button" type="submit"><span class="visually-hidden">Искать</span><svg class="page-not-found__submit-button-icon" width="17" height="17">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg></button></form>
+        <div class="page-not-found__redirection"><button class="button button--orange page-not-found__button" type="button"><span>На главную</span></button><button class="button button--green page-not-found__button" type="button"><span>В каталог</span></button></div>
       </div>
     </section>
-    <section class="define-city-form container">
-      <h2 class="visually-hidden">Указание вашего города</h2>
-      <p class="define-city-form__city-options">Ваш город
-        <a href="#">Москва?</a>
-        <a href="#">Санкт-Петербург</a></p>
-      <form class="define-city-form__form" action="#" method="post"><label class="form-input define-city-form__input"><input class="js-form-input" placeholder=" " id="city" required><span class="form-input__label">Введите название города</span><span class="form-input__error">Введите название города</span><svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#warning"></use>
-          </svg></label></form>
-    </section>
-    <div class="map" title="Карта расположения нашего офиса" id="map"></div>
-    <section class="feedback-form">
-      <h2 class="title title--section feedback-form__title">Обратная связь</h2>
-      <form class="feedback-form__form js-fbf" action="#" method="post"><label class="form-input feedback-form__input js-fbf-validate js-fbf-name"><input class="js-form-input" placeholder=" " id="name" required><span class="form-input__label">Введите имя</span><span class="form-input__error">Введите имя</span><svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#warning"></use>
-          </svg></label><label class="form-input feedback-form__input js-fbf-validate js-fbf-phone"><input class="js-form-input" placeholder=" " id="phone" required><span class="form-input__label">+7 ( _ _ _ ) _ _ _ – _ _ – _ _</span><span class="form-input__error">Неверный номер</span><svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#warning"></use>
-          </svg></label><label class="form-textarea feedback-form__input feedback-form__input--textarea js-fbf-validate"><textarea class="js-form-textarea" placeholder=" " id="message" required></textarea><span class="form-textarea__label">Текст сообщения</span><span class="form-textarea__error">Напишите сообщение</span><svg width="15" height="15">
-            <use xlink:href="img/sprite.svg#warning"></use>
-          </svg></label>
-        <footer class="feedback-form__footer"><button class="button button--orange feedback-form__submit js-fbf-submit" type="submit"><span>Отправить</span></button>
-          <p class="feedback-form__note">Нажимая &laquo;Отправить&raquo;, вы&nbsp;даете согласие на&nbsp;обработку
-            <a href="#">персональных&nbsp;данных</a></p>
-        </footer>
-      </form>
-    </section>
+    <div class="map map--low" title="Карта расположения нашего офиса" id="map"></div>
     <div class="feedback-contacts container">
       <div class="feedback-contacts__call"><a class="button button--green feedback-contacts__gager js-gager-open" href="#">Заявка на замер</a><a class="button button--orange feedback-contacts__callback js-call-request-open" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
       <div class="feedback-contacts__contacts">
@@ -238,12 +184,8 @@
     <div class="page-footer__top">
       <div class="page-footer__company">
         <div class="page-footer__logo"><a class="page-footer__logo-link"><img class="page-footer__logo-img lz-img" src="img/logos/logo-footer.png" width="163" height="44" alt="Логотип  WINFIN" /></a></div>
-        <div class="page-footer__company-details">
-          <h2 class="page-footer__company-details-title">Реквизиты компании:</h2>
-          <p class="page-footer__company-name">Общество с ограниченной ответственностью «Иртыш»</p>
-          <p class="page-footer__company-location">Юр.&nbsp;адрес: 127018, г.&nbsp;Москва, пер.&nbsp;2&#8209;й&nbsp;Вышеславцев,&nbsp;д.1А</p>
-          <p class="page-footer__company-requisites">ИНН&nbsp;7715868422 КПП&nbsp;771501001 ОГРН&nbsp;1117746421539</p>
-        </div>
+        <p class="page-footer__logo-description">Деревянные окна "под ключ" производство, поставка и установка по России
+          <span class="page-footer__404-requisites">ОГРН&nbsp;1117746421539 ИНН&nbsp;7715868422</span></p>
         <div class="page-footer__technology"><img class="page-footer__technology-img lz-img" src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии" />
           <p class="page-footer__technology-description">Finland Technology</p>
         </div>

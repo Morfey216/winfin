@@ -30,7 +30,6 @@
   flex-wrap: wrap;
   align-items: center;
   margin-right: 10px;
-  // width: 168px;
   width: 225px;
   max-width: 300px;
 
@@ -127,6 +126,13 @@
     margin-left: 15px;
     font-size: 11px;
   }
+}
+
+.page-footer__404-requisites {
+  @include ubuntu(13, 18, 500);
+  color: $white;
+  padding-top: 5px;
+  display: inline-block;
 }
 
 .page-footer__technology {

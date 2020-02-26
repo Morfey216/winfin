@@ -1,0 +1,20 @@
+include ../button/button
+include ../input/input
+include ../form-input/form-input
+include ../svg/svg
+
+section.page-not-found
+  div.page-not-found__wrapper
+    h2.page-not-found__title Ошибка
+      |
+      |
+      span 404
+    p.page-not-found__note Сожалеем, запрашиваемая страница отсутствует
+    form.page-not-found__search-form(action="#" method="get")
+      +form-input({label: 'поиск', error: 'Введите имя',}).page-not-found__search#search
+      button(class='button' type='submit').page-not-found__submit-button
+        span.visually-hidden Искать
+        +svg('icon-search')(width = "17", height = "17").page-not-found__submit-button-icon
+    div.page-not-found__redirection
+      +button('На главную', 'orange')(type='button').page-not-found__button
+      +button('В каталог', 'green')(type='button').page-not-found__button

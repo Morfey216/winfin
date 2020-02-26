@@ -18,3 +18,23 @@
     height: 400px;
   }
 }
+
+.map--low {
+  height: 650px;
+
+  @include tablet-max {
+    height: 600px;
+  }
+
+  @include tablet-medium-max {
+    height: 550px;
+  }
+
+  @include mobile-max {
+    height: 500px;
+  }
+
+  @include mobile-medium-max {
+    height: 400px;
+  }
+}
