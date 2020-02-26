@@ -1,5 +1,6 @@
 include ../blocks/head/head
 include ../blocks/header/header
+include ../blocks/map/map
 include ../blocks/feedback-contacts/feedback-contacts
 include ../blocks/page-footer/page-footer
 include ../blocks/overlay/overlay
@@ -18,6 +19,7 @@ html(lang='ru')
       include ../blocks/contacts-heading/contacts-heading
       include ../blocks/contacts/contacts
       include ../blocks/define-city-form/define-city-form
+      +map
       include ../blocks/feedback-form/feedback-form
 
       +feedback-contacts
@@ -25,6 +27,6 @@ html(lang='ru')
     +gager-modal
     +call-request-modal
     +discount-modal
-    +page-footer
+    +page-footer('contacts')
 
     include ../blocks/_scripts-block/_scripts-block

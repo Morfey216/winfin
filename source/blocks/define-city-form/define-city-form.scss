@@ -2,6 +2,10 @@
   max-width: 1110px;
   margin: 0 auto;
   margin-bottom: 120px;
+
+  @include mobile-max {
+    margin-bottom: 80px;
+  }
 }
 
 .define-city-form__city-options {

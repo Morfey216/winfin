@@ -26,14 +26,21 @@
     'Замер и консультация'
   ]
 
-mixin page-footer
+mixin page-footer(mod)
   footer.page-footer
     div.page-footer__top
       div.page-footer__company
         div.page-footer__logo
           a.page-footer__logo-link
             img(src="img/logos/logo-footer.png" width="163" height="44" alt="Логотип  WINFIN").page-footer__logo-img.lz-img
-        p.page-footer__logo-description Деревянные окна "под ключ" производство, поставка и установка по России
+        if (mod === 'contacts')
+          div.page-footer__company-details
+            h2.page-footer__company-details-title Реквизиты компании:
+            p.page-footer__company-name Общество с ограниченной ответственностью «Иртыш»
+            p.page-footer__company-location Юр.&nbsp;адрес: 127018, г.&nbsp;Москва, пер.&nbsp;2&#8209;й&nbsp;Вышеславцев,&nbsp;д.1А
+            p.page-footer__company-requisites ИНН&nbsp;7715868422 КПП&nbsp;771501001 ОГРН&nbsp;1117746421539
+        else
+          p.page-footer__logo-description Деревянные окна "под ключ" производство, поставка и установка по России
         div.page-footer__technology
           img(src="img/icons/fin-flag.png" width="38" height="23" alt="Флаг Финляндии").page-footer__technology-img.lz-img
           p.page-footer__technology-description Finland Technology
