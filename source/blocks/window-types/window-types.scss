@@ -1,7 +1,7 @@
 .window-types {
   margin: 0 auto;
   padding-top: 114px;
-  padding-bottom: 45px;
+  padding-bottom: 60px;
 
   text-align: center;
 
@@ -17,7 +17,7 @@
 .window-types__models-set {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 95px;
+  margin-bottom: 0;
 
   text-align: center;
 
@@ -37,7 +37,7 @@
   max-width: 330px;
 
   @include tablet-max {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 }
 
