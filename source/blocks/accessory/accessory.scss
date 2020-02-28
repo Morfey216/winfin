@@ -1,0 +1,70 @@
+.accessory {
+  width: 165px;
+  color: $dark-gray;
+}
+
+.accessory__content {
+  width: 148px;
+  margin: 0 auto;
+}
+
+.accessory__title {
+  @include ubuntu(18, 24, 400);
+  min-height: 48px;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  @include mobile-max {
+    font-size: 16px;
+    line-height: 18px;
+    min-height: 36px;
+  }
+}
+
+.accessory__description {
+  @include ubuntu(15, 18, 400);
+  color: $header-gray;
+}
+
+.accessory__price-part {
+  @include ubuntu(18, 30, 700);
+}
+
+.accessory__price-value {
+  @include ubuntu(18, 30, 700);
+
+  @include mobile-max {
+    line-height: 26px;
+  }
+
+  span {
+    font-size: 24px;
+
+    @include mobile-max {
+      font-size: 22px;
+    }
+
+    @include mobile-medium-max {
+      font-size: 20px;
+    }
+  }
+}
+
+.accessory__price-value--red {
+  color: $red;
+}
+
+.accessory__price-value--green {
+  color: $green;
+}
+
+.accessory__old-price-value {
+  @include ubuntu(18, 18, 700);
+  color: $light-gray;
+  text-decoration: line-through;
+
+  @include mobile-medium-max {
+    font-size: 16px;
+  }
+}

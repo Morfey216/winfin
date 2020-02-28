@@ -1,0 +1,80 @@
+include ../title/title
+include ../accessory/accessory
+include ../slider-navigation/slider-navigation
+
+-
+  const accessoriesList = [
+      {
+        image: 'accessories/image-placeholder.jpg',
+        w: 165,
+        h: 160,
+        alt: 'Ручка OSCAR',
+        title: 'Ручка OSCAR',
+        params: [
+          'Короткое описание, можно размер',
+        ],
+        price: '4&nbsp;000',
+        priceMod: '',
+        oldPrice: '',
+      },
+      {
+        image: 'accessories/image-placeholder.jpg',
+        w: 165,
+        h: 160,
+        alt: 'Система проветривания',
+        title: 'Система проветривания',
+        params: [
+          'Короткое описание, можно размер',
+        ],
+        price: '4&nbsp;000',
+        priceMod: '',
+        oldPrice: '',
+      },
+      {
+        image: 'accessories/image-placeholder.jpg',
+        w: 165,
+        h: 160,
+        alt: 'Ручка OSCAR',
+        title: 'Ручка OSCAR',
+        params: [
+          'Короткое описание, можно размер',
+        ],
+        price: '4&nbsp;000',
+        priceMod: '',
+        oldPrice: '',
+      },
+      {
+        image: 'accessories/image-placeholder.jpg',
+        w: 165,
+        h: 160,
+        alt: 'Замок',
+        title: 'Замок',
+        params: [
+          'Короткое описание, можно размер',
+        ],
+        price: '4&nbsp;000',
+        priceMod: 'red',
+        oldPrice: '5000',
+      },
+      {
+        image: 'accessories/image-placeholder.jpg',
+        w: 165,
+        h: 160,
+        alt: 'Замок 2',
+        title: 'Замок 2',
+        params: [
+          'Короткое описание, можно размер',
+        ],
+        price: '4&nbsp;000',
+        priceMod: 'green',
+        oldPrice: '',
+      },
+    ]
+
+section.accessories.container
+  +title('Подходящие аксессуары', 'section-nodecor').accessories__title
+  div.accessories__container
+    div.accessories__wrapper
+      each accessory in accessoriesList
+       +accessory(accessory).accessories__slide
+  +slider-navigation(false, 'accessories').accessories__slider-navigation

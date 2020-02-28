@@ -1,0 +1,16 @@
+mixin accessory(data)
+  div.accessory&attributes(attributes)
+    img(src='img/' + data.image width=data.w height=data.h alt= data.alt).accessory__image
+    div.accessory__content
+      h3.accessory__title!= data.title
+      each parametr in data.params
+        p.accessory__description!= parametr
+      p.accessory__price-part Цена
+      p.accessory__price-value(class= data.priceMod ? ' accessory__price-value--' + data.priceMod : '')
+        span!= data.price
+        |
+        | руб.
+      if (data.oldPrice)
+        span.accessory__old-price-value!= data.oldPrice
+          |
+          | руб.

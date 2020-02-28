@@ -8718,3 +8718,118 @@ button.swiper-pagination-bullet {
   height: 247px;
   margin-top: 25px;
   margin-bottom: 34px; }
+
+.accessory {
+  width: 165px;
+  color: #181715; }
+
+.accessory__content {
+  width: 148px;
+  margin: 0 auto; }
+
+.accessory__title {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  min-height: 48px;
+  margin-top: 16px;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+  @media (max-width: 767px) {
+    .accessory__title {
+      font-size: 16px;
+      line-height: 18px;
+      min-height: 36px; } }
+
+.accessory__description {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #969696; }
+
+.accessory__price-part {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700; }
+
+.accessory__price-value {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700; }
+  @media (max-width: 767px) {
+    .accessory__price-value {
+      line-height: 26px; } }
+  .accessory__price-value span {
+    font-size: 24px; }
+    @media (max-width: 767px) {
+      .accessory__price-value span {
+        font-size: 22px; } }
+    @media (max-width: 579px) {
+      .accessory__price-value span {
+        font-size: 20px; } }
+
+.accessory__price-value--red {
+  color: #ff0029; }
+
+.accessory__price-value--green {
+  color: #64892e; }
+
+.accessory__old-price-value {
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #787878;
+  text-decoration: line-through; }
+  @media (max-width: 579px) {
+    .accessory__old-price-value {
+      font-size: 16px; } }
+
+.accessories {
+  position: relative;
+  max-width: 1140px;
+  padding: 35px 15px;
+  border-bottom: 1px solid #d7d7d7; }
+  @media (max-width: 1199px) {
+    .accessories {
+      max-width: 970px; } }
+  @media (max-width: 1023px) {
+    .accessories {
+      max-width: 815px; } }
+  @media (max-width: 767px) {
+    .accessories {
+      max-width: 570px; } }
+  @media (max-width: 579px) {
+    .accessories {
+      max-width: 320px; } }
+
+.accessories__container {
+  position: relative;
+  width: 905px;
+  margin: 0 auto; }
+  @media (max-width: 1199px) {
+    .accessories__container {
+      width: 720px; } }
+  @media (max-width: 1023px) {
+    .accessories__container {
+      width: 535px; } }
+  @media (max-width: 767px) {
+    .accessories__container {
+      width: 350px; } }
+  @media (max-width: 579px) {
+    .accessories__container {
+      width: 165px; } }
+
+.accessories__slider-navigation {
+  position: absolute;
+  top: 185px;
+  left: 40px;
+  right: 40px; }
+  @media (max-width: 579px) {
+    .accessories__slider-navigation {
+      left: 15px;
+      right: 15px; } }
