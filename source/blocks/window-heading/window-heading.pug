@@ -1,0 +1,65 @@
+include ../breadcrumbs/breadcrumbs
+include ../heading-nav/heading-nav
+
+-
+  const breadcrumbs = [
+    {
+      title: 'Главная',
+      link: '#',
+    },
+    {
+      title: 'Деревянные&nbsp;окна',
+      link: '#',
+    },
+    {
+      title: 'Деревянное&nbsp;окно&nbsp;Street из&nbsp;дуба&nbsp;и&nbsp;алюминия, профиль&nbsp;90&nbspмм.',
+      link: '#',
+    }
+  ]
+
+  const headingNavList = [
+    {
+      title: 'Все&nbsp;окна',
+      link: '#',
+    },
+    {
+      title: 'Калькулятор&nbsp;деревянных&nbsp;окон',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;сосны',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;лиственницы',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;меранти',
+      link: '#',
+    },
+    {
+      title: 'Окна&nbsp;из&nbsp;дуба',
+      link: '#',
+    },
+    {
+      title: 'Аксессуары',
+      link: '#',
+    },
+    {
+      title: 'Витражи',
+      link: '#',
+    },
+    {
+      title: 'Треугольные&nbsp;окна',
+      link: '#',
+    },
+    {
+      title: 'Арочные&nbsp;окна',
+      link: '#',
+    },
+  ]
+
+div.window-heading
+  +breadcrumbs(breadcrumbs).window-heading__breadcrumbs.container
+  +heading-nav(headingNavList).window-heading__heading-nav

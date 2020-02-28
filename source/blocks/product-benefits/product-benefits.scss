@@ -1,0 +1,19 @@
+.product-benefits {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 55px 15px 105px;
+
+  @include mobile-max {
+    padding-top: 38px;
+  }
+}
+
+.product-benefits__qualities {
+  display: flex;
+  margin-top: 45px;
+
+  @include mobile-max {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

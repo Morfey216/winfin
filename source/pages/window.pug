@@ -1,0 +1,33 @@
+include ../blocks/head/head
+include ../blocks/header/header
+include ../blocks/examples/examples
+include ../blocks/feedback-contacts/feedback-contacts
+include ../blocks/product-benefits/product-benefits
+include ../blocks/page-footer/page-footer
+include ../blocks/overlay/overlay
+include ../blocks/gager-modal/gager-modal
+include ../blocks/call-request-modal/call-request-modal
+include ../blocks/discount-modal/discount-modal
+
+doctype html
+html(lang='ru')
+  +head('Окно')
+  body
+    +header
+
+    main
+      h1.visually-hidden Сайт компании "WINFIN"
+      include ../blocks/window-heading/window-heading
+      include ../blocks/window-types/window-types
+      +product-benefits('Преимущества окон из дерева')
+      include ../blocks/window-selection-request-form/window-selection-request-form
+      +examples('Деревянные окна в наших проектах')
+
+      +feedback-contacts
+    +overlay.js-modal-overlay
+    +gager-modal
+    +call-request-modal
+    +discount-modal
+    +page-footer
+
+    include ../blocks/_scripts-block/_scripts-block

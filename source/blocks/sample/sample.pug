@@ -2,9 +2,12 @@ include ../button/button
 
 mixin sample(data, elementBaseClass)
   div(class='sample')&attributes(attributes)
+    if (data.name)
+      h3.sample__name!= data.name
     div.sample__image(class= elementBaseClass ? elementBaseClass + '__sample-image' : '')
       img(src='img/' + data.image width=data.w height=data.h alt= data.alt)
-    h3.sample__title!= data.title
+    if (data.title)
+      h3.sample__title!= data.title
     each parametr in data.params
       p.sample__parametr!= parametr
     p.sample__price Цена от

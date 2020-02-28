@@ -2,6 +2,10 @@
   color: $gray;
 }
 
+.sample__name {
+  @include ubuntu(18, 24, 400);
+}
+
 .sample__image {
   max-width: 287px;
   width: auto;

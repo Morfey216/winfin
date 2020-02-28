@@ -1,0 +1,69 @@
+include ../title/title
+include ../button/button
+include ../sample/sample
+
+-
+  const winTypesList = [
+      {
+        name: 'Одностворчатое',
+        image: 'window-types/type-1.jpg',
+        w: 102,
+        h: 247,
+        alt: 'Одностворчатое',
+        title: '',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: 'Двухстворчатое',
+        image: 'window-types/type-2.jpg',
+        w: 229,
+        h: 247,
+        alt: 'Двухстворчатое',
+        title: '',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: 'Трехстворчатое',
+        image: 'window-types/type-3.jpg',
+        w: 330,
+        h: 247,
+        alt: 'Трехстворчатое',
+        title: '',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+      {
+        name: 'Балконный блок',
+        image: 'window-types/type-4.png',
+        w: 229,
+        h: 247,
+        alt: 'Балконный блок',
+        title: '',
+        params: [
+          '- Размер 1300х1400 мм',
+          '- Клееный брус из сосны с алюминиевой накладкой',
+        ],
+        price: '45&nbsp;000',
+        calcLink: '#',
+      },
+    ]
+
+section.window-types
+  div.container
+    div.window-types__models-set
+      each model in winTypesList
+        +sample(model, 'window-types').window-types__model

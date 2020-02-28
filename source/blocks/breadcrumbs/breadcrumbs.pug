@@ -3,4 +3,4 @@ mixin breadcrumbs(list)
     ul.breadcrumbs__list
       each item in list
         li.breadcrumbs__item
-          a.breadcrumbs__link(href=item.link)=item.title
+          a.breadcrumbs__link(href=item.link)!= item.title

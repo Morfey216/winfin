@@ -1,0 +1,41 @@
+include ../title/title
+include ../quality/quality
+
+-
+  const qualitiesList = [
+      {
+        image: 'baby-boy.png',
+        w: 34,
+        h: 52,
+        title: 'Безопасность',
+        alt: 'Безопасность.'
+      },
+      {
+        image: 'appointment-white.png',
+        w: 42,
+        h: 42,
+        title: 'Срок службы до&nbsp;50&nbsp;лет',
+        alt: 'Срок службы до 50 лет',
+      },
+      {
+        image: 'eco.png',
+        w: 47,
+        h: 47,
+        title: 'Экологичность',
+        alt: 'Экологичность',
+      },
+      {
+        image: 'certificate.png',
+        w: 48,
+        h: 48,
+        title: 'Гарантия качества',
+        alt: 'Гарантия качества',
+      },
+    ]
+
+mixin product-benefits(title)
+  section.product-benefits.container
+    +title(title, 'section-nodecor')
+    div.product-benefits__qualities
+      each quality in qualitiesList
+        +quality(quality).product-benefits__quality

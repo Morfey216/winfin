@@ -33,6 +33,10 @@
     @include ubuntu(12, 36, 400);
   }
 
+  @include mobile-max {
+    line-height: 24px;
+  }
+
   &:hover,
   &:focus {
     color: $green;
