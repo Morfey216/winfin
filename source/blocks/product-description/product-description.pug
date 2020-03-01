@@ -1,0 +1,62 @@
+include ../title/title
+include ../button/button
+include ../form-input/form-input
+include ../svg/svg
+include ../slider-navigation/slider-navigation
+
+section.product-description.container
+  +title('Деревянное окно из дуба и алюминия S456').product-description__title
+  div.product-description__visual
+    div.product-description__gallery-container
+      div.product-description__gallery-wrapper
+        div.product-description__image-wrapper
+          img(src="img/product-description/slider/gallery/s456.jpg" width="512" height="512" alt="Окно S456").product-description__image
+        div.product-description__image-wrapper
+          img(src="img/product-description/slider/gallery/video-placeholder.jpg" width="542" height="369" alt="Окно S456").product-description__image
+        div.product-description__image-wrapper
+          img(src="img/product-description/slider/gallery/win-preview.jpg" width="542" height="408" alt="Окно S456").product-description__image
+    div.product-description__slider
+      div.product-description__slider-container.product-description__slider-gallery-thumbs
+        div.product-description__thumbs-wrapper
+          div.product-description__thumbs-slide
+            img(src="img/product-description/slider/thumbs/s456.jpg" width="213" height="145" alt="Превью окна")
+          div.product-description__thumbs-slide
+            img(src="img/product-description/slider/thumbs/video-placeholder.jpg" width="213" height="145" alt="Превью окна")
+          div.product-description__thumbs-slide
+            img(src="img/product-description/slider/thumbs/win-preview.jpg" width="213" height="145" alt="Превью окна")
+      +slider-navigation(false, 'product-description').product-description__slider-navigation
+  div.product-description__content
+    +title('Деревянное окно из дуба и алюминия S456').product-description__title--replay
+    div.product-description__write-up
+      p Финское окно с поворотом створки на 180 градусов в вертикальной плоскости. Уникальное по своему техническому решению окно оснащено скрытой высокотехничной фурнитурой, позволяющей поворачивать створку вокруг своей оси, не нарушая порядок на подоконнике: цветы в горшках и шторы остаются на месте.
+      p Специальный механизм и ограничитель - фиксатор позволяют легко открывать и безопасно проветривать помещение даже при наличии маленьких детей в доме.
+      p Окна Swing имеют неоспоримое преимущество при неблагоприятных метеоусловиях: под напором ветра створка окна прижимается плотнее к раме.
+    div.product-description__details
+      div.product-description__detail
+        img(src="img/product-description/icons/cold.png" width="25" height="33" alt="")
+        p.product-description__detail-title Коэффициент теплопотерь:
+          |
+          |
+          span.product-description__detail-value 1,31
+          span.product-description__detail-explanation(data-explanation= 'Краткое пояснение коэффициента теплопотерь') ?
+      div.product-description__detail
+        img(src="img/product-description/icons/creativity.png" width="27" height="27" alt="")
+        p.product-description__detail-title Оттенки
+        ul.product-description__tints-list
+          li.product-description__tints-item
+            img(src="img/product-description/tints/oak.jpg" width="38" height="38" alt="Дуб" title="Дуб")
+          li.product-description__tints-item
+            img(src="img/product-description/tints/pine.jpg" width="38" height="38" alt="Сосна" title="Сосна")
+    div.product-description__footer
+      div.product-description__price
+        p.product-description__price-label Цена
+        p.product-description__price-data
+          span.product-description__price-value 13&nbsp;632
+          |
+          | р.
+      a(href="#").button.product-description__order-btn Оставить заявку
+      form.product-description__call-request-form(action="#" method="post").js-pdcrf
+        h3.product-description__call-request-form-title Заказать звонок
+        +form-input({label: '+7 ( _ _ _ ) _ _ _ – _ _ – _ _', error: 'Неверный номер',}, 'small-text').product-description__input.js-pdcrf-validate.js-pdcrf-phone#cr-phone
+        button(type='submit').product-description__request-btn.js-pdcrf-submit Оставить заявку
+          +svg('icon-right')(width="11" height="19").product-description__request-arrow

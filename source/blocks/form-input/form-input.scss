@@ -180,6 +180,25 @@
   }
 }
 
+.form-input--small-text {
+  padding: 9px 15px;
+  padding-top: 9px;
+
+  .form-input__label {
+    @include ubuntu(15, 16, 200);
+    left: 15px;
+    width: calc(100% - 30px);
+
+    @include mobile-medium-max {
+      @include ubuntu(14, 15, 200);
+    }
+  }
+
+  input {
+    @include ubuntu(17, 17, 200);
+  }
+}
+
 .form-input__marker {
   @include ubuntu(18, 40, 400);
   position: absolute;

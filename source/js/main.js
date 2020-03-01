@@ -33,6 +33,7 @@ import orderMeasurerForm from '../blocks/order-measurer-form/order-measurer-form
 import multiExamples from '../blocks/multi-examples/multi-examples';
 import feedbackForm from '../blocks/feedback-form/feedback-form';
 import accessories from '../blocks/accessories/accessories';
+import productDescription from '../blocks/product-description/product-description';
 
 // endregion
 
@@ -62,3 +63,4 @@ orderMeasurerForm();
 multiExamples();
 feedbackForm();
 accessories();
+productDescription();

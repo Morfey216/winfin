@@ -1,0 +1,219 @@
+.product-description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  color: $dark-gray;
+}
+
+.product-description__title,
+.product-description__title--replay {
+  margin-bottom: 15px;
+  color: $black-title;
+  text-transform: none;
+}
+
+.product-description__title {
+  display: none;
+}
+
+.product-description__visual {
+  width: 544px;
+  margin-right: 53px;
+}
+
+.product-description__gallery-container {
+  width: 544px;
+  border: 1px solid $border-gray;
+}
+
+.product-description__image-wrapper {
+  display: flex;
+  align-items: center;
+  width: 544px;
+  height: 514px;
+}
+
+.product-description__slider {
+  position: relative;
+}
+
+.product-description__slider-container {
+  width: 436px;
+  margin-top: 23px;
+}
+
+.product-description__slider-navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+
+.product-description__thumbs-slide {
+  box-sizing: border-box;
+}
+
+.product-description__slider-gallery-thumbs .swiper-slide {
+  border: 1px solid transparent;
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $border-gray;
+  }
+}
+
+.product-description__slider-gallery-thumbs .swiper-slide-thumb-active {
+  border: 1px solid $light-gray;
+}
+
+.product-description__write-up p {
+  @include ubuntu(17, 24, 400);
+  margin-bottom: 20px;
+}
+
+.product-description__details {
+  padding-bottom: 25px;
+  border-bottom: 1px solid $border-gray;
+}
+
+.product-description__detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  img {
+    margin-right: 12px;
+  }
+}
+
+.product-description__detail-title {
+  @include ubuntu(17, 24, 700);
+}
+
+.product-description__detail-explanation {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  vertical-align: top;
+
+  position: relative;
+  right: -10px;
+
+  color: $white;
+  border-radius: 50%;
+  background-color: $border-gray;
+
+  cursor: pointer;
+
+  &:hover::before {
+    content: attr(data-explanation);
+
+    @include ubuntu(12, 16, 300);
+    color: $gray;
+    display: block;
+    width: 150px;
+    min-height: 32px;
+    padding: 10px;
+
+    position: absolute;
+    bottom: 25px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 2px;
+    background-color: $popap-gray;
+    z-index: 1;
+  }
+}
+
+.product-description__tints-list {
+  @include list-reset;
+  display: flex;
+}
+
+.product-description__tints-item img {
+  margin-right: 0;
+  margin-left: 12px;
+  border-radius: 50%;
+}
+
+.product-description__price {
+  @include ubuntu(18, 24, 700);
+  margin-top: 17px;
+  margin-bottom: 13px;
+  text-transform: lowercase;
+}
+
+.product-description__price-data {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.button.product-description__order-btn {
+  @include ubuntu(18, 24, 700);
+  display: inline-block;
+  margin-right: 12px;
+  padding: 18px 32px 20px;
+  text-transform: uppercase;
+  color: $white;
+  width: fit-content;
+  background-color: $green;
+
+  &:hover,
+  &:focus {
+    background-color: $green-hover;
+  }
+
+  &:active {
+    background-color: $green-active;
+  }
+}
+
+.product-description__call-request-form {
+  display: inline-block;
+  width: 275px;
+  vertical-align: baseline;
+}
+
+.product-description__call-request-form-title {
+  @include ubuntu(18, 24, 700);
+  color: $light-gray;
+  margin-bottom: 6px;
+}
+
+.product-description__input {
+  display: inline-block;
+  width: 232px;
+  vertical-align: top;
+  border: 1px solid $border-gray;
+  border-radius: 0;
+}
+
+.product-description__request-btn {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 40px;
+  font-size: 0;
+  vertical-align: top;
+  background-color: $orange;
+  border: none;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $orange-hover;
+  }
+
+  &:active {
+    background-color: $orange-active;
+  }
+}
+
+.product-description__request-arrow {
+  position: absolute;
+  left: 18px;
+  bottom: 10px;
+}
