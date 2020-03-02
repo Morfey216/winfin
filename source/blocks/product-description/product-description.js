@@ -57,7 +57,7 @@ export default () => {
     const wrapper = container.querySelector('.product-description__gallery-wrapper');
     const slides = container.querySelectorAll('.product-description__image-wrapper');
 
-    const thumbs = productDescriptionVisual.querySelector('.product-description__slider-gallery-thumbs');
+    const thumbs = productDescriptionVisual.querySelector('.product-description__thumbs-container');
     const thumbsWrapper = thumbs.querySelector('.product-description__thumbs-wrapper');
     const thumbsSlides = thumbs.querySelectorAll('.product-description__thumbs-slide');
 
@@ -82,6 +82,11 @@ export default () => {
         slidesPerView: 2,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
+        breakpoints: {
+          579: {
+            slidesPerView: 1,
+          },
+        },
         navigation: {
           nextEl: '.product-description__navigation-btn-next',
           prevEl: '.product-description__navigation-btn-prev',
