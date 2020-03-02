@@ -1,5 +1,11 @@
 # winfin
 
+## Готовый вариант
+
+Опубликованная версия сверстанного макета https://morfey216.github.io/winfin/
+
+## Сборка
+
 npm run start - без минификации js/css/img + запуск сервера
 
 npm run build - с минификацией js/css и оптимизацией изображений  + gulp-pretty-html + запуск сервера
