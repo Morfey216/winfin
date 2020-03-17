@@ -34,6 +34,8 @@ import multiExamples from '../blocks/multi-examples/multi-examples';
 import feedbackForm from '../blocks/feedback-form/feedback-form';
 import accessories from '../blocks/accessories/accessories';
 import productDescription from '../blocks/product-description/product-description';
+import faq from '../blocks/faq/faq';
+import askQuestionModal from '../blocks/ask-question-modal/ask-question-modal';
 
 // endregion
 
@@ -64,3 +66,5 @@ multiExamples();
 feedbackForm();
 accessories();
 productDescription();
+faq();
+askQuestionModal();

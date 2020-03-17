@@ -935,19 +935,39 @@
       <div class="faq__wrapper">
         <h2 class="title title--section faq__title">Часто задаваемые вопросы</h2>
         <ul class="faq__questions">
-          <li class="faq__question"><span>1.</span>
-            <p>Здравствуйте, скажите, пожалуйста, какой срок изготовления деревянных окон? И можно устанавливать окна в зимний период?</p>
+          <li class="faq__question js-faq-control">
+            <div class="faq__question-title"><span>1.</span>
+              <p>Здравствуйте, скажите, пожалуйста, какой срок изготовления деревянных окон? И можно устанавливать окна в зимний период?</p>
+            </div>
+            <div class="faq__answer">
+              <p>Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002</p>
+            </div>
           </li>
-          <li class="faq__question"><span>2.</span>
-            <p>Добрый день! В чем принципиальное отличие финских окон от так называемых евроокон.</p>
+          <li class="faq__question js-faq-control">
+            <div class="faq__question-title"><span>2.</span>
+              <p>Добрый день! В чем принципиальное отличие финских окон от так называемых евроокон.</p>
+            </div>
+            <div class="faq__answer">
+              <p>Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002</p>
+            </div>
           </li>
-          <li class="faq__question"><span>3.</span>
-            <p>Проконсультируйте пожалуйста, по стоимости окон из сосны с алюминием снаружи?</p>
+          <li class="faq__question js-faq-control">
+            <div class="faq__question-title"><span>3.</span>
+              <p>Проконсультируйте пожалуйста, по стоимости окон из сосны с алюминием снаружи?</p>
+            </div>
+            <div class="faq__answer">
+              <p>Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002</p>
+            </div>
           </li>
-          <li class="faq__question"><span>4.</span>
-            <p>Возможно ли доставка в Дальние регионы РФ?</p>
+          <li class="faq__question js-faq-control">
+            <div class="faq__question-title"><span>4.</span>
+              <p>Возможно ли доставка в Дальние регионы РФ?</p>
+            </div>
+            <div class="faq__answer">
+              <p>Если в оконных проемах установлены старые или временные деревянные окна, то наши специалисты произведут демонтаж и подготовят проемы к монтажу новых окон из дерева. Монтаж оконных блоков осуществляется в строгом соответствии с ГОСТ 30971-2002</p>
+            </div>
           </li>
-        </ul><a class="faq__ask-question-link" href="#">Задать вопрос</a><img class="faq__decor-img" src="img/decor/thinking-woman.png" width="300" height="525" alt="">
+        </ul><a class="faq__ask-question-link js-ask-question-open" href="#">Задать вопрос</a><img class="faq__decor-img" src="img/decor/thinking-woman.png" width="300" height="525" alt="">
       </div>
     </section>
     <section class="gauge-request-form">
@@ -998,6 +1018,23 @@
     </div>
   </main>
   <div class="overlay js-modal-overlay"></div>
+  <section class="modal js-modal ask-question-modal" id="ask-question-modal"><button class="modal__close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span><svg class="modal__close-svg" width="16" height="16">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg></button>
+    <h2>Задать вопрос</h2>
+    <form class="ask-question-modal__form js-aqmf" action="#" method="post"><label class="form-input ask-question-modal__input js-aqmf-validate js-aqmf-name"><input class="js-form-input" placeholder=" " id="aqmf-name" required="required" /><span class="form-input__label">Введите имя</span><span class="form-input__error">Введите имя</span><svg width="15" height="15">
+          <use xlink:href="img/sprite.svg#warning"></use>
+        </svg></label><label class="form-input ask-question-modal__input js-aqmf-validate js-aqmf-phone"><input class="js-form-input" placeholder=" " id="aqmf-phone" type="tel" required="required" /><span class="form-input__label">+7 ( _ _ _ ) _ _ _ – _ _ – _ _</span><span class="form-input__error">Неверный номер</span><svg width="15" height="15">
+          <use xlink:href="img/sprite.svg#warning"></use>
+        </svg></label><label class="form-textarea ask-question-modal__input ask-question-modal__input--textarea js-aqmf-validate js-aqmf-textarea"><textarea class="js-form-textarea" placeholder=" " id="aqmf-message" required="required"></textarea><span class="form-textarea__label">Текст вопроса</span><span class="form-textarea__error">Напишите вопрос</span><svg width="15" height="15">
+          <use xlink:href="img/sprite.svg#warning"></use>
+        </svg></label>
+      <footer class="ask-question-modal__footer">
+        <p class="ask-question-modal__note">Нажимая &laquo;Отправить&raquo;, вы&nbsp;даете согласие на&nbsp;обработку
+          <a href="#">персональных&nbsp;данных</a></p><button class="button button--orange ask-question-modal__submit js-aqmf-submit" type="submit"><span>Отправить</span></button>
+      </footer>
+    </form>
+  </section>
   <section class="modal js-modal gager-modal" id="gager-modal"><button class="modal__close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span><svg class="modal__close-svg" width="16" height="16">
         <use xlink:href="img/sprite.svg#cross"></use>
       </svg></button>
